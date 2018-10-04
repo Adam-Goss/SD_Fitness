@@ -1,0 +1,13 @@
+//main sass styles page to be converted to css file
+
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'base/reset';
+@import 'base/typography';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/forms';
+@import 'layout/all_programs';
+@import 'components/buttons';
+@import 'components/dropdown';
+@import 'components/navigation';

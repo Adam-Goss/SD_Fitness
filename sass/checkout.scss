@@ -1,0 +1,200 @@
+//import main styles
+@import 'main';
+
+
+
+/**************************************************************
+----- page specific styling for checkout.inc.php module -----
+**************************************************************/
+.checkout .inner-wrapper {
+
+  padding-top: 4em;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+
+  h3 {
+    font-size: 1.5em;
+    color: orange;
+    text-align: center;
+    margin-bottom: .5em;
+  }
+
+  .buy_summary {
+    display: grid;
+    grid-gap: 3em 2em;
+    grid-template-areas:
+      "table edit"
+      "buy buy";
+    grid-template-columns: 4fr 1fr;
+    align-items: start;
+    width: 70%;
+    margin: 0 auto;
+    padding: 1em;
+    border: 1px solid black;
+
+
+
+    .buy_table {
+      width: 100%;
+      margin: 0 auto;
+      grid-area: table;
+
+      table {
+        // border: 1px solid black;
+        width: 100%;
+
+        th, td {
+          text-align: center;
+          padding: 1em;
+          border: 1px solid black;
+          font-size: 1.2em;
+        }
+
+        th {
+          font-weight: bold;
+          background-color: lightgrey;
+        }
+        td {
+          background-color: #fff;
+          padding-top: 2em;
+        }
+      }
+    }
+
+    .edit_order {
+      grid-area: edit;
+      box-shadow: $shadow;
+      background: #fff;
+      height: 100%;
+      h3 {
+        text-align: center;
+        padding-top: 2.5em;
+        padding-bottom: 2.5em;
+      }
+
+      &:hover {
+        background: $main-font-color;
+        h3 {
+          color: #fff;
+        }
+      }
+    }
+
+    .payment_options {
+      width: 100%;
+      text-align: center;
+      grid-area: buy;
+      box-shadow: $shadow;
+      background: #fff;
+      padding: 2em 1em;
+    }
+
+  }
+
+   .terms {
+    margin: 4em auto 0 auto;
+    padding-bottom: 4em;
+    text-align: center;
+    width: 100%;
+  }
+
+}
+
+
+footer {
+  margin-top: 0;
+}
+
+/***** END OF styling for the checkout page *****/
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width: 1050px) {
+  .checkout .inner-wrapper {
+    .buy_summary {
+      width: 90%;
+
+      .edit_order {
+        h3 {
+          padding: 2.5em 1em;
+        }
+      }
+    }
+  }
+
+
+
+
+}
+
+@media (max-width: 900px) {
+  .checkout .inner-wrapper {
+    padding-left: 1em;
+    padding-right: 1em;
+
+    .buy_summary {
+      width: 100%;
+      grid-template-columns: 3fr 1fr;
+
+      .buy_table {
+        th, td {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 800px) {
+  .checkout .inner-wrapper .buy_summary {
+    grid-template-areas:
+      'table'
+      'edit'
+      'buy';
+    grid-template-columns: 1fr;
+    grid-row-gap: 1em;
+  }
+
+}
+
+@media (max-width: 650px) {
+  .checkout .inner-wrapper .buy_summary {
+    .buy_table {
+      table {
+        td, th {
+          padding: 1em;
+          font-size: .8em;
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 450px) {
+  .checkout .inner-wrapper .buy_summary {
+    .buy_table {
+      table {
+        td, th {
+          font-size: .6em;
+        }
+      }
+    }
+  }
+}

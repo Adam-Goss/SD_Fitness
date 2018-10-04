@@ -1,0 +1,197 @@
+/* -------------------------
+***** SASS Variables *****
+------------------------- */
+/**************************************************************
+----- page specific styling for view_prod.inc.php module -----
+**************************************************************/
+.view_prod .inner-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  background: #eee; }
+  .view_prod .inner-wrapper .product .product_header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background: #fff; }
+    .view_prod .inner-wrapper .product .product_header h3 {
+      display: inline-block;
+      width: 100%;
+      text-align: left;
+      margin-top: 20%;
+      font-size: 6em;
+      color: #888;
+      margin-left: -.5em;
+      margin-bottom: 1em;
+      margin-right: .5em; }
+    .view_prod .inner-wrapper .product .product_header .program-img {
+      box-shadow: inset -300px 0px 200px 40px #fff;
+      background: top center cover no-repeat; }
+  .view_prod .inner-wrapper .product .product_info {
+    background: #eee;
+    font-size: 1.2em;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 6em; }
+    .view_prod .inner-wrapper .product .product_info p {
+      padding-bottom: 2em;
+      width: 70%;
+      margin: 0 auto;
+      line-height: 3em; }
+    .view_prod .inner-wrapper .product .product_info ul {
+      width: 100%;
+      margin: 0 auto 6em auto;
+      border: 1px solid black;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 3em 4em;
+      background: gray;
+      color: white;
+      padding: 3em 4em; }
+      .view_prod .inner-wrapper .product .product_info ul li {
+        font-weight: bold;
+        list-style: none;
+        padding-left: 4em;
+        padding-bottom: 2em;
+        padding-top: .5em; }
+      .view_prod .inner-wrapper .product .product_info ul li:nth-child(odd) {
+        background: url("../../images/Sports-Weightlift-icon.png") top left no-repeat; }
+      .view_prod .inner-wrapper .product .product_info ul li:nth-child(even) {
+        background: url("../../images/Sports-Torso-icon.png") top left no-repeat; }
+  .view_prod .inner-wrapper .product .buying_info {
+    margin: 4em auto 0 auto;
+    background: white;
+    width: 100%;
+    padding: 6em 0 4em 0; }
+    .view_prod .inner-wrapper .product .buying_info form.buy_options_form {
+      width: 70%;
+      margin: 0 auto; }
+      .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset {
+        display: grid;
+        width: 100%;
+        grid-template: "program option" "terms option" "buy buy";
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 2em; }
+        .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset div {
+          box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8); }
+        .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset .form-group1 {
+          grid-area: program;
+          text-align: center; }
+          .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset .form-group1 select {
+            width: 100%;
+            height: 100%;
+            font-size: 1.5em; }
+        .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset .form-group2 {
+          grid-area: terms;
+          padding: 2em 1em;
+          font-size: 1.5em; }
+          .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset .form-group2 p {
+            margin-bottom: .5em; }
+          .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset .form-group2 a {
+            display: inline-block;
+            font-size: .8em;
+            margin-top: 1em;
+            text-decoration: none;
+            color: #333;
+            font-style: italic; }
+            .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset .form-group2 a:hover {
+              text-decoration: underline; }
+        .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset .form-group3 {
+          grid-area: option;
+          text-align: center;
+          padding: 2em 1em 0 1em;
+          font-size: 1.5em; }
+          .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset .form-group3 p:first-of-type {
+            margin-bottom: 1em; }
+          .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset .form-group3 input:last-of-type {
+            margin-left: 2em; }
+          .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset .form-group3 .nutrition-program {
+            margin: 2em auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            width: 90%;
+            box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+            background: #808080;
+            border: 1px solid #808080; }
+            .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset .form-group3 .nutrition-program .pn-img img {
+              width: 100%;
+              height: 100%;
+              border-bottom: 1px solid #808080; }
+            .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset .form-group3 .nutrition-program .pn-short-des {
+              text-align: center;
+              padding-top: 1em;
+              color: #fff;
+              font-size: .75em; }
+              .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset .form-group3 .nutrition-program .pn-short-des p {
+                line-height: 1.5em;
+                padding: 1em; }
+              .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset .form-group3 .nutrition-program .pn-short-des a {
+                margin-top: 1em;
+                margin-bottom: 1em;
+                display: inline-block;
+                box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+                padding: 1em 4em;
+                border-radius: 30px;
+                color: #333;
+                background: #fff;
+                text-decoration: none;
+                font-variant: small-caps;
+                text-align: center; }
+                .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset .form-group3 .nutrition-program .pn-short-des a:hover {
+                  color: #fff;
+                  background: #333; }
+        .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset button {
+          font-size: 2em;
+          width: 50%;
+          grid-area: buy;
+          margin: 0 auto;
+          margin-top: 1em;
+          padding: 1em;
+          background: green;
+          color: white;
+          border: none;
+          border-radius: 5px; }
+
+footer {
+  margin-top: 0; }
+
+/***** END OF styling for the view product page *****/
+/* media queries */
+@media (max-width: 1000px) {
+  .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset .form-group1 select, .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset .form-group2, .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset .form-group3 {
+    font-size: 1em; }
+  .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset button {
+    font-size: 1.5em; } }
+@media (max-width: 750px) {
+  .view_prod .inner-wrapper .product .product_header {
+    grid-template-columns: 1fr; }
+    .view_prod .inner-wrapper .product .product_header h3 {
+      font-size: 4em;
+      text-align: center;
+      margin: 1em auto; }
+    .view_prod .inner-wrapper .product .product_header .program-img {
+      height: 50vh;
+      box-shadow: inset 0px 0px 200px 40px #fff; }
+  .view_prod .inner-wrapper .product .product_info {
+    font-size: 1em; }
+  .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset {
+    grid-template: "program program" "option option" "terms terms" "buy buy"; } }
+@media (max-width: 550px) {
+  .view_prod .inner-wrapper .product .product_header h3 {
+    font-size: 3em; }
+  .view_prod .inner-wrapper .product .product_info p {
+    width: 100%;
+    padding-left: 1em;
+    padding-right: 1em; }
+  .view_prod .inner-wrapper .product .product_info ul {
+    grid-template-columns: 1fr;
+    grid-gap: 2em 2em;
+    padding: 2em; }
+    .view_prod .inner-wrapper .product .product_info ul li {
+      padding-left: 5em; }
+  .view_prod .inner-wrapper .product .buying_info form.buy_options_form {
+    width: 100%; }
+    .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset .form-group3 .nutrition-program {
+      width: 100%; }
+      .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset .form-group3 .nutrition-program .pn-short-des {
+        font-size: 1em; } }
+
+/*# sourceMappingURL=view_prod.css.map */

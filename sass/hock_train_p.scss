@@ -1,0 +1,44 @@
+//import main styles
+@import 'main';
+
+
+
+/**************************************************************
+----- page specific styling for hock_train_p.inc.php module -----
+**************************************************************/
+
+.hock_train_p .inner-wrapper {
+  // width: 70%;
+  margin: 0 auto;
+  background: $main-bg;
+
+  .showcase-img {
+    width: 100%;
+    margin: 0 auto;
+    background: url('../../images/pro.jpeg') no-repeat top center ;
+    background-size: cover;
+    height: 75vh;
+    // margin-top: 4em;
+    text-align: center;
+    margin-bottom: 0;
+    opacity: 0.70;
+
+    h2 {
+      font-size: 4em;
+      color: green;
+      display: inline-block;
+      margin-top: 15%;
+    }
+  }
+
+  //programs content is styled in sass/layout/_all_programs.scss
+
+
+
+}
+
+footer {
+  margin-top: 0;
+}
+
+/***** END OF styling for the hockey training pro programs page *****/

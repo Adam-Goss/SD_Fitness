@@ -1,0 +1,132 @@
+//import main styles
+@import 'main';
+
+
+
+
+
+/**************************************************************
+----- page specific styling for t_and_c.inc.php module -----
+**************************************************************/
+
+
+.t_and_c .inner-wrapper {
+  width: 100%;
+
+  .termsAndConditionsWrapper {
+    width: 70%;
+    margin: 0 auto;
+
+    h2 {
+      text-align: center;
+      padding-top: 1em;
+      padding-bottom: .5em;
+    }
+
+    p {
+      font-style: italic;
+    }
+
+    h3 {
+      font-size: 1.5em;
+      text-decoration: underline;
+      margin-bottom: 1em;
+    }
+
+    .returnsGuranteesFAQs {
+      margin: 2em 0;
+
+      h4 {
+        font-weight: bold;
+        margin: 1.5em 0;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      ul>li>ul>li {
+        list-style: disc;
+        line-height: 2em;
+      }
+
+    }
+
+    .orderTerms {
+      margin: 2em 0;
+      ul {
+        margin: 2em 0;
+        list-style: disc;
+        line-height: 2em;
+      }
+    }
+
+    .fullTermsConditions {
+      margin: 0 auto;
+      padding-top: 2em;
+      padding-bottom: 4em;
+
+      p {
+        text-align: center;
+        font-size: 1.5em;
+      }
+
+      a {
+        color: $main-font-color;
+        font-weight: bold;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+    }
+
+
+
+  }
+
+
+}
+
+.t_and_c footer {
+  margin-top: 0;
+}
+
+/***** END OF styling for the info section of about page *****/
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width: 800px) {
+  .t_and_c .inner-wrapper {
+
+  }
+
+}
+
+@media (max-height: 700px) {
+  .t_and_c .inner-wrapper {
+
+  }
+
+}
+
+@media (max-width: 500px) {
+  .t_and_c .inner-wrapper {
+
+    .termsAndConditionsWrapper {
+      h2, h3 {
+        font-size: 1.5em;
+      }
+    }
+
+  }
+
+}

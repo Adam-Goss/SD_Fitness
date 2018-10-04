@@ -1,0 +1,29 @@
+//import main styles
+@import 'main';
+
+
+
+/**************************************************************
+----- page specific styling for logout.inc.php module -----
+**************************************************************/
+
+.inner-wrapper {
+  width: 100%;
+  text-align: center;
+  min-height: 40vh;
+  padding-top: 2em;
+
+  h2 {
+    margin-bottom: .5em;
+  }
+
+  i {
+    color: orange;
+    margin-top: .25em;
+  }
+
+}
+
+footer {
+  margin-top: 0;
+}

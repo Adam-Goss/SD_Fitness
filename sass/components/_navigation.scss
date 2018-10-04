@@ -1,0 +1,26 @@
+/*************************************
+ ----- page specific navigation -----
+ ************************************* */
+
+.programs .programsLink,
+.programs_male .programs_maleLink,
+.programs_fem .programs_femLink,
+.priv_coach .priv_coachLink,
+.hock_train .hock_trainLink,
+.hock_train_inseason .hock_train_inLink,
+.hock_train_offseason .hock_train_offLink,
+.blog .blogLink,
+.about .aboutLink
+{
+  background: $nav-link-color!important;
+  color: $light-font!important;
+}
+
+.about .aboutBottomLink,
+.contact .contactLink,
+.t_and_c .t_and_cLink
+{
+  border-left: 1px solid $light-font;
+  padding-left: 5px;
+  color: $light-font;
+}

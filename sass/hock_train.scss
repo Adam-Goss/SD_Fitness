@@ -1,0 +1,160 @@
+//import variables
+@import 'helpers/variables';
+
+
+
+
+
+/**************************************************************
+----- page specific styling for hock_train.inc.php module -----
+**************************************************************/
+
+.hock_train .inner-wrapper {
+  .season-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+      'head head'
+      'inseason offseason';
+    grid-gap: 2em;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    text-align: center;
+    background: url('../../images/quote_img.jpg') center center no-repeat;
+    background-size: cover;
+    padding: 5em 5em;
+    min-height: 100vh;
+    border-bottom: 3em solid #333333;
+
+    .description-box {
+      background: rgba(1,1,1,.1);
+      grid-area: head ;
+      padding: 2em 2em;
+      width: 60%;
+      margin: 0 auto;
+
+      p {
+        font-size: 2em;
+        color: white;
+      }
+    }
+
+    .inseason-box {
+      background: url('../../images/gym1-bg.jpeg') center center no-repeat;
+      background-size: cover;
+      grid-area: inseason;
+    }
+
+    .offseason-box {
+      background: url('../../images/gym2-bg.jpeg') center center no-repeat;
+      background-size: cover;
+      grid-area: offseason;
+    }
+
+    .inseason-box, .offseason-box {
+      border: 1px solid black;
+      padding: 2em 1em;
+      opacity: 1;
+
+      &:hover {
+        opacity: .5;
+        h3 {
+          opacity: 1;
+        }
+        a {
+          opacity: .4;
+        }
+      }
+
+      h3 {
+        font-size: 3em;
+        margin-bottom: 4em;
+        opacity: .1;
+        color: black;
+      }
+      a {
+        border: 2px solid $main-font-color;
+        padding: 1em 4em;
+        color: $main-font-color;
+        text-decoration: none;
+        background: #fff;
+        opacity: .1;
+        font-size: 1.2em;
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+    }
+
+  }
+
+
+
+}
+
+footer {
+  margin-top: 0;
+}
+
+/***** END OF styling for the info section of hock_train page *****/
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width: 950px) {
+  .hock_train .inner-wrapper .season-wrapper {
+    .description-box {
+      width: 90%;
+      line-height: 1.5;
+    }
+  }
+
+}
+
+@media (max-height: 850px) {
+  .hock_train .inner-wrapper .season-wrapper {
+    padding: 5em 2em;
+
+    .description-box {
+      width: 100%;
+    }
+
+    .inseason-box, .offseason-box {
+      h3 {
+        font-size: 2em;
+      }
+      a {
+        padding: 1em 2em;
+        font-size: 1em;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 550px) {
+  .hock_train .inner-wrapper .season-wrapper {
+    grid-template-areas:
+      'head'
+      'inseason'
+      'offseason';
+    grid-template-columns: 1fr;
+    padding: 3em 2em;
+
+    .description-box {
+      p {
+        font-size: 1.5em;
+      }
+    }
+
+  }
+
+
+}

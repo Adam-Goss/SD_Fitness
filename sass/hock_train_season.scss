@@ -1,0 +1,353 @@
+//import main styles
+@import 'main';
+
+
+
+
+
+/**************************************************************
+----- page specific styling for hock_train.inc.php module -----
+**************************************************************/
+
+
+/**** styling for the interactive options ****/
+$container-bg-color: #333;
+$left-bg-color: rgba(223, 39, 39, 0.3);
+$left-button-hover-color: rgba(161, 11, 11, 0.3);
+$middle-bg-color: rgba(23, 239, 39, 0.3);
+$middle-button-hover-color: rgba(161, 211, 11, 0.3);
+$right-bg-color: rgba(43, 43, 43, 0.8);
+$right-button-hover-color: rgba(92, 92, 92, 0.4);
+$hover-width: 60%;
+$other-width: 20%;
+$speed: 1000ms;
+
+.inner-wrapper {
+  width: 100%;
+}
+
+.options-wrapper {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background: $container-bg-color;
+
+
+  h3 {
+    font-size: 4rem;
+    color: $light-font;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+
+  .btn {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 2.5rem;
+    padding-top: 0.5rem;
+    width: 15rem;
+    text-align: center;
+    color: $light-font;
+    border: $light-font solid 0.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transform: translateX(-50%);
+  }
+
+  .split {
+    position: absolute;
+    width: 33.33%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .split.left {
+    left:0;
+    background: url('../../images/youth.jpeg') center center no-repeat;
+    background-size: cover;
+
+    &:before {
+      position:absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: $left-bg-color;
+    }
+
+    .btn:hover {
+      background-color: $left-button-hover-color;
+      border-color: $left-button-hover-color;
+    }
+  }
+
+  .split.middle {
+    left: 33.33%;
+    background: url('../../images/junior.jpg') center center no-repeat;
+    background-size: cover;
+
+    &:before {
+      position:absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: $middle-bg-color;
+    }
+
+
+    .btn:hover {
+      background-color: $middle-button-hover-color;
+      border-color: $middle-button-hover-color;
+    }
+  }
+
+
+  .split.right {
+    right:0;
+    background: url('../../images/pro.jpeg') center center no-repeat;
+    background-size: cover;
+
+    &:before {
+      position:absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: $right-bg-color;
+    }
+
+    .btn:hover {
+      background-color: $right-button-hover-color;
+      border-color: $right-button-hover-color;
+    }
+  }
+
+  .split.left, .split.right, .split.middle,
+  .split.right:before, .split.middle:before, .split.left:before {
+    transition: $speed all ease-in-out;
+  }
+
+
+}
+
+.hover-left .left {
+  width: $hover-width;
+}
+
+.hover-left .right {
+  width: $other-width;
+}
+
+.hover-left .right:before {
+  z-index: 2;
+}
+
+.hover-left .middle {
+  width: $other-width;
+}
+
+.hover-left .middle:before {
+  z-index: 2;
+}
+
+
+.hover-right .right {
+  width: $hover-width;
+}
+
+.hover-right .left {
+  width: $other-width;
+}
+
+.hover-right .left:before {
+  z-index: 2;
+}
+
+.hover-right .middle {
+  width: $other-width;
+}
+
+.hover-right .middle:before {
+  z-index: 2;
+}
+
+.hover-middle .middle {
+  width: $hover-width;
+}
+
+.hover-middle .left {
+  width: $other-width;
+}
+
+.hover-middle .left:before {
+  z-index: 2;
+}
+
+.hover-middle .right {
+  width: $other-width;
+}
+
+.hover-middle .middle:right {
+  z-index: 2;
+}
+
+/***** END OF styling for interactive options *****/
+
+
+
+/***** styling for the info section of hock_train page *****/
+.info-inseason, .info-offseason {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 6em;
+  font-size: 1.2em;
+
+
+
+
+  p {
+    padding-bottom: 2em;
+    width: 70%;
+    margin: 0 auto;
+    line-height: 3em;
+  }
+
+  ul {
+    width: 100%;
+    margin: 0 auto 6em auto;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 3em 4em;
+    background: gray;
+    color: white;
+    padding: 3em 4em;
+
+
+    li {
+      font-weight: bold;
+      list-style: none;
+      // font-size: 1.5em;
+      padding-left: 4em;
+      padding-bottom: 2em;
+      padding-top: 1em;
+      background: url('../../images/weightlifting-icon.png') top left no-repeat;
+    }
+
+
+  }
+
+
+
+}
+
+.training-quote {
+  margin-top: 4em;
+  width: 100%;
+  background: url('../../images/quote-bg.jpg') center center no-repeat;
+  background-size: cover;
+  height: 45vh;
+  text-align: center;
+  margin-bottom: 0;
+  opacity: 0.70;
+
+
+  p {
+    font-size: 4em;
+    color: #fff;
+    display: inline-block;
+    margin-top: 10%;
+
+  }
+}
+
+footer {
+  margin-top: 0;
+}
+
+/***** END OF styling for the info section of hock_train page *****/
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width: 800px) {
+  .options-wrapper {
+    h3 {
+      font-size: 2rem;
+    }
+    .btn {
+      width: 12rem;
+    }
+  }
+
+  .info-offseason, .info-inseason {
+    font-size: 1em;
+  }
+
+
+
+}
+
+@media (max-height: 700px) {
+  .options-wrapper {
+    .btn {
+      top: 70%;
+    }
+  }
+
+}
+
+@media (max-width: 500px) {
+  .options-wrapper {
+    position: relative;
+    width: 100%;
+    height: 500px;
+
+    .btn {
+      top: 55%;
+    }
+
+    .split {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 33.33%;
+
+    }
+    .split.middle {
+      left: 0;
+    }
+  }
+
+  .info-inseason, .info-offseason {
+    p {
+      width: 100%;
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+    ul {
+      grid-template-columns: 1fr;
+      grid-gap: 2em 2em;
+      padding: 2em;
+      li {
+        padding-left: 5em;
+      }
+    }
+  }
+  
+  .training-quote p {
+    font-size: 3em;
+  }
+
+}

@@ -1,0 +1,25 @@
+/********************************
+----- Site wide typography -----
+********************************/
+
+//general typography
+html {
+  font-family: $main-font;
+  color: $main-font-color;
+}
+
+body {
+  background: $main-bg;
+  line-height: 1.4;
+}
+
+.inner-wrapper {
+  h2 {
+    font-size: 3em;
+    color: orange;
+  }
+
+  background: #eeeeee;
+  color: #494539;
+  font-size: 1.1em;
+}

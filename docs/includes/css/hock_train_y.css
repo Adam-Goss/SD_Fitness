@@ -1,0 +1,1012 @@
+/* -------------------------
+***** SASS Variables *****
+------------------------- */
+/*  **************************************
+    reset browser styles
+*************************************** */
+/* make width values include padding and border */
+* {
+  box-sizing: border-box; }
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1.2; }
+
+ol {
+  padding-left: 1.4em;
+  list-style: decimal; }
+
+ul {
+  padding-left: 1.4em;
+  list-style: square; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+/* end reset browser styles */
+/********************************
+----- Site wide typography -----
+********************************/
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333; }
+
+body {
+  background: #ccc;
+  line-height: 1.4; }
+
+.inner-wrapper {
+  background: #eeeeee;
+  color: #494539;
+  font-size: 1.1em; }
+  .inner-wrapper h2 {
+    font-size: 3em;
+    color: orange; }
+
+/******************
+----- header -----
+******************/
+.outer-wrapper .top-nav {
+  width: 100%;
+  height: 5vh;
+  background: #333; }
+  .outer-wrapper .top-nav ul {
+    list-style: none;
+    text-decoration: none;
+    color: #ddd;
+    height: 100%; }
+  .outer-wrapper .top-nav li {
+    display: inline-block; }
+  .outer-wrapper .top-nav .social-links {
+    float: left; }
+    .outer-wrapper .top-nav .social-links li {
+      margin-top: .5em;
+      margin-left: 1em; }
+      .outer-wrapper .top-nav .social-links li i {
+        color: #ddd; }
+      .outer-wrapper .top-nav .social-links li:hover i {
+        color: #fff; }
+  .outer-wrapper .top-nav .other-links {
+    float: right; }
+    .outer-wrapper .top-nav .other-links li {
+      margin-top: .5em;
+      margin-left: 1em; }
+      .outer-wrapper .top-nav .other-links li:last-child {
+        margin-right: 2em; }
+    .outer-wrapper .top-nav .other-links a {
+      color: #fff;
+      text-decoration: none; }
+      .outer-wrapper .top-nav .other-links a:hover {
+        text-decoration: underline; }
+.outer-wrapper .logo {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #fff;
+  text-align: center; }
+  .outer-wrapper .logo img {
+    width: 50%;
+    height: 100%;
+    margin-top: 1rem;
+    padding-bottom: 2em; }
+.outer-wrapper header {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 20px; }
+  .outer-wrapper header .main-nav {
+    /* The container <div> - needed to position the dropdown content */
+    /* Dropdown Content (Hidden by Default) */ }
+    .outer-wrapper header .main-nav ul {
+      display: grid;
+      grid-gap: 20px;
+      padding: 0;
+      list-style: none;
+      grid-template-columns: repeat(5, 1fr);
+      justify-content: stretch; }
+    .outer-wrapper header .main-nav a {
+      background: #ddd;
+      display: block;
+      text-decoration: none;
+      padding: 0.8rem;
+      text-align: center;
+      color: #333;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+      height: 100%; }
+      .outer-wrapper header .main-nav a:hover {
+        background: #333;
+        color: #fff; }
+    .outer-wrapper header .main-nav .dropdown {
+      position: relative;
+      display: inline-block; }
+      .outer-wrapper header .main-nav .dropdown:hover .dropdown-content {
+        display: block; }
+    .outer-wrapper header .main-nav .dropdown-content {
+      /* padding-top: 5px; */
+      display: none;
+      position: absolute;
+      width: 100%;
+      z-index: 3; }
+      .outer-wrapper header .main-nav .dropdown-content a {
+        color: gray; }
+        .outer-wrapper header .main-nav .dropdown-content a:hover {
+          color: #fff; }
+
+/* media queries */
+@media (max-height: 800px) {
+  .outer-wrapper .top-nav {
+    height: 7vh; } }
+@media (max-height: 600px) {
+  .outer-wrapper .top-nav {
+    height: 9vh; } }
+@media (max-width: 950px) {
+  .outer-wrapper .logo img {
+    width: 90%; }
+  .outer-wrapper header .main-nav ul {
+    width: 100%; }
+  .outer-wrapper header .main-nav a {
+    font-size: 1em; } }
+@media (max-width: 700px) {
+  .outer-wrapper header .main-nav ul {
+    display: block; }
+  .outer-wrapper header .main-nav li {
+    width: 100%;
+    padding-bottom: 15px; }
+  .outer-wrapper header .main-nav .dropdown:hover .dropdown-content {
+    display: none; } }
+@media (max-width: 500px) {
+  .outer-wrapper .logo img {
+    height: 80%; }
+  .outer-wrapper .top-nav .other-links {
+    float: none; }
+  .outer-wrapper .top-nav .social-links {
+    display: none; } }
+/*****************
+----- footer -----
+******************/
+footer {
+  background-color: #333;
+  padding-bottom: 20px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  margin-top: 70px;
+  padding-top: 10px;
+  width: 100%; }
+  footer li a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 1.8em;
+    font-size: 1em; }
+  footer .footer-wrapper {
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: top;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; }
+  footer h4 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.5em; }
+  footer ul {
+    list-style: none; }
+  footer .company-info {
+    width: 20%; }
+    footer .company-info li a {
+      color: gray; }
+      footer .company-info li a:hover {
+        color: #fff; }
+  footer .social-links {
+    width: 30%;
+    text-align: center; }
+    footer .social-links li {
+      list-style: none;
+      display: inline-block;
+      margin: 0 1em;
+      opacity: 0.5; }
+      footer .social-links li:first-of-type {
+        margin-left: 0; }
+      footer .social-links li:hover {
+        opacity: 1; }
+    footer .social-links img {
+      margin-bottom: 20px; }
+  footer .contact {
+    width: 22%; }
+    footer .contact li, footer .contact a {
+      color: gray; }
+    footer .contact a:hover {
+      color: #fff; }
+    footer .contact li:last-of-type {
+      line-height: 1.5em;
+      margin-top: 1.4em; }
+  footer .associates {
+    width: 15%;
+    text-align: center; }
+    footer .associates img {
+      margin-top: 10px;
+      width: 50%; }
+    footer .associates h4 {
+      font-size: 1.2em;
+      font-style: italic; }
+  footer p {
+    color: #fff;
+    text-align: center;
+    margin-top: 30px; }
+    footer p span {
+      font-style: italic; }
+
+/* media queries */
+@media (max-width: 950px) {
+  footer {
+    height: 100%; }
+
+  footer .footer-wrapper .associates {
+    width: 10%; }
+
+  footer .footer-wrapper h4 {
+    font-size: 1rem; }
+
+  footer .footer-wrapper li, footer .footer-wrapper li a {
+    font-size: 0.9em; } }
+@media (max-width: 700px) {
+  footer .footer-wrapper h4 {
+    font-size: 1rem; }
+
+  footer .footer-wrapper li, footer .footer-wrapper li a {
+    font-size: 0.8em; }
+
+  footer .footer-wrapper .social-links {
+    width: 25%; }
+    footer .footer-wrapper .social-links li {
+      display: block; } }
+@media (max-width: 500px) {
+  footer .footer-wrapper {
+    flex-wrap: wrap;
+    flex-direction: column; }
+
+  footer .footer-wrapper .company-info {
+    width: 100%;
+    padding-bottom: 1em;
+    border-bottom: 1px solid gray; }
+    footer .footer-wrapper .company-info h4 {
+      font-size: 1em; }
+    footer .footer-wrapper .company-info li {
+      font-size: 1em; }
+  footer .footer-wrapper .social-links {
+    width: 100%;
+    padding-bottom: 1em;
+    margin-top: 1em;
+    border-bottom: 1px solid gray; }
+    footer .footer-wrapper .social-links img {
+      width: 80%; }
+    footer .footer-wrapper .social-links li {
+      display: inline-block;
+      font-size: 1em; }
+  footer .footer-wrapper .contact {
+    width: 100%;
+    padding-bottom: 1em;
+    border-bottom: 1px solid gray;
+    margin-top: 1em; }
+    footer .footer-wrapper .contact h4 {
+      font-size: 1em; }
+    footer .footer-wrapper .contact li, footer .footer-wrapper .contact a {
+      font-size: 1em; }
+  footer .footer-wrapper .associates {
+    width: 100%;
+    margin-top: 1em; }
+    footer .footer-wrapper .associates h4 {
+      font-size: 1em; } }
+/*****************************************
+----- form specific styling for site -----
+*******************************************/
+/***** home page login form *****/
+.main .login-box {
+  width: 100%;
+  height: 99%;
+  box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  border-radius: 5px;
+  background: #333;
+  padding: 5px;
+  text-align: center; }
+  .main .login-box h3 {
+    font-size: 3em;
+    color: orange;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  .main .login-box input {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 60px;
+    font-size: 1.2em;
+    background: #eee; }
+  .main .login-box button {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 20px;
+    background: transparent;
+    border: none; }
+    .main .login-box button i {
+      color: white; }
+    .main .login-box button:focus i, .main .login-box button:hover i {
+      color: orange; }
+  .main .login-box span {
+    width: 100%;
+    margin: 0 auto; }
+    .main .login-box span a {
+      text-decoration: none;
+      color: #fff; }
+      .main .login-box span a:hover {
+        text-decoration: underline; }
+
+/** END OF home page login form **/
+/***** contact page form *****/
+.contact .inner-wrapper {
+  width: 100%;
+  background-color: #ccc;
+  padding-top: 40px; }
+  .contact .inner-wrapper ul {
+    list-style: none;
+    padding: 0; }
+  .contact .inner-wrapper h2 {
+    margin-top: 1em;
+    text-align: center; }
+  .contact .inner-wrapper .form-wrapper {
+    box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
+    background-color: #c9e6ff;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 5em;
+    display: flex; }
+    .contact .inner-wrapper .form-wrapper .contact-info {
+      width: 35%; }
+      .contact .inner-wrapper .form-wrapper .contact-info img {
+        margin: 1em 0 1em 0;
+        width: 100%;
+        padding: 1em; }
+      .contact .inner-wrapper .form-wrapper .contact-info ul {
+        margin-left: 2em; }
+      .contact .inner-wrapper .form-wrapper .contact-info li {
+        padding-bottom: 1em;
+        text-align: left; }
+      .contact .inner-wrapper .form-wrapper .contact-info i {
+        padding-right: 1em; }
+      .contact .inner-wrapper .form-wrapper .contact-info li:nth-of-type(2) {
+        padding-left: 2em;
+        padding-top: 0; }
+      .contact .inner-wrapper .form-wrapper .contact-info li:first-of-type {
+        padding-bottom: 0; }
+      .contact .inner-wrapper .form-wrapper .contact-info p {
+        margin: 1em;
+        margin-bottom: 2em; }
+    .contact .inner-wrapper .form-wrapper .contact {
+      width: 65%;
+      background: #f9feff;
+      padding: 2em; }
+      .contact .inner-wrapper .form-wrapper .contact h3 {
+        font-weight: bold;
+        font-variant: small-caps;
+        font-size: 1.5em;
+        margin-bottom: 1em; }
+      .contact .inner-wrapper .form-wrapper .contact form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em; }
+        .contact .inner-wrapper .form-wrapper .contact form label {
+          display: block; }
+        .contact .inner-wrapper .form-wrapper .contact form p {
+          margin: 0; }
+        .contact .inner-wrapper .form-wrapper .contact form .full {
+          grid-column: 1 / 3; }
+        .contact .inner-wrapper .form-wrapper .contact form button, .contact .inner-wrapper .form-wrapper .contact form input, .contact .inner-wrapper .form-wrapper .contact form textarea {
+          width: 100%;
+          padding: 1em;
+          border: 1px solid #c9e6ff; }
+        .contact .inner-wrapper .form-wrapper .contact form button {
+          background: #c9e6ff;
+          border: 0;
+          text-transform: uppercase; }
+          .contact .inner-wrapper .form-wrapper .contact form button:hover, .contact .inner-wrapper .form-wrapper .contact form button:focus {
+            background: #9292bde7;
+            color: #fff;
+            outline: 0;
+            transition: background-color 2s ease-out; }
+.contact footer {
+  margin-top: 0; }
+
+/* media queries */
+/* LARGE SCREENS */
+@media (max-width: 750px) {
+  .contact .inner-wrapper h2 {
+    font-size: 2.5em; }
+  .contact .inner-wrapper .form-wrapper {
+    font-size: .8em;
+    min-width: 90%; }
+    .contact .inner-wrapper .form-wrapper .contact form {
+      display: block;
+      width: 100%; }
+      .contact .inner-wrapper .form-wrapper .contact form p {
+        margin-top: 1em; }
+  .contact .inner-wrapper .contact-info {
+    font-size: .8em; } }
+@media (max-width: 500px) {
+  .contact .inner-wrapper .form-wrapper {
+    display: block; }
+    .contact .inner-wrapper .form-wrapper .contact-info {
+      width: 100%;
+      padding-bottom: 2em; }
+    .contact .inner-wrapper .form-wrapper .contact {
+      width: 100%; } }
+/** END OF contact page form **/
+/***** Login form page form *****/
+.login footer {
+  margin-top: 0; }
+.login .inner-wrapper {
+  background: #ccc;
+  margin: 0;
+  padding-top: 3em;
+  height: 80vh; }
+  .login .inner-wrapper #form-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center; }
+    .login .inner-wrapper #form-container h1.logo {
+      color: orange;
+      background: #ccc;
+      font-size: 4rem;
+      margin-bottom: 1em; }
+    .login .inner-wrapper #form-container h1.end {
+      position: relative;
+      color: #fff;
+      font-size: 2em;
+      margin-top: -2em;
+      opacity: 0;
+      transition: 0.8s ease-in-out;
+      text-align: center; }
+  .login .inner-wrapper .help-block {
+    margin-top: 1.5em; }
+    .login .inner-wrapper .help-block a {
+      color: #333; }
+      .login .inner-wrapper .help-block a:hover {
+        color: orange; }
+  .login .inner-wrapper #form-box {
+    background: #fff;
+    position: relative;
+    width: 600px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.1), 0 6px 10px 5px rgba(0, 0, 0, 0.1), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s ease-in-out; }
+  .login .inner-wrapper #form-box.close {
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: 0.8s ease-in-out;
+    box-shadow: 0 16px 24px 2px transparent; }
+  .login .inner-wrapper #next-btn {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    font-size: 40px;
+    color: orange;
+    float: right;
+    cursor: pointer;
+    z-index: 2; }
+    .login .inner-wrapper #next-btn:hover {
+      color: #ffdb99; }
+  .login .inner-wrapper #prev-btn {
+    position: absolute;
+    left: 30px;
+    top: 12px;
+    font-size: 18px;
+    color: #9e9e9e;
+    float: right;
+    cursor: pointer;
+    z-index: 2; }
+    .login .inner-wrapper #prev-btn:hover {
+      color: #ffdb99; }
+  .login .inner-wrapper #input-group {
+    position: relative;
+    padding: 30px 20px 20px 20px;
+    margin: 10px 60px 10px 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; }
+    .login .inner-wrapper #input-group input {
+      position: relative;
+      width: 100%;
+      border: none;
+      font-size: 20px;
+      font-weight: bold;
+      outline: 0;
+      background: transparent;
+      box-shadow: none; }
+    .login .inner-wrapper #input-group #input-label {
+      position: absolute;
+      pointer-events: none;
+      top: 32px;
+      left: 20px;
+      font-weight: bold;
+      transition: 0.2s ease-in-out; }
+    .login .inner-wrapper #input-group input:valid + #input-label {
+      top: 6px;
+      left: 42px;
+      margin-left: 0 !important;
+      font-size: 11px;
+      font-weight: normal;
+      color: #9e9e9e; }
+  .login .inner-wrapper #input-progress {
+    border-bottom: 3px solid orange;
+    width: 0;
+    transition: width 0.6s ease-in-out; }
+  .login .inner-wrapper #progress-bar {
+    position: absolute;
+    background: #ffdb99;
+    height: 10px;
+    width: 0;
+    transition: width 0.5s ease-in-out; }
+  .login .inner-wrapper .close #next-btn, .login .inner-wrapper .close #prev-btn {
+    color: #ccc; }
+  .login .inner-wrapper .error #input-progress {
+    border-color: #ff2d26; }
+  .login .inner-wrapper .error #next-btn {
+    color: #ff2d26; }
+
+/** END OF login form page form **/
+/***** Sign up page form *****/
+.sign_up footer {
+  margin-top: 0; }
+.sign_up .inner-wrapper {
+  background: #ccc;
+  margin: 0;
+  padding-top: 3em;
+  height: 80vh; }
+  .sign_up .inner-wrapper #form-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center; }
+    .sign_up .inner-wrapper #form-container h1.logo {
+      color: orange;
+      background: #ccc;
+      font-size: 4rem;
+      margin-bottom: 1em; }
+    .sign_up .inner-wrapper #form-container h1.end {
+      position: relative;
+      color: #fff;
+      font-size: 2em;
+      margin-top: -2em;
+      opacity: 0;
+      transition: 0.8s ease-in-out;
+      text-align: center;
+      padding: 0 4em; }
+      .sign_up .inner-wrapper #form-container h1.end a {
+        text-decoration: none;
+        color: #fff; }
+      .sign_up .inner-wrapper #form-container h1.end a:hover {
+        text-decoration: underline; }
+  .sign_up .inner-wrapper #form-box {
+    background: #fff;
+    position: relative;
+    width: 600px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.1), 0 6px 10px 5px rgba(0, 0, 0, 0.1), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s ease-in-out; }
+  .sign_up .inner-wrapper #form-box.close {
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: 0.8s ease-in-out;
+    box-shadow: 0 16px 24px 2px transparent; }
+  .sign_up .inner-wrapper #next-btn {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    font-size: 40px;
+    color: orange;
+    float: right;
+    cursor: pointer;
+    z-index: 2; }
+    .sign_up .inner-wrapper #next-btn:hover {
+      color: #ffdb99; }
+  .sign_up .inner-wrapper #prev-btn {
+    position: absolute;
+    left: 30px;
+    top: 12px;
+    font-size: 18px;
+    color: #9e9e9e;
+    float: right;
+    cursor: pointer;
+    z-index: 2; }
+    .sign_up .inner-wrapper #prev-btn:hover {
+      color: #ffdb99; }
+  .sign_up .inner-wrapper #input-group {
+    position: relative;
+    padding: 30px 20px 20px 20px;
+    margin: 10px 60px 10px 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; }
+    .sign_up .inner-wrapper #input-group input {
+      position: relative;
+      width: 100%;
+      border: none;
+      font-size: 20px;
+      font-weight: bold;
+      outline: 0;
+      background: transparent;
+      box-shadow: none; }
+    .sign_up .inner-wrapper #input-group #input-label {
+      position: absolute;
+      pointer-events: none;
+      top: 32px;
+      left: 20px;
+      font-weight: bold;
+      transition: 0.2s ease-in-out; }
+    .sign_up .inner-wrapper #input-group input:valid + #input-label {
+      top: 6px;
+      left: 42px;
+      margin-left: 0 !important;
+      font-size: 11px;
+      font-weight: normal;
+      color: #9e9e9e; }
+  .sign_up .inner-wrapper #input-progress {
+    border-bottom: 3px solid orange;
+    width: 0;
+    transition: width 0.6s ease-in-out; }
+  .sign_up .inner-wrapper #progress-bar {
+    position: absolute;
+    background: #ffdb99;
+    height: 10px;
+    width: 0;
+    transition: width 0.5s ease-in-out; }
+  .sign_up .inner-wrapper .close #next-btn, .sign_up .inner-wrapper .close #prev-btn {
+    color: #fff; }
+  .sign_up .inner-wrapper .error #input-progress {
+    border-color: #ff2d26; }
+  .sign_up .inner-wrapper .error #next-btn {
+    color: #ff2d26; }
+
+@media (max-width: 650px) {
+  .sign_up .inner-wrapper #form-container #form-box {
+    width: 80%;
+    margin: 0 auto; } }
+@media (max-width: 400px) {
+  .sign_up .inner-wrapper #form-container #form-box {
+    font-size: .8em; } }
+/** END OF sign up page form **/
+/***** change password page form ******/
+.change_p footer, .reset_p footer {
+  margin-top: 0; }
+.change_p h2.complete, .reset_p h2.complete {
+  text-align: center;
+  font-size: 2.5em;
+  padding-top: 2em; }
+.change_p .inner-wrapper, .reset_p .inner-wrapper {
+  min-height: 80vh;
+  text-align: center; }
+  .change_p .inner-wrapper h2, .reset_p .inner-wrapper h2 {
+    padding-top: 1em;
+    padding-bottom: 0.5em; }
+  .change_p .inner-wrapper .error-wrapper, .reset_p .inner-wrapper .error-wrapper {
+    padding-top: 2em; }
+    .change_p .inner-wrapper .error-wrapper .pass-error, .reset_p .inner-wrapper .error-wrapper .pass-error {
+      color: red; }
+  .change_p .inner-wrapper form, .reset_p .inner-wrapper form {
+    margin: 1em auto;
+    text-align: center;
+    max-width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: top;
+    align-items: center; }
+    .change_p .inner-wrapper form .form-group, .reset_p .inner-wrapper form .form-group {
+      min-width: 100%;
+      margin: 0 auto;
+      border: 1px solid black;
+      padding: 1em 0;
+      text-align: center;
+      font-size: 1.2em;
+      background: #fff; }
+      .change_p .inner-wrapper form .form-group label, .reset_p .inner-wrapper form .form-group label {
+        min-width: 30%;
+        display: inline-block;
+        padding-right: 1em; }
+      .change_p .inner-wrapper form .form-group input, .reset_p .inner-wrapper form .form-group input {
+        min-width: 40%;
+        display: inline-block; }
+      .change_p .inner-wrapper form .form-group span.help-block, .reset_p .inner-wrapper form .form-group span.help-block {
+        display: inline-block;
+        min-width: 100%;
+        margin: 0 auto;
+        margin-top: 1em;
+        font-style: italic;
+        font-size: .8em; }
+    .change_p .inner-wrapper form input[type=submit], .reset_p .inner-wrapper form input[type=submit] {
+      min-width: 50%;
+      display: inline-block;
+      margin: 1em 0;
+      background: orange;
+      font-weight: bold;
+      border: none;
+      padding: 1em 0; }
+      .change_p .inner-wrapper form input[type=submit]:hover, .reset_p .inner-wrapper form input[type=submit]:hover {
+        background: #333;
+        color: #fff;
+        cursor: pointer; }
+
+/*** END OF change password form ***/
+/***** forgot password form *****/
+.forgot_p footer {
+  margin-top: 0; }
+.forgot_p h2.complete {
+  text-align: center;
+  font-size: 2.5em;
+  padding-top: 2em; }
+.forgot_p .inner-wrapper {
+  min-height: 80vh;
+  text-align: center; }
+  .forgot_p .inner-wrapper h2 {
+    padding-top: 1em;
+    padding-bottom: 0.5em; }
+  .forgot_p .inner-wrapper .error-wrapper {
+    padding-top: 2em; }
+    .forgot_p .inner-wrapper .error-wrapper .pass-error {
+      color: red; }
+  .forgot_p .inner-wrapper form {
+    margin: 1em auto;
+    text-align: center;
+    max-width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: top;
+    align-items: center; }
+    .forgot_p .inner-wrapper form fieldset {
+      width: 100%; }
+    .forgot_p .inner-wrapper form .form-group {
+      width: 100%;
+      margin: 0 auto;
+      padding: 1em 0;
+      text-align: center;
+      font-size: 1.2em;
+      background: #fff; }
+      .forgot_p .inner-wrapper form .form-group label {
+        min-width: 50%;
+        display: inline-block;
+        padding-right: 1em; }
+      .forgot_p .inner-wrapper form .form-group input {
+        min-width: 50%;
+        display: inline-block; }
+      .forgot_p .inner-wrapper form .form-group span.help-block {
+        display: inline-block;
+        min-width: 100%;
+        margin: 0 auto;
+        margin-top: 1em;
+        font-style: italic;
+        font-size: .8em; }
+    .forgot_p .inner-wrapper form input[type=submit] {
+      min-width: 50%;
+      display: inline-block;
+      margin: 1em 0;
+      background: orange;
+      font-weight: bold;
+      border: none;
+      padding: 1em 0; }
+      .forgot_p .inner-wrapper form input[type=submit]:hover {
+        background: #333;
+        color: #fff;
+        cursor: pointer; }
+
+/*** END OF forgot password form ***/
+/***** reset password form *****/
+.reset_p footer {
+  margin-top: 0; }
+.reset_p h2.complete {
+  text-align: center;
+  font-size: 2.5em;
+  padding-top: 2em; }
+.reset_p .inner-wrapper {
+  min-height: 80vh;
+  text-align: center; }
+  .reset_p .inner-wrapper h2 {
+    padding-top: 1em;
+    padding-bottom: 0.5em; }
+  .reset_p .inner-wrapper .error-wrapper {
+    padding-top: 2em; }
+    .reset_p .inner-wrapper .error-wrapper .pass-error {
+      color: red; }
+  .reset_p .inner-wrapper .reset-error-wrapper {
+    padding-top: 3em;
+    color: red;
+    min-height: 60vh; }
+    .reset_p .inner-wrapper .reset-error-wrapper a {
+      color: #000;
+      text-decoration: none; }
+      .reset_p .inner-wrapper .reset-error-wrapper a:hover {
+        text-decoration: underline; }
+  .reset_p .inner-wrapper .success-wrapper {
+    padding-top: 3em;
+    min-height: 60vh; }
+  .reset_p .inner-wrapper form {
+    margin: 1em auto;
+    text-align: center;
+    max-width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: top;
+    align-items: center; }
+    .reset_p .inner-wrapper form fieldset {
+      width: 100%; }
+    .reset_p .inner-wrapper form .form-group {
+      width: 100%;
+      margin: 0 auto;
+      padding: 1em 0;
+      text-align: center;
+      font-size: 1.2em;
+      background: #fff; }
+      .reset_p .inner-wrapper form .form-group label {
+        min-width: 50%;
+        display: inline-block;
+        padding-right: 1em; }
+      .reset_p .inner-wrapper form .form-group input {
+        min-width: 50%;
+        display: inline-block; }
+      .reset_p .inner-wrapper form .form-group span.help-block {
+        display: inline-block;
+        min-width: 100%;
+        margin: 0 auto;
+        margin-top: 1em;
+        font-style: italic;
+        font-size: .8em; }
+    .reset_p .inner-wrapper form input[type=submit] {
+      min-width: 50%;
+      display: inline-block;
+      margin: 1em 0;
+      background: orange;
+      font-weight: bold;
+      border: none;
+      padding: 1em 0; }
+      .reset_p .inner-wrapper form input[type=submit]:hover {
+        background: #333;
+        color: #fff;
+        cursor: pointer; }
+
+/****************************************
+----- general layout for programs -------
+*****************************************/
+.inner-wrapper .programs-wrapper {
+  width: 70%;
+  margin: 0 auto;
+  padding: 4em 0; }
+  .inner-wrapper .programs-wrapper .program {
+    background: #eee;
+    margin-bottom: 3em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1em;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    padding: 0; }
+    .inner-wrapper .programs-wrapper .program .program-img {
+      border-right: 1px solid black; }
+      .inner-wrapper .programs-wrapper .program .program-img img {
+        width: 100%;
+        height: 100%; }
+    .inner-wrapper .programs-wrapper .program .program-content {
+      padding: 1em;
+      text-align: center; }
+      .inner-wrapper .programs-wrapper .program .program-content h3 {
+        font-size: 3em;
+        color: orange;
+        margin: .5em 0;
+        line-height: 1.2em; }
+      .inner-wrapper .programs-wrapper .program .program-content p {
+        line-height: 2em;
+        padding: 0 1em; }
+      .inner-wrapper .programs-wrapper .program .program-content a {
+        margin-top: 2em;
+        margin-bottom: 1em;
+        display: inline-block;
+        box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+        padding: 1em 4em;
+        border-radius: 30px;
+        color: #333;
+        background: #fff;
+        text-decoration: none;
+        font-variant: small-caps; }
+        .inner-wrapper .programs-wrapper .program .program-content a:hover {
+          color: #fff;
+          background: #333; }
+
+/* media queries */
+@media (max-width: 1000px) {
+  .inner-wrapper .programs-wrapper {
+    width: 100%;
+    padding: 4em 2em; } }
+@media (max-width: 800px) {
+  .inner-wrapper .programs-wrapper .program {
+    grid-template-columns: 1fr; }
+    .inner-wrapper .programs-wrapper .program .program-img {
+      border-right: none; } }
+@media (max-width: 500px) {
+  .inner-wrapper .showcase-img h2 {
+    font-size: 3em;
+    margin-top: 40%; }
+  .inner-wrapper .programs-wrapper .program .program-content h3 {
+    font-size: 2.5em; }
+  .inner-wrapper .programs-wrapper .program .program-img {
+    border-right: none; } }
+/*************************************
+ ----- page specific navigation -----
+ ************************************* */
+.programs .programsLink,
+.programs_male .programs_maleLink,
+.programs_fem .programs_femLink,
+.priv_coach .priv_coachLink,
+.hock_train .hock_trainLink,
+.hock_train_y .hock_train_yLink,
+.hock_train_j .hock_train_jLink,
+.hock_train_p .hock_train_pLink,
+.blog .blogLink,
+.about .aboutLink {
+  background: #333 !important;
+  color: #fff !important; }
+
+.about .aboutBottomLink,
+.contact .contactLink,
+.t_and_c .t_and_cLink {
+  border-left: 1px solid #fff;
+  padding-left: 5px;
+  color: #fff; }
+
+/**************************************************************
+----- page specific styling for hock_train_y.inc.php module -----
+**************************************************************/
+.hock_train_y .inner-wrapper {
+  margin: 0 auto;
+  background: #ccc; }
+  .hock_train_y .inner-wrapper .showcase-img {
+    width: 100%;
+    margin: 0 auto;
+    background: url("../../images/youth.jpeg") no-repeat top center;
+    background-size: cover;
+    height: 75vh;
+    text-align: center;
+    margin-bottom: 0;
+    opacity: 0.70; }
+    .hock_train_y .inner-wrapper .showcase-img h2 {
+      font-size: 4em;
+      color: blue;
+      display: inline-block;
+      margin-top: 15%; }
+
+footer {
+  margin-top: 0; }
+
+/***** END OF styling for the hockey training youth programs page *****/
+
+/*# sourceMappingURL=hock_train_y.css.map */

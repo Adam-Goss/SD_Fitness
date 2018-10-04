@@ -1,0 +1,255 @@
+//import main styles
+@import 'main';
+
+
+
+
+
+/**************************************************************
+----- page specific styling for about.inc.php module -----
+**************************************************************/
+
+
+.about .inner-wrapper {
+  width: 100%;
+
+  .aboutUsWrapper {
+
+    .bioTitle {
+      width: 100%;
+      margin: 0 auto;
+      background: url('../../images/seanBio.jpg') no-repeat top center;
+      background-size: cover;
+      height: 70vh;
+      text-align: center;
+
+      h2 {
+        font-size: 4em;
+        color: orange;
+        display: inline-block;
+        margin-top: 15%;
+      }
+
+      p {
+        color: $dark-font;
+        font-size: 3em;
+      }
+
+    }
+
+    .bioContent {
+      padding: 4em 0;
+      width: 70%;
+      margin: 0 auto;
+      font-size: 1.2em;
+      line-height: 1.5em;
+
+      p {
+        margin: 1.5em 0;
+      }
+
+
+    }
+
+    .bioVideo {
+      width: 100%;
+      box-shadow: $shadow;
+      background: $nav-link-color;
+      padding: 2rem 1rem;
+      text-align: center;
+
+      h3 {
+        text-align: center;
+        font-size: 4em;
+        color: orange;
+        margin-top: 1em;
+        margin-bottom: .5em;
+      }
+      video {
+        width: 70%;
+        border-radius: 5px;
+      }
+
+    }
+
+    .bioTestimonialVideos {
+      width: 70%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap:  4em 0;
+      justify-items: stretch;
+      // align-items: top;
+      padding-bottom: 4em;
+
+
+      .testimonial-box {
+        border: 1px solid $nav-link-color;
+        box-shadow: $shadow;
+        border-radius: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap:  0 2em;
+        justify-items: stretch;
+        align-items: center;
+
+
+        .testimonialContent {
+          text-align: center;
+          font-size: 1.5em;
+          line-height: 2em;
+        }
+
+        .testimonial-video video {
+          width: 100%;
+          min-height: 100%;
+          margin-bottom: -.5em;
+        }
+
+        .testimonial-video video.right-vid {
+          border-top-right-radius:  30px;
+          border-bottom-right-radius:  30px;
+        }
+        .testimonial-video video.left-vid {
+          border-top-left-radius: 30px;
+          border-bottom-left-radius: 30px;
+        }
+
+
+
+      }
+
+    }
+
+    h2.testimonialsTitle {
+      width: 100%;
+      text-align: center;
+      margin-top: 2em;
+      margin-bottom: 1em;
+    }
+
+
+  .training-quote {
+    margin-top: 4em;
+    width: 100%;
+    background: url('../../images/quote-bg.jpg') center center no-repeat;
+    background-size: cover;
+    height: 45vh;
+    text-align: center;
+    margin-bottom: 0;
+    opacity: 0.70;
+
+
+    p {
+      font-size: 4em;
+      color: #fff;
+      display: inline-block;
+      margin-top: 10%;
+
+    }
+
+  }
+}
+
+
+
+
+}
+
+.about footer {
+  margin-top: 0;
+}
+
+/***** END OF styling for the info section of about page *****/
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width: 800px) {
+  .about .inner-wrapper .aboutUsWrapper {
+    .bioTitle {
+      h2 {
+        font-size: 3em;
+        margin-top: 20%;
+      }
+      p {
+        font-size: 2em;
+      }
+    }
+
+    .bioContent {
+      font-size: 1em;
+    }
+
+    .bioVideo {
+      padding: 1rem .5rem;
+
+      h3 {
+        font-size: 3em;
+        margin-top: .5em;
+        margin-bottom: .25em;
+      }
+    }
+
+    .bioTestimonialVideos {
+
+      .testimonial-box {
+        .testimonialContent {
+          font-size: 1em;
+        }
+      }
+    }
+
+    .training-quote p {
+      margin-top: 20%;
+      font-size: 3em;
+    }
+
+
+
+  }
+
+}
+
+@media (max-width: 600px) {
+  .about .inner-wrapper .aboutUsWrapper {
+
+    .bioTestimonialVideos .testimonial-box {
+      grid-template-columns: 1fr;
+      grid-gap: 2em 0;
+
+      .testimonial-video video.left-vid, .testimonial-video video.right-vid {
+        border-radius: 0;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+      }
+
+      .testimonialContent{
+        order: 1;
+        padding-bottom: 1em;
+      }
+
+    }
+
+    h2.testimonialsTitle {
+      font-size: 2.5em;
+    }
+
+  }
+
+}
+
+@media (max-width: 500px) {
+  .about .inner-wrapper .aboutUsWrapper {
+
+
+
+  }
+
+}
