@@ -101,7 +101,7 @@ if(isset($_POST['submitted'])) {
       $user_id = $_SESSION['SD_Fitness_Sess']['user_id'];
 
       //check if that user id exists in the database
-      $q = "SELECT id FROM users WHERE id = $user_id";
+      $q = "SELECT id, first_name, last_name, email FROM users WHERE id = $user_id";
       $r = mysqli_query($dbc, $q);
 
       if (mysqli_num_rows($r) !== 1) { // Problem!
@@ -110,6 +110,14 @@ if(isset($_POST['submitted'])) {
         echo '</div>';
   		  include('./includes/php/footer.inc.php');
   		  exit();
+      } else {
+        //fetch the users fist name, surname and email address
+        $row = mysqli_fetch_array($r, MYSQLI_ASSOC);
+        $first_name = $row['first_name'];
+        $last_name= $row['last_name'];
+        $email = $row['email'];
+        $cid = $row['id'];
+
       }
 
 
@@ -154,9 +162,48 @@ if(isset($_POST['submitted'])) {
 
 
         echo "<div class=\"payment_options\">
-                <h3>Buy Now:</h3>
-                <a href=\"#\">STRIPE PAYMENT</a>
-                <a href=\"#\">PAYPAL PAYMENT</a>
+                <div class=\"stripe_payment\">
+                  <h4>Please Enter Your Billing Information Below:</h4>
+                  <form action=\"includes/php/charge.php\" method=\"post\" id=\"payment-form\">
+                    <div class=\"form-row\">
+                      <label for=\"first_name\">First Name: </label>
+                      <input type=\"text\" name=\"first_name\" class=\"StripeElement StripeElement--empty\" value=\"$first_name\">
+                    </div>
+                    <div class=\"form-row\">
+                      <label for=\"last_name\">Last Name: </label>
+                      <input type=\"text\" name=\"last_name\" class=\"StripeElement StripeElement--empty\" value=\"$last_name\">
+                    </div>
+                    <div class=\"form-row\">
+                      <label for=\"email\">Email: </label>
+                      <input type=\"email\" name=\"email\" class=\"form-control mb-3 StripeElement StripeElement--empty\" value=\"$email\">
+                    </div>
+
+                    <div id=\"card-element\" class=\"n\">
+                      <!-- A Stripe Element will be inserted here. -->
+                    </div>
+
+                    <!-- Used to display form errors. -->
+                    <div id=\"card-errors\" role=\"alert\"></div>
+                  <button>Submit Payment</button>
+
+                  <input type=\"hidden\" name=\"submitted\" value=\"TRUE\">
+                  <input type=\"hidden\" name=\"pid\" value=\"{$row['id']}\">
+                  <input type=\"hidden\" name=\"cid\" value=\"{$cid}\">
+
+
+                  </form>
+                  <div>By clicking this button, your order will be completed and your credit card will be charged.</div>
+                </div>
+
+                <div class=\"paypal_payment\">
+                  <h4>Or Purcahse with PayPal</h4>
+                  <form action=\"https://www.sandbox.paypal.com/cgi-bin/webscr\" method=\"post\" target=\"_top\">
+                    <input type=\"hidden\" name=\"cmd\" value=\"_s-xclick\">
+                    <input type=\"hidden\" name=\"hosted_button_id\" value=\"BYWFCJAJR9B6J\">
+                    <input type=\"image\" src=\"https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif\" border=\"0\" name=\"submit\" alt=\"PayPal - The safer, easier way to pay online!\">
+                    <img alt=\"\" border=\"0\" src=\"https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif\" width=\"1\" height=\"1\">
+                  </form>
+                </div>
               </div>
               <a href=\"index.php?p=view_prod&pid={$row['id']}\">
               <div class=\"edit_order\">

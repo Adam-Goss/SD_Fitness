@@ -1043,7 +1043,39 @@ footer {
       grid-area: buy;
       box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
       background: #fff;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
       padding: 2em 1em; }
+      .checkout .inner-wrapper .buy_summary .payment_options h4 {
+        margin-bottom: 1em;
+        font-size: 1.5em; }
+      .checkout .inner-wrapper .buy_summary .payment_options .stripe_payment .StripeElement {
+        background-color: white;
+        height: 40px;
+        padding: 10px 12px;
+        border-radius: 4px;
+        border: 1px solid transparent;
+        box-shadow: 0 1px 3px 0 #e6ebf1;
+        transition: box-shadow 150ms ease; }
+      .checkout .inner-wrapper .buy_summary .payment_options .stripe_payment .StripeElement--focus {
+        box-shadow: 0 1px 3px 0 #cfd7df; }
+      .checkout .inner-wrapper .buy_summary .payment_options .stripe_payment .StripeElement--invalid {
+        border-color: #fa755a; }
+      .checkout .inner-wrapper .buy_summary .payment_options .stripe_payment .StripeElement--webkit-autofill {
+        background-color: #fefde5 !important; }
+      .checkout .inner-wrapper .buy_summary .payment_options .stripe_payment .form-row {
+        display: block;
+        width: 100%;
+        text-align: left;
+        margin-left: 1em; }
+      .checkout .inner-wrapper .buy_summary .payment_options .stripe_payment form button {
+        padding: .5em 2em;
+        border-radius: 15px;
+        font-size: 1.2em;
+        border: none;
+        margin: 1em auto; }
+        .checkout .inner-wrapper .buy_summary .payment_options .stripe_payment form button:hover {
+          cursor: pointer; }
   .checkout .inner-wrapper .terms {
     margin: 4em auto 0 auto;
     padding-bottom: 4em;

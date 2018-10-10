@@ -35,15 +35,17 @@ if ($local) {
     $debug = TRUE;
 
     // Define the constants:
-    define('BASE_URI', '/var/www/html/pro_dev/SD_Fitness--sean/');
-    define('BASE_URL', '127.0.0.1:8080/pro_dev/SD_Fitness--sean/');
+    define('BASE_URI', '/var/www/html/pro_dev/SD_Fitness--sean/docs/');
+    define('BASE_URL', '127.0.0.1:8080/pro_dev/SD_Fitness--sean/docs/');
     define('MYSQL', BASE_URI . 'includes/php/mysql.inc.php');
+    define('STRIPE_TEST_API_KEY', 'sk_test_5HUh09ZK7QHVG5FfRcCcu2BG');
 
 } else {
 
     define('BASE_URI', '/path/to/live/html/folder/');
     define('BASE_URL', 'http://www.example.com/');
     define('DB', '/path/to/live/mysql.inc.php');
+    define('STRIPE_LIVE_API_KEY', '...');
 
 }
 

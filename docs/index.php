@@ -161,6 +161,9 @@ switch ($p) {
     $page_title = 'Checkout';
     $page_class = 'checkout';
     $page_css = 'includes/css/checkout.css';
+    $script = 'https://code.jquery.com/jquery-3.3.1.min.js';
+    $script2 = 'https://js.stripe.com/v3/';
+    $script3 = 'includes/js/charge.js';
     break;
 
 

@@ -38,7 +38,13 @@
 <!-- scripts to be included -->
 <?php
 if (isset($script)) {
-  echo "<script src=\"$script\"></script>";
+  echo "<script src=\"$script\"></script>\n";
+  if (isset($script2)) {
+    echo "<script src=\"$script2\"></script>\n";
+    if (isset($script3)) {
+      echo "<script src=\"$script3\"></script>\n";
+    }
+  }
 }
 ?>
 

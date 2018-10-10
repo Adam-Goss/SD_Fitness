@@ -94,17 +94,79 @@
       grid-area: buy;
       box-shadow: $shadow;
       background: #fff;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
       padding: 2em 1em;
+
+      h4 {
+        margin-bottom: 1em;
+        font-size: 1.5em;
+      }
+
+      .stripe_payment {
+        //The CSS shown here will not be introduced in the Quickstart guide, but shows
+        //how you can use CSS to style your Element's container.
+        .StripeElement {
+          background-color: white;
+          height: 40px;
+          padding: 10px 12px;
+          border-radius: 4px;
+          border: 1px solid transparent;
+          box-shadow: 0 1px 3px 0 #e6ebf1;
+          transition: box-shadow 150ms ease;
+        }
+
+        .StripeElement--focus {
+          box-shadow: 0 1px 3px 0 #cfd7df;
+        }
+
+        .StripeElement--invalid {
+          border-color: #fa755a;
+        }
+
+        .StripeElement--webkit-autofill {
+          background-color: #fefde5 !important;
+        }
+
+        .form-row {
+          display: block;
+          width: 100%;
+          text-align: left;
+          margin-left: 1em;
+        }
+
+        form button {
+          padding: .5em 2em;
+          border-radius: 15px;
+          font-size: 1.2em;
+          border: none;
+          margin: 1em auto;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+
+
+
+      }
+
+      .paypal_payment {
+
+      }
+
     }
 
   }
-
-   .terms {
+  
+ .terms {
     margin: 4em auto 0 auto;
     padding-bottom: 4em;
     text-align: center;
     width: 100%;
   }
+
 
 }
 
