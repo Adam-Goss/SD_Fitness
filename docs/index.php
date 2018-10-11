@@ -165,6 +165,18 @@ switch ($p) {
     $script2 = 'https://js.stripe.com/v3/';
     $script3 = 'includes/js/charge.js';
     break;
+  case 'success_transaction':
+    $page = 'success.inc.php';
+    $page_title = 'Successful Purchase';
+    $page_class = 'success';
+    $page_css = 'includes/css/success-fail.css';
+    break;
+  case 'failed_transacation':
+    $page = 'fail.inc.php';
+    $page_title = 'Unsuccessful Purchase';
+    $page_class = 'fail';
+    $page_css = 'includes/css/success-fail.css';
+    break;
 
 
   // Default is to include the main page.

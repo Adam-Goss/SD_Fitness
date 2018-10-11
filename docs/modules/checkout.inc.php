@@ -189,6 +189,7 @@ if(isset($_POST['submitted'])) {
                   <input type=\"hidden\" name=\"submitted\" value=\"TRUE\">
                   <input type=\"hidden\" name=\"pid\" value=\"{$row['id']}\">
                   <input type=\"hidden\" name=\"cid\" value=\"{$cid}\">
+                  <input type=\"hidden\" name=\"n\" value=\"{$nutrition}\">
 
 
                   </form>
