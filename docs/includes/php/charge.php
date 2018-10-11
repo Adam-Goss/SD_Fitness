@@ -68,18 +68,21 @@ if( isset($_POST['submitted'])
     "description" => $prodRow['title'] .", Vol: ". $prodRow['volume'] .", Season: ". $prodRow['season'],
     "customer" => $customer->id
   ));
+
+  $charge_amount = $charge->amount / 100;
+
   //insert charge into transaction table (using prepared statement)
   $q = "INSERT INTO transactions (user_id, product_id, stripe_customer_id, stripe_transaction_id, payment_status, currency, payment_amount)
   VALUES (?, ?, ?, ?, ?, ?, ?)";
   $stmt = mysqli_prepare($dbc, $q);
-  mysqli_stmt_bind_param($stmt, 'iissssd', $userRow['id'], $prodRow['id'], $customer->id, $charge->id, $charge->status, $charge->currency, $charge->amount);
+  mysqli_stmt_bind_param($stmt, 'iissssd', $userRow['id'], $prodRow['id'], $customer->id, $charge->id, $charge->status, $charge->currency, $charge_amount);
   mysqli_stmt_execute($stmt);
   // mysqli_stmt_execute($stmt);
   if (mysqli_stmt_affected_rows($stmt) !== 1) { //IF PROBLEM THEN REDIRECT
     //redirect user to fail page
-    // $url = '../../' . 'index.php?p=failed_transacation';
-    // header("Location: $url");
-    echo "error first query";
+    $url = '../../' . 'index.php?p=failed_transacation';
+    header("Location: $url");
+    // echo "error first query";
   }
 
   //if the user selected to by the nutrition option - charge customer for both options
@@ -101,29 +104,31 @@ if( isset($_POST['submitted'])
       "description" => $nutRow['title'],
       "customer" => $customer->id
     ));
+
+    $charge2_amount = $charge2->amount / 100;
     //insert charge2 into transaction table (using prepared statement)
     $q = "INSERT INTO transactions (user_id, product_id, stripe_customer_id, stripe_transaction_id, payment_status, currency, payment_amount)
     VALUES (?,?,?,?,?,?,?)";
     $stmt = mysqli_prepare($dbc, $q);
-    mysqli_stmt_bind_param($stmt, 'iissssd', $userRow['id'], $nutRow['id'], $customer->id, $charge2->id, $charge2->status, $charge2->currency, $charge2->amount);
+    mysqli_stmt_bind_param($stmt, 'iissssd', $userRow['id'], $nutRow['id'], $customer->id, $charge2->id, $charge2->status, $charge2->currency, $charge2_amount);
     mysqli_stmt_execute($stmt);
     if (mysqli_stmt_affected_rows($stmt) !== 1) { //IF PROBLEM THEN REDIRECT
       //redirect user to fail page
-      // $url = '../../' . 'index.php?p=failed_transacation';
-      // header("Location: $url");
-      echo "error second query";
+      $url = '../../' . 'index.php?p=failed_transacation';
+      header("Location: $url");
+      // echo "error second query";
     }
 
     //redirect to success page
-    // $url = '../../' . 'index.php?p=success_transaction&tid='. $charge->id .'&product='. $charge->description .'&n=TRUE';
-    // header("Location: $url");
+    $url = '../../' . 'index.php?p=success_transaction&tid='. $charge->id .'&product='. $charge->description .'&n=TRUE';
+    header("Location: $url");
 
   }
 
 
   //redirect to success page
-  // $url = '../../' . 'index.php?p=success_transaction&tid='. $charge->id .'&product='. $charge->description;
-  // header("Location: $url");
+  $url = '../../' . 'index.php?p=success_transaction&tid='. $charge->id .'&product='. $charge->description;
+  header("Location: $url");
 
 
 } else { //page accessed in error (redirect)
