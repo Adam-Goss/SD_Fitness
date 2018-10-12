@@ -120,14 +120,16 @@ if( isset($_POST['submitted'])
     }
 
     //redirect to success page
-    $url = '../../' . 'index.php?p=success_transaction&tid='. $charge->id .'&product='. $charge->description .'&n=TRUE';
+    $url = '../../' . 'index.php?p=success_transaction&tid='. urldecode($charge->id) .'&product='. urldecode($charge->description) .'&n=TRUE';
     header("Location: $url");
+    exit();
+
 
   }
 
 
   //redirect to success page
-  $url = '../../' . 'index.php?p=success_transaction&tid='. $charge->id .'&product='. $charge->description;
+  $url = '../../' . 'index.php?p=success_transaction&tid='. urldecode($charge->id) .'&product='. urldecode($charge->description);
   header("Location: $url");
 
 

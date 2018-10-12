@@ -29,7 +29,7 @@ if (!defined('BASE_URL')) {
   <div class="fail-container">
     <h2>Your purchased could not be processed at this time</h2>
     <hr>
-    <p><a href="index.php" class="">Please Try Again</a></p>
+    <p><a href="index.php">Please Try Again</a></p>
   </div>
 
 

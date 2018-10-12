@@ -36,16 +36,17 @@ if (!empty($_GET['tid'] && !empty($_GET['product']))) {
 <div class="inner-wrapper">
 
   <div class="success-container">
-    <h2>Thank you for purchasing <?php echo $product; ?></h2>
+    <h2>Thank you for purchasing:
+      <?php echo "<br><span class=\"product-title\">$product</span>"; ?></h2>
     <?php
     if(isset($_GET['n']) && ($_GET['n'] == 'TRUE')) {
-      echo '<p>And the nutrition option!</p>';
+      echo '<h3>(And the nutrition option!)</h3>';
     }
     ?>
     <hr>
     <p>Your transaction ID is <?php echo $tid; ?></p>
     <p>Check your email for more information</p>
-    <p><a href="index.php?p=view_p" class="">View Purchases</a></p>
+    <p><a href="index.php?p=view_p">View Purchases</a></p>
   </div>
 
 

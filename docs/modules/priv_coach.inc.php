@@ -39,7 +39,7 @@ if (!defined('BASE_URL')) {
       $q = 'SELECT p.id, p.title, p.short_description, p.img_file_name, pc.category FROM products as p
           INNER JOIN product_categories as pc
           ON p.category_id = pc.id
-          WHERE p.gender = "all" AND p.age_group = "all"';
+          WHERE p.gender = "all" AND p.age_group = "all" and pc.category="private"';
       $r = @mysqli_query($dbc, $q);
 
       //count the number of returned rows:

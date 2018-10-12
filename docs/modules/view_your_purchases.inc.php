@@ -20,34 +20,66 @@ if (!defined('BASE_URL')) {
 
 } // End of defined() IF.
 
-?>
-<!-- start of page specific content -->
-<div class="inner-wrapper">
 
-  <h2>Hi
-    <?php if(isset($_SESSION['SD_Fitness_Sess']['username'])) {
-      //print user's username
-      echo $_SESSION['SD_Fitness_Sess']['username'];
-    } else {
-      //if user is not logged in (has session w/ username) then send them to login form
-      header('Location: index.php?p=login');
-    } ?>,
-    you have currently purchased ...
-  </h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-  <?php
+//check the user is logged in
+if(isset($_SESSION['SD_Fitness_Sess']['username'])) {
+  //need DB connection
   require(MYSQL);
 
+  $user_id = $_SESSION['SD_Fitness_Sess']['user_id'];
+  $username = $_SESSION['SD_Fitness_Sess']['username'];
+
+} else {
+  //if user is not logged in (has session w/ username) then send them to login form
+  header('Location: index.php?p=login');
+} ?>
+<!-- start of page specific content -->
+<div class="inner-wrapper">
+  <h2>Hi, <?php echo $username //print user's username ?></h2>
+
+<?php
+//check if the user has made any purchases (has any orders)
+$q = 'SELECT * FROM transactions WHERE user_id=' . $user_id;
+$r = @mysqli_query($dbc,$q);
+
+if(mysqli_num_rows($r) > 0) {
+  //if the customer has made purchases
+  echo '<h2>you currently have purchased ...</h2><div class="purchases_container">';
+
+  //join the transactions table to the products table to get product info
+  $q = 'SELECT t.product_id, p.title, p.volume, p.season, p.short_description, p.img_file_name FROM transactions as t
+        INNER JOIN products as p ON t.product_id = p.id
+        WHERE t.user_id=' . $user_id;
+  $r = @mysqli_query($dbc,$q);
+
+  //fetch and display purchases
+  while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+    echo "<div class=\"purchase-box\">
+            <div class=\"purchase-img\">
+              <img src=\"program_images/{$row['img_file_name']}\" alt=\"purchase image\">
+            </div>
+            <div class=\"purchase-content\">
+              <h3>{$row['title']} | Volume: {$row['volume']} | Season: {$row['season']}</h3>
+              <p>{$row['short_description']}</p>
+              <p><a href=\"#\">View Purchase</a></p>
+            </div>
+          </div>";
+  }
+
+  //close purchases_container div
+  echo "\n</div>";
+  //free up the resources
+  mysqli_free_result($r);
+  //close db connection
+  mysqli_close($dbc);
 
 
+} else {
+  //the customer has no purchases
+  echo '<h2>you currently have no purchases</h2>';
+}
 
-  ?>
-
-
-
+?>
 
 </div> <!-- end of inner-wrapper -->
 <!-- end of page specific content -->

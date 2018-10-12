@@ -1,0 +1,66 @@
+/* -------------------------
+***** SASS Variables *****
+------------------------- */
+/**************************************************************
+----- page specific styling for checkout.inc.php module -----
+**************************************************************/
+.inner-wrapper {
+  margin: 0 auto;
+  padding: 4em 0; }
+  .inner-wrapper div {
+    width: 70%;
+    margin: 0 auto; }
+    .inner-wrapper div h2 {
+      text-align: center;
+      margin-bottom: 1.5em;
+      font-size: 2em; }
+    .inner-wrapper div h3 {
+      font-size: 1.7em;
+      text-align: center;
+      color: darkgreen; }
+    .inner-wrapper div hr {
+      margin: 2em 0; }
+    .inner-wrapper div a {
+      border-radius: 15px;
+      font-size: 1.5em;
+      padding: 1em 2em;
+      display: block;
+      margin: 3em auto;
+      width: 40%;
+      color: #fff;
+      background: gray;
+      text-decoration: none;
+      text-align: center;
+      transition: all 1s ease-out; }
+      .inner-wrapper div a:hover {
+        background: #333;
+        border: 1px solid #333; }
+  .inner-wrapper .success-container h2 {
+    color: green; }
+  .inner-wrapper .success-container span.product-title {
+    text-decoration: underline;
+    font-variant: small-caps; }
+  .inner-wrapper .fail-container h2 {
+    color: red; }
+
+footer {
+  margin-top: 0; }
+
+/***** END OF styling for the checkout page *****/
+/* media queries */
+@media (max-width: 800px) {
+  .inner-wrapper div {
+    width: 100%;
+    padding: 0 1em; }
+    .inner-wrapper div a {
+      width: 60%; } }
+@media (max-width: 550px) {
+  .inner-wrapper div h2 {
+    font-size: 1.5em; }
+  .inner-wrapper div h3 {
+    font-size: 1.2em; }
+  .inner-wrapper div a {
+    font-size: 1.2em;
+    width: 70%; } }
+
+/*# sourceMappingURL=success-fail.css.map */
