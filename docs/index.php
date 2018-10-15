@@ -138,6 +138,7 @@ switch ($p) {
     $page = 'view_your_purchases.inc.php';
     $page_title = 'View Purchases';
     $page_class = 'view_p';
+    $page_css = 'includes/css/view_p.css';
     break;
   case 'logout':
     $page = 'logout.inc.php';
@@ -176,6 +177,12 @@ switch ($p) {
     $page_title = 'Unsuccessful Purchase';
     $page_class = 'fail';
     $page_css = 'includes/css/success-fail.css';
+    break;
+  case 'view_p_content':
+    $page = 'view_purchase_content.inc.php';
+    $page_title = 'Purchase Content';
+    $page_class = 'view_p_content';
+    $page_css = 'includes/css/view_p_content.css';
     break;
 
 

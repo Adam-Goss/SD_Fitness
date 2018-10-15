@@ -66,56 +66,85 @@ if (isset($_GET['pid']) && filter_var($_GET['pid'], FILTER_VALIDATE_INT, array('
 
     $user_id = $_SESSION['SD_Fitness_Sess']['user_id'];
 
-    //get nutrition program
-    $q2 = 'SELECT id, title, short_description, img_file_name, price FROM products
-          WHERE id = 27';
-  	$r2 = mysqli_query($dbc, $q2);
-  	if (mysqli_num_rows($r2) !== 1) { // Problem!
-  		echo '<div class="alert alert-danger">This page has been accessed in error.</div>';
-      echo '</div>';
-  		include('./includes/php/footer.php');
-  		exit();
-  	}
+    //check if the user already has purchased the nutrition option
+    $q3 = 'SELECT * FROM transactions WHERE user_id = ' . $user_id . ' AND
+    product_id = 27';
+  	$r3 = mysqli_query($dbc, $q3);
+  	if (mysqli_num_rows($r3) < 1) {
+      //if they haven't alreay purchased then show nutrition option to buy
 
-    $row2 = mysqli_fetch_array($r2, MYSQLI_ASSOC);
+      //get nutrition program
+      $q2 = 'SELECT id, title, short_description, img_file_name, price FROM products
+            WHERE id = 27';
+    	$r2 = mysqli_query($dbc, $q2);
+    	if (mysqli_num_rows($r2) !== 1) { // Problem!
+    		echo '<div class="alert alert-danger">This page has been accessed in error.</div>';
+        echo '</div>';
+    		include('./includes/php/footer.php');
+    		exit();
+    	}
 
-    //show buying information
-    // TODO: STYLING
-    echo "<form class=\"buy_options_form\" action=\"index.php?p=checkout\" method=\"post\" accept-charset=\"utf-8\">
-            <fieldset>
-              <div class=\"form-group1\">
-                <select name=\"pid\">
-                  <option value=\"{$row['id']}\" selected>{$row['title']}</option>
-                </select>
-              </div>
-              <div class=\"form-group2\">
-                <p>I agree to terms and conditions</p>
-                <input type=\"radio\" name=\"t_and_c\" value=\"yes\" required> Yes
-                <p><a href=\"website_terms_conditions.pdf\" target=\"_blank\">*View terms and conditions</a></p>
-              </div>
-              <div class=\"form-group3\">
-                <p>Include {$row2['title']}?</p>
-                <input type=\"radio\" name=\"n\" value=\"yes\" checked> Yes (\${$row2['price']})
-                <input type=\"radio\" name=\"n\" value=\"no\"> No
-                <div class=\"nutrition-program\">
-                  <div class=\"pn-img\">
-                    <img src=\"program_images/{$row2['img_file_name']}\">
-                  </div>
-                  <div class=\"pn-short-des\">
-                    {$row2['short_description']}
-                    <p><a href=\"\">Find out more</a></p>
+      $row2 = mysqli_fetch_array($r2, MYSQLI_ASSOC);
+
+      //show buying information if they haven't alreay brought nutrition program
+      echo "<form class=\"buy_options_form\" action=\"index.php?p=checkout\" method=\"post\" accept-charset=\"utf-8\">
+              <fieldset>
+                <div class=\"form-group1\">
+                  <select name=\"pid\">
+                    <option value=\"{$row['id']}\" selected>{$row['title']}</option>
+                  </select>
+                </div>
+                <div class=\"form-group2\">
+                  <p>I agree to terms and conditions</p>
+                  <input type=\"radio\" name=\"t_and_c\" value=\"yes\" required> Yes
+                  <p><a href=\"website_terms_conditions.pdf\" target=\"_blank\">*View terms and conditions</a></p>
+                </div>
+                <div class=\"form-group3\">
+                  <p>Include {$row2['title']}?</p>
+                  <input type=\"radio\" name=\"n\" value=\"yes\" checked> Yes (\${$row2['price']})
+                  <input type=\"radio\" name=\"n\" value=\"no\"> No
+                  <div class=\"nutrition-program\">
+                    <div class=\"pn-img\">
+                      <img src=\"program_images/{$row2['img_file_name']}\">
+                    </div>
+                    <div class=\"pn-short-des\">
+                      {$row2['short_description']}
+                      <p><a href=\"\">Find out more</a></p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <button type=\"submit\" class=\"\">Buy</button>
-            </fieldset>
-            <input type=\"hidden\" name=\"submitted\" value=\"TRUE\">
-          </form>";
+                <button type=\"submit\" class=\"\">Buy</button>
+              </fieldset>
+              <input type=\"hidden\" name=\"submitted\" value=\"TRUE\">
+            </form>";
 
-  } else { //user not logged in
+        } else {
+          //show buying information if they HAVE alreay brought nutrition program
+          echo "<form class=\"buy_options_form\" action=\"index.php?p=checkout\" method=\"post\" accept-charset=\"utf-8\">
+                  <fieldset>
+                    <div class=\"form-group1\">
+                      <select name=\"pid\">
+                        <option value=\"{$row['id']}\" selected>{$row['title']}</option>
+                      </select>
+                    </div>
+                    <div class=\"form-group2\">
+                      <p>I agree to terms and conditions</p>
+                      <input type=\"radio\" name=\"t_and_c\" value=\"yes\" required> Yes
+                      <p><a href=\"website_terms_conditions.pdf\" target=\"_blank\">*View terms and conditions</a></p>
+                    </div>
+                    <div class=\"form-group3\">
+                      <p>You have previously brought the nurition option so check it out on your <a href=\"index.php?=view_p\">View Purchases Homepage</a></p>
+                      <input type=\"hidden\" name=\"n\" value=\"no\">
+                    </div>
+                    <button type=\"submit\" class=\"\">Buy</button>
+                  </fieldset>
+                  <input type=\"hidden\" name=\"submitted\" value=\"TRUE\">
+                </form>";
+        }
+
+      } else { //user not logged in#
 
     //say user must log in to buy product
-    // TODO: STYLING
     echo '<p>You must <a href="index.php?p=login">login</a> or <a href="index.php?p=signup">sign up</a> to buy</p>';
 
   } //end of IF session set

@@ -98,6 +98,11 @@
           text-align: center;
           padding: 2em 1em 0 1em;
           font-size: 1.5em; }
+          .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset .form-group3 p a {
+            text-decoration: none;
+            color: #333; }
+            .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset .form-group3 p a:hover {
+              color: orange; }
           .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset .form-group3 p:first-of-type {
             margin-bottom: 1em; }
           .view_prod .inner-wrapper .product .buying_info form.buy_options_form fieldset .form-group3 input:last-of-type {

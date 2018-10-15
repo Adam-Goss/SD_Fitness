@@ -147,6 +147,15 @@
             padding: 2em 1em 0 1em;
             font-size: 1.5em;
 
+            p a {
+              text-decoration: none;
+              color: $main-font-color;
+
+              &:hover {
+                color: orange;
+              }
+            }
+
             p:first-of-type {
               margin-bottom: 1em;
             }

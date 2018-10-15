@@ -1,0 +1,149 @@
+//import variable styles
+@import 'helpers/variables';
+
+
+
+
+
+/**************************************************************
+----- page specific styling for view_p.inc.php module -----
+**************************************************************/
+
+
+.view_p .inner-wrapper {
+  width: 100%;
+
+  h2 {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+    color: blue;
+    padding: 2rem 0;
+
+
+    span {
+      font-variant: small-caps;
+      font-size: 3rem;
+    }
+  }
+
+  h3 {
+    color: red;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+
+  .purchases_container {
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+
+    .purchase-box {
+      box-shadow: $shadow;
+
+      .purchase-content-wrapper {
+        background: no-repeat top center / cover;
+        height: 100%;
+
+        &:hover {
+          .purchase-content {
+            z-index: 1;
+            background: rgba(0,0,0,0.7);
+          }
+        }
+
+        .purchase-content {
+          transition: .5s all ease-in;
+          min-height: 100%;
+          color: #fff;
+          padding: 1em;
+          // opacity: .1;
+          height: auto;
+          z-index: -1;
+          position: relative;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-row-gap: 1em;
+          text-align: center;
+          justify-content: center;
+
+          h3 {
+            font-size: 3rem;
+          }
+
+          h4 {
+            font-size: 1.2em;
+            font-style: italic;
+          }
+
+          p {
+            font-size: 1em;
+          }
+
+          a {
+            margin-top: auto;
+            margin-bottom: 1em;
+            align-self: end;
+            box-shadow: $shadow;
+            padding: 1em 2em;
+            border-radius: 30px;
+            color: #333;
+            background: #fff;
+            text-decoration: none;
+            font-variant: small-caps;
+
+            &:hover {
+              color: #fff;
+              background: #333;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+
+
+
+}
+
+.view_p footer {
+  margin-top: 0;
+}
+
+
+
+
+
+
+/* media queries */
+@media (max-width: 1300px) {
+  .view_p .inner-wrapper {
+    .purchases_container {
+      width: 100%;
+      padding: 0 2rem;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .view_p .inner-wrapper {
+    .purchases_container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .view_p .inner-wrapper {
+    .purchases_container {
+      grid-template-columns: 1fr;
+    }
+
+  }
+
+}
