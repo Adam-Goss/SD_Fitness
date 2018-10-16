@@ -1,5 +1,5 @@
-<?php # blog.inc.php
-/* this page is the about content module (info about company)
+<?php # view_your_purchases.inc.php
+/* this page is the view your purchases content module (shows user's purchases)
 * this page is included by index.php
 */
 

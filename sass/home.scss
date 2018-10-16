@@ -186,19 +186,90 @@
         box-shadow: $shadow;
         background: $secondary-bg;
 
-        h4 {
+        a {
           text-align: center;
           margin-top: 10px;
+          color: $main-font-color;
+          text-decoration: none;
+
+          &:hover {
+            color: orange;
+          }
         }
 
         img {
           width: 100%;
           height: 80%;
         }
+
+        /* modal stylings */
+        .athlete-modal {
+          display: none;
+          position: fixed;
+          z-index: 1;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: rgba(0,0,0,0.5);
+
+          .modal-content {
+            background-color: #f4f4f4;
+            margin: 20% auto;
+            width: 60%;
+            box-shadow: 0 5px 8px 0 rgba(0,0,0,0.7);
+
+            animation-name: modalOpen;
+            animation-duration: 1s;
+
+            .modal-header {
+              background: coral;
+              padding: 15px;
+
+              h3 {
+              color: #fff;
+              margin: 0;
+              }
+
+              .closeBtn {
+                color: #fff;
+                float: right;
+                font-size: 30px;
+
+                &:hover, &:focus {
+                  color: #000;
+                  text-decoration: none;
+                  cursor: pointer;
+                }
+              }
+            }
+
+            .modal-body {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              grid-column-gap: 2em;
+              padding: 1em;
+
+              img {
+                margin: 0 auto;
+                width: 60%;
+                border: 5px solid coral;
+                border-radius: 15px;
+              }
+            }
+
+          }
+        }
       }
     }
   }
+}
 
+/* fade in modal */
+@keyframes modalOpen {
+  from { opacity: 0 }
+  to { opacity: 1 }
 }
 
 

@@ -193,6 +193,7 @@ switch ($p) {
     $page_class = 'main';
     $page_css = 'includes/css/home.css';
     $script = 'includes/js/homepage-slideshow.js';
+    $script2 = 'includes/js/modals.js';
     break;
 
 } // End of main switch.
@@ -201,6 +202,9 @@ switch ($p) {
 if (!file_exists('./modules/' . $page)) {
     $page = 'main.inc.php';
     $page_title = 'SD Fitness';
+    $page_css = 'includes/css/home.css';
+    $script = 'includes/js/homepage-slideshow.js';
+    $script2 = 'includes/js/modals.js';
 }
 
 // Include the header file:

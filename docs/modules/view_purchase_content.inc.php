@@ -1,5 +1,5 @@
 <?php # view_purchase_content.inc.php
-/* this page is the view purchase content module (product info)
+/* this page is the view purchase content module (purchase content)
 * this page is included by index.php
 */
 

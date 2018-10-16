@@ -1,5 +1,5 @@
-<?php # about.inc.php
-/* this page is the about content module (info about company)
+<?php # fail.inc.php
+/* this page is the failed transaction content module (shown if transaction fails)
 * this page is included by index.php
 */
 

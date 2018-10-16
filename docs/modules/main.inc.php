@@ -217,46 +217,60 @@ if(isset($_POST['submitted'])) {
     <h3>SD Fitness Athletes</h3>
     <div class="athletes-container">
 
-    <div class="athlete">
-      <img src="images/athlete1.jpeg" alt="">
-      <h4>Barry Scott</h4>
-    </div>
-    <div class="athlete">
-      <img src="images/athlete2.jpeg" alt="">
-      <h4>Dwayne Carter</h4>
-    </div>
-    <div class="athlete">
-      <img src="images/athlete3.jpg" alt="">
-      <h4>John Smith</h4>
-    </div>
-    <div class="athlete">
-      <img src="images/athlete1.jpeg" alt="">
-      <h4>Gary Potter</h4>
-    </div>
-    <div class="athlete">
-      <img src="images/athlete2.jpeg" alt="">
-      <h4>Alex Cook</h4>
-    </div>
-    <div class="athlete">
-      <img src="images/athlete3.jpg" alt="">
-      <h4>Gavin Tanaka</h4>
-    </div>
-    <div class="athlete">
-      <img src="images/athlete1.jpeg" alt="">
-      <h4>Sean Bradley</h4>
-    </div>
-    <div class="athlete">
-      <img src="images/athlete2.jpeg" alt="">
-      <h4>Rhys Buckland</h4>
-    </div>
-    <div class="athlete">
-      <img src="images/athlete3.jpg" alt="">
-      <h4>Angel McFadden</h4>
-    </div>
-    <div class="athlete">
-      <img src="images/athlete2.jpeg" alt="">
-      <h4>Ashley McScott</h4>
-    </div>
+      <div class="athlete">
+          <img src="images/athlete1.jpeg" alt="Image of athlete">
+          <a href="" id="modalBtn" class="btn"><h4>Barry Scott</h4></a>
+        <div class="athlete-modal" id="athlete1-modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="closeBtn">&times;</span>
+              <h3>Barry Scott</h3>
+            </div>
+            <div class="modal-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, reiciendis, eius dignissimos illum odit consequuntur porro. Quod perspiciatis debitis voluptas aspernatur, quibusdam fugit natus accusamus earum atque beatae at, dignissimos?</p>
+              <img src="images/athlete1.jpeg" alt="Image of athlete">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="athlete">
+        <img src="images/athlete2.jpeg" alt="">
+        <h4>Dwayne Carter</h4>
+      </div>
+      <div class="athlete">
+        <img src="images/athlete3.jpg" alt="">
+        <h4>John Smith</h4>
+      </div>
+      <div class="athlete">
+        <img src="images/athlete1.jpeg" alt="">
+        <h4>Gary Potter</h4>
+      </div>
+      <div class="athlete">
+        <img src="images/athlete2.jpeg" alt="">
+        <h4>Alex Cook</h4>
+      </div>
+      <div class="athlete">
+        <img src="images/athlete3.jpg" alt="">
+        <h4>Gavin Tanaka</h4>
+      </div>
+      <div class="athlete">
+        <img src="images/athlete1.jpeg" alt="">
+        <h4>Sean Bradley</h4>
+      </div>
+      <div class="athlete">
+        <img src="images/athlete2.jpeg" alt="">
+        <h4>Rhys Buckland</h4>
+      </div>
+      <div class="athlete">
+        <img src="images/athlete3.jpg" alt="">
+        <h4>Angel McFadden</h4>
+      </div>
+      <div class="athlete">
+        <img src="images/athlete2.jpeg" alt="">
+        <h4>Ashley McScott</h4>
+      </div>
   </div>
   </section>
 
