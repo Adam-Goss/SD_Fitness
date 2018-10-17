@@ -185,9 +185,9 @@
       .athlete {
         box-shadow: $shadow;
         background: $secondary-bg;
+        text-align: center;
 
         a {
-          text-align: center;
           margin-top: 10px;
           color: $main-font-color;
           text-decoration: none;
@@ -216,7 +216,7 @@
 
           .modal-content {
             background-color: #f4f4f4;
-            margin: 20% auto;
+            margin: 10% auto;
             width: 60%;
             box-shadow: 0 5px 8px 0 rgba(0,0,0,0.7);
 
@@ -250,6 +250,7 @@
               grid-template-columns: 1fr 1fr;
               grid-column-gap: 2em;
               padding: 1em;
+              text-align: left;
 
               img {
                 margin: 0 auto;

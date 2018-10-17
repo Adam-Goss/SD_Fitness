@@ -22,6 +22,11 @@ if (isset($_GET['p'])) {
 switch ($p) {
   case 'programs':
     $page = 'programs.inc.php';
+    if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+      $page_title = 'Programs';
+    } else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+      $page_title = 'FRANCE Programs';
+    }
     $page_title = 'Programs';
     $page_class = 'programs';
     $page_css = 'includes/css/programs.css';

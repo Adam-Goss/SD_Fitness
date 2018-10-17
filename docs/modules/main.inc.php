@@ -218,9 +218,9 @@ if(isset($_POST['submitted'])) {
     <div class="athletes-container">
 
       <div class="athlete">
-          <img src="images/athlete1.jpeg" alt="Image of athlete">
-          <a href="" id="modalBtn" class="btn"><h4>Barry Scott</h4></a>
-        <div class="athlete-modal" id="athlete1-modal">
+        <img src="images/athlete1.jpeg" alt="Image of athlete">
+        <a href="" class="modalBtn">Barry Scott</a>
+        <div class="athlete-modal">
           <div class="modal-content">
             <div class="modal-header">
               <span class="closeBtn">&times;</span>
@@ -234,42 +234,157 @@ if(isset($_POST['submitted'])) {
         </div>
       </div>
 
+      <div class="athlete">
+        <img src="images/athlete2.jpeg" alt="Image of athlete">
+        <a href="" class="modalBtn">Dwayne Carter</a>
+        <div class="athlete-modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="closeBtn">&times;</span>
+              <h3>Dwayne Carter</h3>
+            </div>
+            <div class="modal-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, reiciendis, eius dignissimos illum odit consequuntur porro. Quod perspiciatis debitis voluptas aspernatur, quibusdam fugit natus accusamus earum atque beatae at, dignissimos?</p>
+              <img src="images/athlete2.jpeg" alt="Image of athlete">
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="athlete">
-        <img src="images/athlete2.jpeg" alt="">
-        <h4>Dwayne Carter</h4>
+        <img src="images/athlete3.jpg" alt="Image of athlete">
+        <a href="" class="modalBtn">John Smith</a>
+        <div class="athlete-modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="closeBtn">&times;</span>
+              <h3>John Smith</h3>
+            </div>
+            <div class="modal-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, reiciendis, eius dignissimos illum odit consequuntur porro. Quod perspiciatis debitis voluptas aspernatur, quibusdam fugit natus accusamus earum atque beatae at, dignissimos?</p>
+              <img src="images/athlete3.jpg" alt="Image of athlete">
+            </div>
+          </div>
+        </div>
       </div>
+
       <div class="athlete">
-        <img src="images/athlete3.jpg" alt="">
-        <h4>John Smith</h4>
+        <img src="images/athlete1.jpeg" alt="Image of athlete">
+        <a href="" class="modalBtn">Gary Potter</a>
+        <div class="athlete-modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="closeBtn">&times;</span>
+              <h3>Gary Potter</h3>
+            </div>
+            <div class="modal-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, reiciendis, eius dignissimos illum odit consequuntur porro. Quod perspiciatis debitis voluptas aspernatur, quibusdam fugit natus accusamus earum atque beatae at, dignissimos?</p>
+              <img src="images/athlete1.jpeg" alt="Image of athlete">
+            </div>
+          </div>
+        </div>
       </div>
+
       <div class="athlete">
-        <img src="images/athlete1.jpeg" alt="">
-        <h4>Gary Potter</h4>
+        <img src="images/athlete2.jpeg" alt="Image of athlete">
+        <a href="" class="modalBtn">Alex Cook</a>
+        <div class="athlete-modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="closeBtn">&times;</span>
+              <h3>Alex Cook</h3>
+            </div>
+            <div class="modal-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, reiciendis, eius dignissimos illum odit consequuntur porro. Quod perspiciatis debitis voluptas aspernatur, quibusdam fugit natus accusamus earum atque beatae at, dignissimos?</p>
+              <img src="images/athlete2.jpeg" alt="Image of athlete">
+            </div>
+          </div>
+        </div>
       </div>
+
       <div class="athlete">
-        <img src="images/athlete2.jpeg" alt="">
-        <h4>Alex Cook</h4>
+        <img src="images/athlete3.jpg" alt="Image of athlete">
+        <a href="" class="modalBtn">Gavin Tanaka</a>
+        <div class="athlete-modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="closeBtn">&times;</span>
+              <h3>Gavin Tanaka</h3>
+            </div>
+            <div class="modal-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, reiciendis, eius dignissimos illum odit consequuntur porro. Quod perspiciatis debitis voluptas aspernatur, quibusdam fugit natus accusamus earum atque beatae at, dignissimos?</p>
+              <img src="images/athlete3.jpg" alt="Image of athlete">
+            </div>
+          </div>
+        </div>
       </div>
+
       <div class="athlete">
-        <img src="images/athlete3.jpg" alt="">
-        <h4>Gavin Tanaka</h4>
+        <img src="images/athlete1.jpeg" alt="Image of athlete">
+        <a href="" class="modalBtn">Sean Bradley</a>
+        <div class="athlete-modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="closeBtn">&times;</span>
+              <h3>Sean Bradley</h3>
+            </div>
+            <div class="modal-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, reiciendis, eius dignissimos illum odit consequuntur porro. Quod perspiciatis debitis voluptas aspernatur, quibusdam fugit natus accusamus earum atque beatae at, dignissimos?</p>
+              <img src="images/athlete1.jpeg" alt="Image of athlete">
+            </div>
+          </div>
+        </div>
       </div>
+
       <div class="athlete">
-        <img src="images/athlete1.jpeg" alt="">
-        <h4>Sean Bradley</h4>
+        <img src="images/athlete2.jpeg" alt="Image of athlete">
+        <a href="" class="modalBtn">Rhys Buckland</a>
+        <div class="athlete-modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="closeBtn">&times;</span>
+              <h3>Rhys Buckland</h3>
+            </div>
+            <div class="modal-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, reiciendis, eius dignissimos illum odit consequuntur porro. Quod perspiciatis debitis voluptas aspernatur, quibusdam fugit natus accusamus earum atque beatae at, dignissimos?</p>
+              <img src="images/athlete2.jpeg" alt="Image of athlete">
+            </div>
+          </div>
+        </div>
       </div>
+
       <div class="athlete">
-        <img src="images/athlete2.jpeg" alt="">
-        <h4>Rhys Buckland</h4>
+        <img src="images/athlete3.jpg" alt="Image of athlete">
+        <a href="" class="modalBtn">Angel McFadden</a>
+        <div class="athlete-modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="closeBtn">&times;</span>
+              <h3>Angel McFadden</h3>
+            </div>
+            <div class="modal-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, reiciendis, eius dignissimos illum odit consequuntur porro. Quod perspiciatis debitis voluptas aspernatur, quibusdam fugit natus accusamus earum atque beatae at, dignissimos?</p>
+              <img src="images/athlete3.jpg" alt="Image of athlete">
+            </div>
+          </div>
+        </div>
       </div>
+
       <div class="athlete">
-        <img src="images/athlete3.jpg" alt="">
-        <h4>Angel McFadden</h4>
-      </div>
-      <div class="athlete">
-        <img src="images/athlete2.jpeg" alt="">
-        <h4>Ashley McScott</h4>
+        <img src="images/athlete2.jpeg" alt="Image of athlete">
+        <a href="" class="modalBtn">Ashley McScott</a>
+        <div class="athlete-modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="closeBtn">&times;</span>
+              <h3>Ashley McScott</h3>
+            </div>
+            <div class="modal-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, reiciendis, eius dignissimos illum odit consequuntur porro. Quod perspiciatis debitis voluptas aspernatur, quibusdam fugit natus accusamus earum atque beatae at, dignissimos?</p>
+              <img src="images/athlete2.jpeg" alt="Image of athlete">
+            </div>
+          </div>
+        </div>
       </div>
   </div>
   </section>

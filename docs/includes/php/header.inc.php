@@ -37,17 +37,37 @@
   <ul class="other-links">
     <?php
     if(isset($_SESSION['SD_Fitness_Sess']['user_id'])) {
-      echo '<li><a href="index.php?p=logout">Logout</a></li>
+      echo "<li><a href=\"index.php?p=logout\">Logout</a></li>
             <li>|</li>
-            <li><a href="index.php?p=change_p">Change Password</a></li>
+            <li><a href=\"index.php?p=change_p\">Change Password</a></li>
             <li>|</li>
-            <li><a href="index.php?p=view_p">View Your Purchases</a></li>';
+            <li><a href=\"index.php?p=view_p\">View Your Purchases</a></li>";
     } else {
-      echo '<li><a href="index.php?p=login">Login</a></li>
+      echo "<li><a href=\"index.php?p=login\">Login</a></li>
             <li>|</li>
-            <li><a href="index.php?p=signup">Sign Up</a></li>';
+            <li><a href=\"index.php?p=signup\">Sign Up</a></li>";
     }
     ?>
+    <li><?php echo $lang['language']; ?></li>
+    <li>
+      <a href="<?php
+      if (!empty($_SERVER['QUERY_STRING'])) {
+        echo htmlentities($_SERVER['REQUEST_URI']) . "&lang=en";
+      } else {
+        echo htmlentities($_SERVER['PHP_SELF']) . "?lang=en";
+      }
+      ?>">ENG</a>
+    </li>
+    <li>|</li>
+    <li>
+      <a href="<?php
+      if (!empty($_SERVER['QUERY_STRING'])) {
+        echo htmlentities($_SERVER['REQUEST_URI']) . "&lang=fr";
+      } else {
+        echo htmlentities($_SERVER['PHP_SELF']) . "?lang=fr";
+      }
+      ?>">FRA</a>
+    </li>
   </ul>
 </div>
 

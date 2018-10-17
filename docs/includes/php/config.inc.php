@@ -79,6 +79,26 @@ if (!isset($debug)) {
 session_name('SD_Fitness_Sess');
 session_start();
 
+if (!isset($_SESSION['SD_Fitness_Sess']['lang'])){
+  //set langauage to english by default
+  $_SESSION['SD_Fitness_Sess']['lang'] = "en";
+
+} else if (isset($_GET['lang']) && $_SESSION['SD_Fitness_Sess']['lang'] != $_GET['lang'] && !empty($_GET['lang'])) {
+
+  if ($_GET['lang'] == "en") {
+    $_SESSION['SD_Fitness_Sess']['lang'] = "en";
+  } else if ($_GET['lang'] == "fr") {
+    $_SESSION['SD_Fitness_Sess']['lang'] = "fr";
+  }
+}
+
+echo $_SESSION['SD_Fitness_Sess']['lang'];
+
+require_once("languages/" . $_SESSION['SD_Fitness_Sess']['lang'] . ".php");
+
+
+
+
 # ***** END OF SESSIONS ***** #
 # *************************** #
 
