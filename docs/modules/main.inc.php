@@ -38,14 +38,14 @@ if(isset($_POST['submitted'])) {
   if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
 	   $e = escape_data($_POST['email'], $dbc);
   } else {
-	   $login_errors['email'] = 'Please enter a valid email address!';
+	   $login_errors['email'] = $lang['valid_email_address'];
   }
 
   //validate the password:
   if (!empty($_POST['pass'])) {
 	   $p = $_POST['pass'];
   } else {
-	   $login_errors['pass'] = 'Please enter your password!';
+	   $login_errors['pass'] = $lang['enter_your_password'];
   }
 
 
@@ -92,14 +92,12 @@ if(isset($_POST['submitted'])) {
             // if ($expired == 1) $_SESSION['user_not_expired'] = true;
 
         } else {  //right email address but invalid password
-            $login_errors['login'] = 'The email address and password do not match those on file.';
-          echo "<h3>false 1</h3>";
+          $login_errors['login'] = $lang['wrong_email_address_password'];
 
         }   //END OF validate password IF
 
     } else {  //no match was made (technically, only the email address failed)
-        $login_errors['login'] = 'The email address and password do not match those on file.';
-          echo "<h3>false 2</h3>";
+      $login_errors['login'] = $lang['wrong_email_address_password'];
     }
 
     //print the errors and redirect the user (no match made)
@@ -107,7 +105,7 @@ if(isset($_POST['submitted'])) {
     foreach($login_errors as $error) {
       echo "<p class=\"login-error\">$error</p>";
     }
-    echo '<p>Redirecting ... </p></div>';
+    echo '<p>' . $lang['redirecting'] . '</p></div>';
     $url = 'index.php?p=login';
     header("refresh:3; url=$url");
 
@@ -117,7 +115,7 @@ if(isset($_POST['submitted'])) {
     foreach($login_errors as $error) {
       echo "<p class=\"login-error\">$error</p>";
     }
-    echo '<p>Redirecting ... </p></div>';
+    echo '<p>' . $lang['redirecting'] . '</p></div>';
     $url = 'index.php?p=login';
     header("refresh:3; url=$url");
 
@@ -149,24 +147,24 @@ if(isset($_POST['submitted'])) {
         echo '
           <h3>Hi, ' . $_SESSION['SD_Fitness_Sess']['username'] . '</h3>
           <p class="logged-in-options">
-            <span><a href="index.php?p=view_p">View Your Purchases</a></span><br>
-            <span><a href="index.php?p=change_p">Change Password</a></span><br>
-            <span><a href="index.php?p=logout">Logout</a></span><br>
+            <span><a href="index.php?p=view_p">' . $lang['view_your_purchases'] . '</a></span><br>
+            <span><a href="index.php?p=change_p">' . $lang['change_password'] . '</a></span><br>
+            <span><a href="index.php?p=logout">' . $lang['logout'] . '</a></span><br>
           </p>
         ';
       } else { //show login form
         echo '
           <form action="' . htmlentities($_SERVER['PHP_SELF']) . '" method="post" accept-charset="utf-8">
             <fieldset>
-              <h3>Login</h3>
+              <h3>' . $lang['login'] . '</h3>
               <div class="form-group">
-                <input type="email" name="email" id="email" class="form-control" placeholder="Email address">
+                <input type="email" name="email" id="email" class="form-control" placeholder="' . $lang['email_address'] . '">
               </div>
               <div class="form-group">
-                <input type="password" name="pass" id="pass" class="form-control" placeholder="Password">
+                <input type="password" name="pass" id="pass" class="form-control" placeholder="' . $lang['password'] . '">
               </div>
               <button type="submit" class=""><i class="fas fa-sign-in-alt fa-3x"></i></button>
-              <span class="help-block"><a href="index.php?p=forgot_p">Forgot Password?</a></span>
+              <span class="help-block"><a href="index.php?p=forgot_p">' . $lang['forgot_password'] . '</a></span>
           	</fieldset>
             <input type="hidden" name="submitted" value="TRUE">
           </form>
@@ -181,23 +179,23 @@ if(isset($_POST['submitted'])) {
   <!-- testimonial section -->
   <section class="testimonials-container">
     <div class="tbox tbox-a">
-      <h3>Brad</h3>
-      <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero inventore cupiditate corporis officia consequatur tempora quisquam, hic impedit nulla quasi."</p>
+      <h3><?php echo $lang['testimonial1_name']; ?></h3>
+      <p><?php echo $lang['testimonial1_text']; ?></p>
     </div>
     <div class="tbox tbox-b">
-      <h3>Chad</h3>
-      <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero inventore cupiditate corporis officia consequatur tempora quisquam, hic impedit nulla quasi."</p>
+      <h3><?php echo $lang['testimonial2_name']; ?></h3>
+      <p><?php echo $lang['testimonial2_text']; ?></p>
     </div>
     <div class="tbox tbox-c">
-      <h3>Doug</h3>
-      <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero inventore cupiditate corporis officia consequatur tempora quisquam, hic impedit nulla quasi."</p>
+      <h3><?php echo $lang['testimonial3_name']; ?></h3>
+      <p><?php echo $lang['testimonial3_text']; ?></p>
     </div>
   </section>
 
 
   <!-- vid section -->
   <section class="vid-container">
-    <h3>My Story</h3>
+    <h3><?php echo $lang['my_story']; ?></h3>
     <video src="images/bg_vid1.mov" autoplay loop></video>
   </section>
 
@@ -207,185 +205,177 @@ if(isset($_POST['submitted'])) {
       <img src="images/coach.jpeg" alt="Image of Coach">
     </div>
     <div class="m-text">
-      <h3>My Mission</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <h3><?php echo $lang['my_mission']; ?></h3>
+      <p><?php echo $lang['my_mission_text']; ?></p>
     </div>
   </section>
 
   <!-- athletes section -->
   <section class="athletes">
-    <h3>SD Fitness Athletes</h3>
+    <h3><?php echo $lang['sd_fitness_athletes']; ?></h3>
     <div class="athletes-container">
 
       <div class="athlete">
         <img src="images/athlete1.jpeg" alt="Image of athlete">
-        <a href="" class="modalBtn">Barry Scott</a>
+        <a href="" class="modalBtn"><?php echo $lang['athlete1_name']; ?></a>
         <div class="athlete-modal">
           <div class="modal-content">
             <div class="modal-header">
               <span class="closeBtn">&times;</span>
-              <h3>Barry Scott</h3>
+              <h3><?php echo $lang['athlete1_name']; ?></h3>
             </div>
             <div class="modal-body">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, reiciendis, eius dignissimos illum odit consequuntur porro. Quod perspiciatis debitis voluptas aspernatur, quibusdam fugit natus accusamus earum atque beatae at, dignissimos?</p>
+              <p><?php echo $lang['athlete1_text']; ?></p>
               <img src="images/athlete1.jpeg" alt="Image of athlete">
             </div>
           </div>
         </div>
       </div>
-
       <div class="athlete">
         <img src="images/athlete2.jpeg" alt="Image of athlete">
-        <a href="" class="modalBtn">Dwayne Carter</a>
+        <a href="" class="modalBtn"><?php echo $lang['athlete2_name']; ?></a>
         <div class="athlete-modal">
           <div class="modal-content">
             <div class="modal-header">
               <span class="closeBtn">&times;</span>
-              <h3>Dwayne Carter</h3>
+              <h3><?php echo $lang['athlete2_name']; ?></h3>
             </div>
             <div class="modal-body">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, reiciendis, eius dignissimos illum odit consequuntur porro. Quod perspiciatis debitis voluptas aspernatur, quibusdam fugit natus accusamus earum atque beatae at, dignissimos?</p>
+              <p><?php echo $lang['athlete2_text']; ?></p>
               <img src="images/athlete2.jpeg" alt="Image of athlete">
             </div>
           </div>
         </div>
       </div>
-
       <div class="athlete">
         <img src="images/athlete3.jpg" alt="Image of athlete">
-        <a href="" class="modalBtn">John Smith</a>
+        <a href="" class="modalBtn"><?php echo $lang['athlete3_name']; ?></a>
         <div class="athlete-modal">
           <div class="modal-content">
             <div class="modal-header">
               <span class="closeBtn">&times;</span>
-              <h3>John Smith</h3>
+              <h3><?php echo $lang['athlete3_name']; ?></h3>
             </div>
             <div class="modal-body">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, reiciendis, eius dignissimos illum odit consequuntur porro. Quod perspiciatis debitis voluptas aspernatur, quibusdam fugit natus accusamus earum atque beatae at, dignissimos?</p>
+              <p><?php echo $lang['athlete3_text']; ?></p>
               <img src="images/athlete3.jpg" alt="Image of athlete">
             </div>
           </div>
         </div>
       </div>
-
+      <div class="athlete">
+        <img src="images/athlete2.jpeg" alt="Image of athlete">
+        <a href="" class="modalBtn"><?php echo $lang['athlete4_name']; ?></a>
+        <div class="athlete-modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="closeBtn">&times;</span>
+              <h3><?php echo $lang['athlete4_name']; ?></h3>
+            </div>
+            <div class="modal-body">
+              <p><?php echo $lang['athlete4_text']; ?></p>
+              <img src="images/athlete2.jpeg" alt="Image of athlete">
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="athlete">
         <img src="images/athlete1.jpeg" alt="Image of athlete">
-        <a href="" class="modalBtn">Gary Potter</a>
+        <a href="" class="modalBtn"><?php echo $lang['athlete5_name']; ?></a>
         <div class="athlete-modal">
           <div class="modal-content">
             <div class="modal-header">
               <span class="closeBtn">&times;</span>
-              <h3>Gary Potter</h3>
+              <h3><?php echo $lang['athlete5_name']; ?></h3>
             </div>
             <div class="modal-body">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, reiciendis, eius dignissimos illum odit consequuntur porro. Quod perspiciatis debitis voluptas aspernatur, quibusdam fugit natus accusamus earum atque beatae at, dignissimos?</p>
+              <p><?php echo $lang['athlete5_text']; ?></p>
               <img src="images/athlete1.jpeg" alt="Image of athlete">
             </div>
           </div>
         </div>
       </div>
-
-      <div class="athlete">
-        <img src="images/athlete2.jpeg" alt="Image of athlete">
-        <a href="" class="modalBtn">Alex Cook</a>
-        <div class="athlete-modal">
-          <div class="modal-content">
-            <div class="modal-header">
-              <span class="closeBtn">&times;</span>
-              <h3>Alex Cook</h3>
-            </div>
-            <div class="modal-body">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, reiciendis, eius dignissimos illum odit consequuntur porro. Quod perspiciatis debitis voluptas aspernatur, quibusdam fugit natus accusamus earum atque beatae at, dignissimos?</p>
-              <img src="images/athlete2.jpeg" alt="Image of athlete">
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div class="athlete">
         <img src="images/athlete3.jpg" alt="Image of athlete">
-        <a href="" class="modalBtn">Gavin Tanaka</a>
+        <a href="" class="modalBtn"><?php echo $lang['athlete6_name']; ?></a>
         <div class="athlete-modal">
           <div class="modal-content">
             <div class="modal-header">
               <span class="closeBtn">&times;</span>
-              <h3>Gavin Tanaka</h3>
+              <h3><?php echo $lang['athlete6_name']; ?></h3>
             </div>
             <div class="modal-body">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, reiciendis, eius dignissimos illum odit consequuntur porro. Quod perspiciatis debitis voluptas aspernatur, quibusdam fugit natus accusamus earum atque beatae at, dignissimos?</p>
+              <p><?php echo $lang['athlete6_text']; ?></p>
               <img src="images/athlete3.jpg" alt="Image of athlete">
             </div>
           </div>
         </div>
       </div>
-
+      <div class="athlete">
+        <img src="images/athlete2.jpeg" alt="Image of athlete">
+        <a href="" class="modalBtn"><?php echo $lang['athlete7_name']; ?></a>
+        <div class="athlete-modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="closeBtn">&times;</span>
+              <h3><?php echo $lang['athlete7_name']; ?></h3>
+            </div>
+            <div class="modal-body">
+              <p><?php echo $lang['athlete7_text']; ?></p>
+              <img src="images/athlete2.jpeg" alt="Image of athlete">
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="athlete">
         <img src="images/athlete1.jpeg" alt="Image of athlete">
-        <a href="" class="modalBtn">Sean Bradley</a>
+        <a href="" class="modalBtn"><?php echo $lang['athlete8_name']; ?></a>
         <div class="athlete-modal">
           <div class="modal-content">
             <div class="modal-header">
               <span class="closeBtn">&times;</span>
-              <h3>Sean Bradley</h3>
+              <h3><?php echo $lang['athlete8_name']; ?></h3>
             </div>
             <div class="modal-body">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, reiciendis, eius dignissimos illum odit consequuntur porro. Quod perspiciatis debitis voluptas aspernatur, quibusdam fugit natus accusamus earum atque beatae at, dignissimos?</p>
+              <p><?php echo $lang['athlete8_text']; ?></p>
               <img src="images/athlete1.jpeg" alt="Image of athlete">
             </div>
           </div>
         </div>
       </div>
-
-      <div class="athlete">
-        <img src="images/athlete2.jpeg" alt="Image of athlete">
-        <a href="" class="modalBtn">Rhys Buckland</a>
-        <div class="athlete-modal">
-          <div class="modal-content">
-            <div class="modal-header">
-              <span class="closeBtn">&times;</span>
-              <h3>Rhys Buckland</h3>
-            </div>
-            <div class="modal-body">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, reiciendis, eius dignissimos illum odit consequuntur porro. Quod perspiciatis debitis voluptas aspernatur, quibusdam fugit natus accusamus earum atque beatae at, dignissimos?</p>
-              <img src="images/athlete2.jpeg" alt="Image of athlete">
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div class="athlete">
         <img src="images/athlete3.jpg" alt="Image of athlete">
-        <a href="" class="modalBtn">Angel McFadden</a>
+        <a href="" class="modalBtn"><?php echo $lang['athlete9_name']; ?></a>
         <div class="athlete-modal">
           <div class="modal-content">
             <div class="modal-header">
               <span class="closeBtn">&times;</span>
-              <h3>Angel McFadden</h3>
+              <h3><?php echo $lang['athlete9_name']; ?></h3>
             </div>
             <div class="modal-body">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, reiciendis, eius dignissimos illum odit consequuntur porro. Quod perspiciatis debitis voluptas aspernatur, quibusdam fugit natus accusamus earum atque beatae at, dignissimos?</p>
+              <p><?php echo $lang['athlete9_text']; ?></p>
               <img src="images/athlete3.jpg" alt="Image of athlete">
             </div>
           </div>
         </div>
       </div>
-
       <div class="athlete">
         <img src="images/athlete2.jpeg" alt="Image of athlete">
-        <a href="" class="modalBtn">Ashley McScott</a>
+        <a href="" class="modalBtn"><?php echo $lang['athlete10_name']; ?></a>
         <div class="athlete-modal">
           <div class="modal-content">
             <div class="modal-header">
               <span class="closeBtn">&times;</span>
-              <h3>Ashley McScott</h3>
+              <h3><?php echo $lang['athlete10_name']; ?></h3>
             </div>
             <div class="modal-body">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, reiciendis, eius dignissimos illum odit consequuntur porro. Quod perspiciatis debitis voluptas aspernatur, quibusdam fugit natus accusamus earum atque beatae at, dignissimos?</p>
+              <p><?php echo $lang['athlete10_text']; ?></p>
               <img src="images/athlete2.jpeg" alt="Image of athlete">
             </div>
           </div>
         </div>
       </div>
+
   </div>
   </section>
 

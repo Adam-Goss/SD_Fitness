@@ -41,20 +41,20 @@ if(isset($_POST['submitted'])) {
 	if (!empty($_POST['current'])) {
 		$current = $_POST['current'];
 	} else {
-		$pass_errors['current'] = 'Please enter your current password!';
+		$pass_errors['current'] = $lang['enter_current_password'];
 	}
 
 	// Check for a password and match against the confirmed password:
-  // TODO: CHANGE REGEX TO COMMENTED OUT BELOW 
+  // TODO: CHANGE REGEX TO COMMENTED OUT BELOW
 	// if (preg_match('/^(\w*(?=\w*\d)(?=\w*[a-z])(?=\w*[A-Z])\w*){6,}$/', $_POST['pass1']) ) {
   if (preg_match('/^[a-z]{2,}$/i', $_POST['pass1']) ) {
 		if ($_POST['pass1'] == $_POST['pass2']) {
 			$p = $_POST['pass1'];
 		} else {
-			$pass_errors['pass2'] = 'Your password did not match the confirmed password!';
+			$pass_errors['pass2'] = $lang['password_no_match'];
 		}
 	} else {
-		$pass_errors['pass1'] = 'Please enter a valid password!';
+		$pass_errors['pass1'] = $lang['invalid_password'];
 	}
 
 	if (empty($pass_errors)) { // If everything's OK.
@@ -74,7 +74,7 @@ if(isset($_POST['submitted'])) {
 				// Send an email, if desired.
 
 				// Let the user know the password has been changed:
-				echo '<h2 class="complete">Your password has been changed...</h2>';
+				echo '<h2 class="complete">' . $lang['password_has_changed'] . '</h2>';
         //redirect user to their purchases
         $url = 'index.php?p=view_p';
         header("refresh:3; url=$url");
@@ -82,12 +82,12 @@ if(isset($_POST['submitted'])) {
 
 
 			} else { // If it did not run OK.
-        echo '<div class="error-wrapper"><p class="pass-error">Your password could not be changed due to a system error. We apologize for any inconvenience.</p><p>Please try again...</p></div>';
+        echo '<div class="error-wrapper"><p class="pass-error">' . $lang['password_not_changed'] . '</p></div>';
 				trigger_error('Your password could not be changed due to a system error. We apologize for any inconvenience.');
 			}
 
 		} else { // Invalid password.
-			$pass_errors['current'] = 'Your current password is incorrect!';
+			$pass_errors['current'] = $lang['password_incorrect'];
 		}
 
 	} // End of empty($pass_errors) IF.
@@ -96,32 +96,32 @@ if(isset($_POST['submitted'])) {
   foreach($pass_errors as $error) {
     echo "<p class=\"pass-error\">$error</p>";
   }
-  echo '<p>Please try again...</p></div>';
+  echo '<p>' . $lang['try_again'] . '</p></div>';
 
 } // End of the form submission conditional.
 
 //create the form
 ?>
 
-  <h2>Change Your Password</h2>
+  <h2><?php echo $lang['change_your_password']; ?></h2>
 
-  <p>Use the form below to change your password.</p>
+  <p><?php echo $lang['use_form_to_change_password']; ?></p>
   <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>?p=change_p" method="post" accept-charset="utf-8">
     <fieldset>
       <div class="form-group">
-        <label for="current">Current Password:</label>
+        <label for="current"><?php echo $lang['current_password']; ?></label>
         <input type="password" name="current" required autofocus>
       </div>
       <div class="form-group">
-        <label for="pass1">New Password:</label>
+        <label for="pass1"><?php echo $lang['new_password']; ?></label>
         <input type="password" name="pass1" required>
-        <span class="help-block">*Must be at least 6 characters long, with at least one lowercase letter, one uppercase letter, and one number.</span>
+        <span class="help-block"><?php echo $lang['password_constraint']; ?></span>
       </div>
       <div class="form-group">
-        <label for="pass2">Confirm New Password:</label>
+        <label for="pass2"><?php echo $lang['confirm_new_password']; ?></label>
         <input type="password" name="pass2" required>
       </div>
-    	<input type="submit" name="submit_button" value="Change &rarr;" id="submit_button" class="btn btn-default" />
+    	<input type="submit" name="submit_button" value="<?php echo $lang['change']; ?> &rarr;" id="submit_button" class="btn btn-default" />
     </fieldset>
     <input type="hidden" name="submitted" value="TRUE">
   </form>

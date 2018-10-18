@@ -47,11 +47,11 @@ if(isset($_POST['submitted'])) {
 		    if (mysqli_num_rows($r) === 1) { // Retrieve the user ID:
 			       list($uid) = mysqli_fetch_array($r, MYSQLI_NUM);
 		    } else { // No database match made.
-			       $pass_errors['email'] = 'The submitted email address does not match those on file!';
+			       $pass_errors['email'] = $lang['email_not_on_file'];
 		    }
 
 	  } else { // No valid address submitted.
-		$pass_errors['email'] = 'Please enter a valid email address!';
+		$pass_errors['email'] = $lang['invalid_email'];
 
     } // End of $_POST['email'] IF.
 
@@ -74,13 +74,11 @@ if(isset($_POST['submitted'])) {
         $url = 'http://' . BASE_URL . 'reset.php?t=' . $token;
 
         //send the email
-        $body = "This email is in response to a forgotten password reset request at 'Knowledge is Power'. If you did make this request, click the following link to be able to access your account:
-        $url
-        For security purposes, you have 15 minutes to do this. If you do not click this link within 15 minutes, you'll need to request a reset again. If you have not forgotten your password you can safely ignore this message and you will still be able to login with your existing password. ";
+        $body = $lang['password_reset_email_p1'] .' '. $url .' '. $lang['password_reset_email_p2'] ;
         // mail($email, 'Password Reset at Knowledge is Power', $body, 'FROM: ' . CONTACT_EMAIL);
 
         //display msg and end page
-        echo '<h2 class="complete">Reset Your Password</h1><p>You will receive an access code via email. Click the link in that email to gain access to the site. Once you have done that, you may then change your password.</p>';
+        echo $lang['reset_password_msg'];
 
         // TODO: PRINT LINK FOR TESTING PURPOSES ONLY
         echo "<p>Link:<a href=\"$url\">$url</a></p>";
@@ -88,7 +86,7 @@ if(isset($_POST['submitted'])) {
         exit();
 
 			} else { // If it did not run OK.
-            echo '<div class="error-wrapper"><p class="pass-error">Your password could not be changed due to a system error. We apologize for any inconvenience.</p><p>Please try again...</p></div>';
+            echo '<div class="error-wrapper"><p class="pass-error">' . $lang['password_not_reset'] . '</p></div>';
 						trigger_error('Your password could not be changed due to a system error. We apologize for any inconvenience.');
 
 			} //END OF update query IF
@@ -99,16 +97,16 @@ if(isset($_POST['submitted'])) {
     foreach($pass_errors as $error) {
       echo "<p class=\"pass-error\">$error</p>";
     }
-    echo '<p>Please try again...</p></div>';
+    echo '<p>' . $lang['try_again'] . '</p></div>';
 
 } //END OF main Submit conditional
 ?>
-<h2>Reset Your Password</h2>
-<p>Enter your email address below to reset your password.</p>
+<h2><?php echo $lang['reset_password_title']; ?></h2>
+<p><?php echo $lang['reset_password_brief']; ?></p>
 <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>?p=forgot_p" method="post" accept-charset="utf-8">
   <fieldset>
     <div class="form-group">
-      <label for="email">Email Address:</label>
+      <label for="email"><?php echo $lang['email_address']; ?></label>
       <input type="email" name="email" required autofocus>
     </div>
     <input type="submit" name="submit_button" value="Reset &rarr;">

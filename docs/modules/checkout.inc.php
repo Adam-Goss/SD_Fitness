@@ -47,11 +47,11 @@ if(isset($_POST['submitted'])) {
 
     if (mysqli_num_rows($r) !== 1) { // Problem!
       //product id is not in database
-      $buying_errors['product'] = 'Please select a valid product';
+      $buying_errors['product'] = $lang['select_valid_product'];
     }
 
   } else {
-    $buying_errors['product'] = 'Please select a valid product';
+    $buying_errors['product'] = $lang['select_valid_product'];
   }
 
 
@@ -60,7 +60,7 @@ if(isset($_POST['submitted'])) {
     //terms and conditions accepted
 
   } else {
-    $buying_errors['t_and_c'] = 'Please read and accept terms and conditions to continue';
+    $buying_errors['t_and_c'] = $lang['accept_t_and_c'];
   }
 
 
@@ -77,7 +77,7 @@ if(isset($_POST['submitted'])) {
             WHERE id = 27';
     	$r2 = mysqli_query($dbc, $q2);
     	if (mysqli_num_rows($r2) !== 1) { // Problem!
-    		echo '<div class="alert alert-danger">This page has been accessed in error.</div>';
+    		echo '<div class="alert alert-danger">' . $lang['page_accessed_in_error'] . '</div>';
         echo '</div>';
     		include('./includes/php/footer.php');
     		exit();
@@ -88,7 +88,7 @@ if(isset($_POST['submitted'])) {
     }
 
   } else {
-    $buying_errors['nutrition'] = 'Please select a valid nutrition option';
+    $buying_errors['nutrition'] = $lang['valid_nutrition_option'];
   }
 
 
@@ -106,7 +106,7 @@ if(isset($_POST['submitted'])) {
 
       if (mysqli_num_rows($r) !== 1) { // Problem!
         //user id is not in database
-        echo '<p>Please <a href="index.php?p=logout">logout</a> and try again</p>';
+        echo '<p>Please <a href="index.php?p=logout">' . $lang['logout_try_again'] . '</p>';
         echo '</div>';
   		  include('./includes/php/footer.inc.php');
   		  exit();
@@ -126,7 +126,7 @@ if(isset($_POST['submitted'])) {
       $q = "SELECT id, gender, age_group, title, price FROM products WHERE id = $pid";
       $r = mysqli_query($dbc, $q);
     	if (mysqli_num_rows($r) !== 1) { // Problem!
-        echo '<div class="alert alert-danger">This page has been accessed in error.</div>';
+        echo '<div class="alert alert-danger">' . $lang['page_accessed_in_error'] . '</div>';
         echo '</div>';
 		    include('./includes/php/footer.php');
 		    exit();
@@ -144,11 +144,11 @@ if(isset($_POST['submitted'])) {
               <div class=\"buy_table\">
                 <table>
                   <tr>
-                    <th>Program</th>
-                    <th>Gender</th>
-                    <th>Age Group</th>
-                    <th>Nutrition Included</th>
-                    <th>Price</th>
+                    <th>{$lang['program_title']}</th>
+                    <th>{$lang['gender_title']}</th>
+                    <th>{$lang['age_group_title']}</th>
+                    <th>{$lang['nutrition_included_title']}</th>
+                    <th>{$lang['price_title']}</th>
                   </tr>
                   <tr>
                     <td>{$row['title']}</td>
@@ -163,18 +163,18 @@ if(isset($_POST['submitted'])) {
 
         echo "<div class=\"payment_options\">
                 <div class=\"stripe_payment\">
-                  <h4>Please Enter Your Billing Information Below:</h4>
+                  <h4>{$lang['enter_billing_info']}</h4>
                   <form action=\"includes/php/charge.php\" method=\"post\" id=\"payment-form\">
                     <div class=\"form-row\">
-                      <label for=\"first_name\">First Name: </label>
+                      <label for=\"first_name\">{$lang['first_name']} </label>
                       <input type=\"text\" name=\"first_name\" class=\"StripeElement StripeElement--empty\" value=\"$first_name\">
                     </div>
                     <div class=\"form-row\">
-                      <label for=\"last_name\">Last Name: </label>
+                      <label for=\"last_name\">{$lang['last_name']} </label>
                       <input type=\"text\" name=\"last_name\" class=\"StripeElement StripeElement--empty\" value=\"$last_name\">
                     </div>
                     <div class=\"form-row\">
-                      <label for=\"email\">Email: </label>
+                      <label for=\"email\">{$lang['email']} </label>
                       <input type=\"email\" name=\"email\" class=\"form-control mb-3 StripeElement StripeElement--empty\" value=\"$email\">
                     </div>
 
@@ -184,7 +184,7 @@ if(isset($_POST['submitted'])) {
 
                     <!-- Used to display form errors. -->
                     <div id=\"card-errors\" role=\"alert\"></div>
-                  <button>Submit Payment</button>
+                  <button>{$lang['submit_payment']}</button>
 
                   <input type=\"hidden\" name=\"submitted\" value=\"TRUE\">
                   <input type=\"hidden\" name=\"pid\" value=\"{$row['id']}\">
@@ -193,11 +193,11 @@ if(isset($_POST['submitted'])) {
 
 
                   </form>
-                  <div>By clicking this button, your order will be completed and your credit card will be charged.</div>
+                  <div>{$lang['credit_card_will_be_charged']}</div>
                 </div>
 
                 <div class=\"paypal_payment\">
-                  <h4>Or Purcahse with PayPal</h4>
+                  <h4>{$lang['purchase_paypal']}</h4>
                   <form action=\"https://www.sandbox.paypal.com/cgi-bin/webscr\" method=\"post\" target=\"_top\">
                     <input type=\"hidden\" name=\"cmd\" value=\"_s-xclick\">
                     <input type=\"hidden\" name=\"hosted_button_id\" value=\"BYWFCJAJR9B6J\">
@@ -208,17 +208,17 @@ if(isset($_POST['submitted'])) {
               </div>
               <a href=\"index.php?p=view_prod&pid={$row['id']}\">
               <div class=\"edit_order\">
-                <h3>Edit Order</h3>
+                <h3>{$lang['edit_order']}</h3>
               </div>
               </a>
             </div>
             <div class=\"terms\">
-              <p><a href=\"index.php?p=t_and_c\">Questions about your order?</a></p>
+              <p><a href=\"index.php?p=t_and_c\">{$lang['questions_about_order']}</a></p>
             </div>";
 
 
     } else { //user is not logged in
-      echo '<p>You must <a href="index.php?p=login">login</a> or <a href="index.php?p=signup">sign up</a> to buy</p>';
+      echo $lang['login_signup_to_buy'];
     } //END OF user_id set (logged in) IF
 
   } else { //if the buying options form was invalid
@@ -226,13 +226,13 @@ if(isset($_POST['submitted'])) {
     foreach($buying_errors as $error) {
       echo "<p class=\"login-error\">$error</p>";
     }
-    echo "<p>Please try again</p>";
+    echo "<p>{$lang['try_again']}</p>";
 
   } //END OF $buying_errors IF
 
 
 } else { //invalid product id (pid)
-	echo '<div class="alert alert-danger">This page has been accessed in error.</div>';
+	echo '<div class="alert alert-danger">' . $lang['page_accessed_in_error'] . '</div>';
 } //END OF pid validation PRIMARY IF
 
 

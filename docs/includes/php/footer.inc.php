@@ -2,11 +2,11 @@
 <footer>
   <div class="footer-wrapper">
   <div class="company-info">
-    <h4>Who We Are</h4>
+    <h4><?php echo $lang['who_we_are']; ?></h4>
     <ul>
-      <li><a class="aboutBottomLink" href="index.php?p=about">About Us</a></li>
-      <li><a class="contactLink" href="index.php?p=contact">Contact</a></li>
-      <li><a class="t_and_cLink" href="index.php?p=t_and_c">Terms & Conditions</a></li>
+      <li><a class="aboutBottomLink" href="index.php?p=about"><?php echo $lang['about_us']; ?></a></li>
+      <li><a class="contactLink" href="index.php?p=contact"><?php echo $lang['contact']; ?></a></li>
+      <li><a class="t_and_cLink" href="index.php?p=t_and_c"><?php echo $lang['terms_and_conditions']; ?></a></li>
     </ul>
   </div>
   <div class="social-links">
@@ -18,7 +18,7 @@
     </ul>
   </div>
   <div class="contact">
-    <h4>Inqueries</h4>
+    <h4><?php echo $lang['inqueries']; ?></h4>
     <ul>
       <li><i class="fa fa-envelope"></i> <a href="mailto:company@gmail.com">company@gmail.com</a></li>
       <li><i class="fa fa-phone"></i> 002-998-1123</li>
@@ -26,11 +26,11 @@
     </ul>
   </div>
   <div class="associates">
-    <h4>Proud partner of:</h4>
+    <h4><?php echo $lang['proud_partner_with']; ?></h4>
     <img src="images/associate_logo.png" />
   </div>
   </div>
-  <p>© 2018 SD Fitness. <span>All Rights Reserved.</span></p>
+  <p>© 2018 SD Fitness. <span><?php echo $lang['all_rights_reserved']; ?></span></p>
 </footer>
 
 </div> <!-- end of outer-wrapper -->

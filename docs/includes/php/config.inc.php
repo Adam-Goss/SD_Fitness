@@ -92,7 +92,7 @@ if (!isset($_SESSION['SD_Fitness_Sess']['lang'])){
   }
 }
 
-echo $_SESSION['SD_Fitness_Sess']['lang'];
+// echo $_SESSION['SD_Fitness_Sess']['lang'];
 
 require_once("languages/" . $_SESSION['SD_Fitness_Sess']['lang'] . ".php");
 

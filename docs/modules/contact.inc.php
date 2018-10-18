@@ -34,34 +34,34 @@ if (!defined('BASE_URL')) {
         <li><i class="fa fa-phone"></i>002-998-1123</li>
         <li><i class="fa fa-envelope"></i>test@acme.test</li>
       </ul>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p><?php echo $lang['company_contact_brief']; ?></p>
     </div>
 
     <div class="contact">
-      <h3>Email Us</h3>
+      <h3><?php echo $lang['email_us']; ?></h3>
       <form action="#">
         <p>
-          <label for="name">Name:</label>
+          <label for="name"><?php echo $lang['contact_name']; ?></label>
           <input type="text" name="name">
         </p>
         <p>
-          <label for="company">Company:</label>
+          <label for="company"><?php echo $lang['contact_company']; ?></label>
           <input type="text" name="company">
         </p>
         <p>
-          <label for="email">Email:</label>
+          <label for="email"><?php echo $lang['contact_email']; ?></label>
           <input type="email" name="email">
         </p>
         <p>
-          <label for="phone">Phone Number:</label>
+          <label for="phone"><?php echo $lang['contact_phone_number']; ?></label>
           <input type="text" name="phone">
         </p>
         <p class="full">
-          <label for="message">Message:</label>
+          <label for="message"><?php echo $lang['contact_message']; ?></label>
           <textarea name="message" rows="5"></textarea>
         </p>
         <p class="full">
-          <button>Submit</button>
+          <button><?php echo $lang['submit']; ?></button>
         </p>
         </form>
     </div>

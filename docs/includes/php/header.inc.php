@@ -37,15 +37,15 @@
   <ul class="other-links">
     <?php
     if(isset($_SESSION['SD_Fitness_Sess']['user_id'])) {
-      echo "<li><a href=\"index.php?p=logout\">Logout</a></li>
+      echo "<li><a href=\"index.php?p=logout\">{$lang['logout']}</a></li>
             <li>|</li>
-            <li><a href=\"index.php?p=change_p\">Change Password</a></li>
+            <li><a href=\"index.php?p=change_p\">{$lang['change_password']}</a></li>
             <li>|</li>
-            <li><a href=\"index.php?p=view_p\">View Your Purchases</a></li>";
+            <li><a href=\"index.php?p=view_p\">{$lang['view_your_purchases']}</a></li>";
     } else {
-      echo "<li><a href=\"index.php?p=login\">Login</a></li>
+      echo "<li><a href=\"index.php?p=login\">{$lang['login']}</a></li>
             <li>|</li>
-            <li><a href=\"index.php?p=signup\">Sign Up</a></li>";
+            <li><a href=\"index.php?p=signup\">{$lang['sign_up']}</a></li>";
     }
     ?>
     <li><?php echo $lang['language']; ?></li>
@@ -79,21 +79,21 @@
     <!-- navigation -->
     <nav class="main-nav">
       <ul>
-        <li class="dropdown"><a class="programsLink" href="index.php?p=programs">Programs</a>
+        <li class="dropdown"><a class="programsLink" href="index.php?p=programs"><?php echo $lang['programs']; ?></a>
           <div class="dropdown-content">
-            <a class="programs_maleLink" href="index.php?p=programs_male">Male</a>
-            <a class="programs_femLink" href="index.php?p=programs_fem">Female</a>
+            <a class="programs_maleLink" href="index.php?p=programs_male"><?php echo $lang['male']; ?></a>
+            <a class="programs_femLink" href="index.php?p=programs_fem"><?php echo $lang['female']; ?></a>
           </div>
         </li>
-        <li><a class="priv_coachLink" href="index.php?p=priv_coach">Private Coaching</a></li>
-        <li class="dropdown"><a class="hock_trainLink" href="index.php?p=hock_train">Hockey Training</a>
+        <li><a class="priv_coachLink" href="index.php?p=priv_coach"><?php echo $lang['private_coaching']; ?></a></li>
+        <li class="dropdown"><a class="hock_trainLink" href="index.php?p=hock_train"><?php echo $lang['hockey_training']; ?></a>
           <div class="dropdown-content">
-            <a class="hock_train_inLink" href="index.php?p=hock_train_inseason">In-Season</a>
-            <a class="hock_train_offLink" href="index.php?p=hock_train_offseason">Off-Season</a>
+            <a class="hock_train_inLink" href="index.php?p=hock_train_inseason"><?php echo $lang['in-season']; ?></a>
+            <a class="hock_train_offLink" href="index.php?p=hock_train_offseason"><?php echo $lang['off-season']; ?></a>
           </div>
         </li>
-        <li><a class="blogLink" href="index.php?p=blog">Blog</a></li>
-        <li><a class="aboutLink" href="index.php?p=about">About Us</a></li>
+        <li><a class="blogLink" href="index.php?p=blog"><?php echo $lang['blog']; ?></a></li>
+        <li><a class="aboutLink" href="index.php?p=about"><?php echo $lang['about_us']; ?></a></li>
       </ul>
     </nav>
   </header>

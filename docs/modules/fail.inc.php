@@ -27,9 +27,9 @@ if (!defined('BASE_URL')) {
 <div class="inner-wrapper">
 
   <div class="fail-container">
-    <h2>Your purchased could not be processed at this time</h2>
+    <h2><?php echo $lang['purchased_not_processed']; ?></h2>
     <hr>
-    <p><a href="index.php">Please Try Again</a></p>
+    <p><a href="index.php"><?php echo $lang['fail_try_again']; ?></a></p>
   </div>
 
 

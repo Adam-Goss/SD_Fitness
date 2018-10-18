@@ -25,72 +25,111 @@ switch ($p) {
     if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
       $page_title = 'Programs';
     } else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
-      $page_title = 'FRANCE Programs';
+      $page_title = 'Programmes';
     }
-    $page_title = 'Programs';
     $page_class = 'programs';
     $page_css = 'includes/css/programs.css';
     $script = 'includes/js/programs-options.js';
     break;
   case 'programs_male':
     $page = 'programs_male.inc.php';
-    $page_title = 'Male Training Programs';
+    if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+      $page_title = 'Male Training Programs';
+    } else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+      $page_title = 'Programmes de Formation Pour Hommes';
+    }
     $page_class = 'programs_male';
     $page_css = 'includes/css/programs_male.css';
     break;
   case 'programs_fem':
     $page = 'programs_fem.inc.php';
-    $page_title = 'Female Training Programs';
+    if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+      $page_title = 'Female Training Programs';
+    } else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+      $page_title = 'Programmes de Formation Pour Femmes';
+    }
     $page_class = 'programs_fem';
     $page_css = 'includes/css/programs_fem.css';
     break;
   case 'priv_coach':
     $page = 'priv_coach.inc.php';
-    $page_title = 'Private Coaching';
+    if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+      $page_title = 'Private Coaching';
+    } else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+      $page_title = 'Coaching Privé';
+    }
     $page_class = 'priv_coach';
     $page_css = 'includes/css/priv_coach.css';
     break;
   case 'hock_train':
     $page = 'hock_train.inc.php';
-    $page_title = 'Hockey Training';
+    if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+      $page_title = 'Hockey Training';
+    } else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+      $page_title = 'Entraînement de Hockey';
+    }
     $page_class = 'hock_train';
     $page_css = 'includes/css/hock_train.css';
     break;
   case 'hock_train_inseason':
     $page = 'hock_train_inseason.inc.php';
-    $page_title = 'Hockey Training In-Season';
+    if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+      $page_title = 'Hockey Training In-Season';
+    } else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+      $page_title = 'Entraînement de Hockey En Saison';
+    }
     $page_class = 'hock_train_inseason';
     $page_css = 'includes/css/hock_train_season.css';
     $script = 'includes/js/hock_train-options.js';
     break;
   case 'hock_train_offseason':
     $page = 'hock_train_offseason.inc.php';
-    $page_title = 'Hockey Training Off-Season';
+    if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+      $page_title = 'Hockey Training Off-Season';
+    } else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+      $page_title = 'Entraînement de Hockey Hors Saison';
+    }
     $page_class = 'hock_train_offseason';
     $page_css = 'includes/css/hock_train_season.css';
     $script = 'includes/js/hock_train-options.js';
     break;
   case 'hock_train_y':
     $page = 'hock_train_y.inc.php';
-    $page_title = 'Youth Hockey Training';
+    if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+      $page_title = 'Youth Hockey Training';
+    } else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+      $page_title = 'Entraînement de Hockey Pour les Jeunes';
+    }
     $page_class = 'hock_train_y';
     $page_css = 'includes/css/hock_train_y.css';
     break;
   case 'hock_train_j':
     $page = 'hock_train_j.inc.php';
-    $page_title = 'Junior Hockey Training';
+    if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+      $page_title = 'Junior Hockey Training';
+    } else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+      $page_title = 'Entraînement de Hockey Junior';
+    }
     $page_class = 'hock_train_j';
     $page_css = 'includes/css/hock_train_j.css';
     break;
   case 'hock_train_p':
     $page = 'hock_train_p.inc.php';
-    $page_title = 'Pro Hockey Training';
+    if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+      $page_title = 'Pro Hockey Training';
+    } else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+      $page_title = 'Entraînement de Hockey Professionnel';
+    }
     $page_class = 'hock_train_p';
     $page_css = 'includes/css/hock_train_p.css';
     break;
   case 'blog':
     $page = 'blog.inc.php';
-    $page_title = 'Blog';
+    if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+      $page_title = 'Blog';
+    } else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+      $page_title = 'Blog';
+    }
     $page_class = 'blog';
     $page_css = 'includes/css/blog.css';
     break;
@@ -99,7 +138,11 @@ switch ($p) {
     if(isset($_GET['t'])) {
       $page_title = $_GET['t'];
     } else {
-      $page_title = 'Blog Page';
+      if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+        $page_title = 'Blog Page';
+      } else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+        $page_title = 'Page de Blog';
+      }
     };
     $page_class = 'blog-page';
     $page_css = 'includes/css/blog_page.css';
@@ -107,64 +150,108 @@ switch ($p) {
     break;
   case 'about':
     $page = 'about.inc.php';
-    $page_title = 'About Us';
+    if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+      $page_title = 'About Us';
+    } else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+      $page_title = 'À Propos de Nous';
+    }
     $page_class = 'about';
     $page_css = 'includes/css/about.css';
     break;
   case 'contact':
     $page = 'contact.inc.php';
-    $page_title = 'Contact';
+    if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+      $page_title = 'Contact';
+    } else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+      $page_title = 'Contact';
+    }
     $page_class = 'contact';
     break;
   case 't_and_c':
     $page = 't_and_c.inc.php';
-    $page_title = 'Terms & Conditions';
+    if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+      $page_title = 'Terms & Conditions';
+    } else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+      $page_title = 'Termes et Conditions';
+    }
     $page_class = 't_and_c';
     $page_css = 'includes/css/t_and_c.css';
     break;
   case 'login':
     $page = 'login-form.inc.php';
-    $page_title = 'Login';
+    if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+      $page_title = 'Login';
+    } else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+      $page_title = 'S\'identifier';
+    }
     $page_class = 'login';
     $script = 'includes/js/login-form.js';
     break;
   case 'signup':
     $page = 'signup-form.inc.php';
-    $page_title = 'Sign Up';
+    if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+      $page_title = 'Sign Up';
+    } else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+      $page_title = 'S\'inscrire';
+    }
     $page_class = 'sign_up';
     $script = 'includes/js/signup-form.js';
     break;
   case 'change_p':
     $page = 'change_password.inc.php';
-    $page_title = 'Change Password';
+    if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+      $page_title = 'Change Password';
+    } else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+      $page_title = 'Changer le Mot de Passe';
+    }
     $page_class = 'change_p';
     break;
   case 'view_p':
     $page = 'view_your_purchases.inc.php';
-    $page_title = 'View Purchases';
+    if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+      $page_title = 'View Your Purchases';
+    } else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+      $page_title = 'Voir Votre Achat';
+    }
     $page_class = 'view_p';
     $page_css = 'includes/css/view_p.css';
     break;
   case 'logout':
     $page = 'logout.inc.php';
-    $page_title = 'Logout';
+    if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+      $page_title = 'Logout';
+    } else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+      $page_title = 'Connectez - Out';
+    }
     $page_class = 'logout';
     $page_css = 'includes/css/logout.css';
     break;
   case 'forgot_p':
     $page = 'forgot_password.inc.php';
-    $page_title = 'Forgot Password';
+    if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+      $page_title = 'Forgot Password';
+    } else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+      $page_title = 'Mot de Passe Oubié';
+    }
     $page_class = 'forgot_p';
     break;
   case 'view_prod':
     $page = 'view_product.inc.php';
-    $page_title = 'View Product';
+    if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+      $page_title = 'View Product';
+    } else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+      $page_title = 'Voir le Produit';
+    }
     $page_class = 'view_prod';
     $page_css = 'includes/css/view_prod.css';
     break;
   case 'checkout':
     $page = 'checkout.inc.php';
-    $page_title = 'Checkout';
+    if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+      $page_title = 'Checkout';
+    } else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+      $page_title = 'Check-out';
+    }
     $page_class = 'checkout';
     $page_css = 'includes/css/checkout.css';
     $script = 'https://code.jquery.com/jquery-3.3.1.min.js';
@@ -173,19 +260,31 @@ switch ($p) {
     break;
   case 'success_transaction':
     $page = 'success.inc.php';
-    $page_title = 'Successful Purchase';
+    if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+      $page_title = 'Successful Purchase';
+    } else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+      $page_title = 'Achat Réussi';
+    }
     $page_class = 'success';
     $page_css = 'includes/css/success-fail.css';
     break;
   case 'failed_transacation':
     $page = 'fail.inc.php';
-    $page_title = 'Unsuccessful Purchase';
+    if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+      $page_title = 'Unsuccessful Purchase';
+    } else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+      $page_title = 'Achat Infructueux';
+    }
     $page_class = 'fail';
     $page_css = 'includes/css/success-fail.css';
     break;
   case 'view_p_content':
     $page = 'view_purchase_content.inc.php';
-    $page_title = 'Purchase Content';
+    if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+      $page_title = 'Purchase Content';
+    } else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+      $page_title = 'Acheter du Contenu';
+    }
     $page_class = 'view_p_content';
     $page_css = 'includes/css/view_p_content.css';
     break;
