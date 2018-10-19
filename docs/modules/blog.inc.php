@@ -59,24 +59,24 @@ if (isset($_POST['submitted'])) {
 
         <div class="filter-bar">
           <ul>
-            <li><a href="index.php?p=blog&sort=dc">Most Recent</a></li>
+            <li><a href="index.php?p=blog&sort=dc"><?php echo $lang['most_recent']; ?></a></li>
             <li>|</li>
-            <li><a href="index.php?p=blog&sort=v">Most Popular</a></li>
+            <li><a href="index.php?p=blog&sort=v"><?php echo $lang['most_popular']; ?></a></li>
             <li>|</li>
             <?php // COMBAK: ADD FUNCTIONALITY FOR HIGHEST RATED BLOG PAGES USING blog_page_ratings table ?>
-            <li><a href="index.php?p=blog&sort=hr">Highest Rated</a></li>
+            <li><a href="index.php?p=blog&sort=hr"><?php echo $lang['highest_rated']; ?></a></li>
             <li>|</li>
-            <li><a href="index.php?p=blog&cat=h">Hockey</a></li>
+            <li><a href="index.php?p=blog&cat=h"><?php echo $lang['hockey']; ?></a></li>
             <li>|</li>
-            <li><a href="index.php?p=blog&cat=n">Nutrition</a></li>
+            <li><a href="index.php?p=blog&cat=n"><?php echo $lang['nutrition']; ?></a></li>
             <li>|</li>
-            <li><a href="index.php?p=blog&cat=f">Fitness</a></li>
+            <li><a href="index.php?p=blog&cat=f"><?php echo $lang['fitness']; ?></a></li>
             <li>|</li>
-            <li><a href="index.php?p=blog&cat=st">Sports Training</a></li>
+            <li><a href="index.php?p=blog&cat=st"><?php echo $lang['sports_training']; ?></a></li>
             <li>|</li>
-            <li><a href="index.php?p=blog&cat=l">Lifestyle</a></li>
+            <li><a href="index.php?p=blog&cat=l"><?php echo $lang['lifestyle']; ?></a></li>
             <li>|</li>
-            <li><a href="index.php?p=blog&cat=o">Other Articles</a></li>
+            <li><a href="index.php?p=blog&cat=o"><?php echo $lang['other_articles']; ?></a></li>
             <li><form class="" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>?p=blog" method="post" role="search">
               <input type="text" name="search" id="search-box" placeholder="<?php echo $term; ?>">
               <input type="hidden" name="submitted" value="TRUE">
@@ -97,7 +97,7 @@ if (isset($_POST['submitted'])) {
               <li><h3>{$row['title']}</h3></li>
               <li><p>{$row['description']}</p></li>
               <li class=\"btn\">
-                <a href=\"index.php?p=blog_p&id={$row['id']}&t=", urlencode($row['title']), "\">Read More</a>
+                <a href=\"index.php?p=blog_p&id={$row['id']}&t=", urlencode($row['title']), "\">{$lang['read_more']}</a>
               </li>
             </ul>
           </div>";
@@ -113,7 +113,7 @@ if (isset($_POST['submitted'])) {
 
     } else { //no results
 
-      echo "<p>Your search did not match any products. Please try again.</p>";
+      echo "<p>{$lang['search_unsuccessful']}</p>";
 
     } //end of IF search results
 
@@ -242,28 +242,28 @@ if (isset($_POST['submitted'])) {
 
     <div class="filter-bar">
       <ul>
-        <li><a href="index.php?p=blog&sort=dc">Most Recent</a></li>
+        <li><a href="index.php?p=blog&sort=dc"><?php echo $lang['most_recent']; ?></a></li>
         <li>|</li>
-        <li><a href="index.php?p=blog&sort=v">Most Popular</a></li>
+        <li><a href="index.php?p=blog&sort=v"><?php echo $lang['most_popular']; ?></a></li>
         <li>|</li>
         <?php // COMBAK: ADD FUNCTIONALITY FOR HIGHEST RATED BLOG PAGES USING blog_page_ratings table ?>
-        <li><a href="index.php?p=blog&sort=hr">Highest Rated</a></li>
+        <li><a href="index.php?p=blog&sort=hr"><?php echo $lang['highest_rated']; ?></a></li>
         <li>|</li>
-        <li class="dropdown">Sort by category
+        <li class="dropdown"><?php echo $lang['sort_by_category'] ?>
           <div class="dropdown-content">
             <ul>
-              <li><a href="index.php?p=blog&cat=h">Hockey</a></li>
-              <li><a href="index.php?p=blog&cat=n">Nutrition</a></li>
-              <li><a href="index.php?p=blog&cat=f">Fitness</a></li>
-              <li><a href="index.php?p=blog&cat=st">Sports Training</a></li>
-              <li><a href="index.php?p=blog&cat=l">Lifestyle</a></li>
-              <li><a href="index.php?p=blog&cat=o">Other Articles</a></li>
+              <li><a href="index.php?p=blog&cat=h"><?php echo $lang['hockey']; ?></a></li>
+              <li><a href="index.php?p=blog&cat=n"><?php echo $lang['nutrition']; ?></a></li>
+              <li><a href="index.php?p=blog&cat=f"><?php echo $lang['fitness']; ?></a></li>
+              <li><a href="index.php?p=blog&cat=st"><?php echo $lang['sports_training']; ?></a></li>
+              <li><a href="index.php?p=blog&cat=l"><?php echo $lang['lifestyle']; ?></a></li>
+              <li><a href="index.php?p=blog&cat=o"><?php echo $lang['other_articles']; ?></a></li>
             </ul>
           </div>
         </li>
       </ul>
       <form class="" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>?p=blog" method="post" role="search">
-        <input type="text" name="search" id="search-box" placeholder="Search ...">
+        <input type="text" name="search" id="search-box" placeholder="<?php echo $lang['search']; ?>">
         <input type="hidden" name="submitted" value="TRUE">
       </form>
     </div>
@@ -285,7 +285,7 @@ if (isset($_POST['submitted'])) {
               <li><h3>{$row['title']}</h3></li>
               <li><p>{$row['description']}</p></li>
               <li class=\"btn\">
-                <a href=\"index.php?p=blog_p&id={$row['id']}&t=", urlencode($row['title']), "\">Read More</a>
+                <a href=\"index.php?p=blog_p&id={$row['id']}&t=", urlencode($row['title']), "\">{$lang['read_more']}</a>
               </li>
             </ul>
           </div>";
@@ -310,7 +310,7 @@ if (isset($_POST['submitted'])) {
   		// If it's not the first page, make a Previous link:
   		if ($current_page != 1) {
   			echo '<a href="index.php?p=blog&amp;s=' . ($start - $display) .
-  			'&amp;n=' . $pages . '&amp;sort=' . $sort . '&amp;cat=' . $cat .'">Previous</a> &nbsp;';
+  			'&amp;n=' . $pages . '&amp;sort=' . $sort . '&amp;cat=' . $cat .'">' . $lang['previous'] . '</a> &nbsp;';
   		}
 
   		// Make all the numbered pages:
@@ -327,7 +327,7 @@ if (isset($_POST['submitted'])) {
   		// If it's not the last page, make a Next button:
   		if ($current_page != $pages) {
   			echo '&nbsp; <a href="index.php?p=blog&amp;s=' . ($start + $display) .
-  			'&amp;n=' . $pages . '&amp;sort=' . $sort . '&amp;cat=' . $cat .'">Next</a>';
+  			'&amp;n=' . $pages . '&amp;sort=' . $sort . '&amp;cat=' . $cat .'">' . $lang['next'] . '</a>';
   		}
 
   		echo '</p></div>'; // Close the paragraph
@@ -337,7 +337,7 @@ if (isset($_POST['submitted'])) {
 
   } else {
   	//if no records were returned:
-  	echo '<p class="error">There are currently no blog posts.</p>';
+  	echo '<p class="error">' . $lang['no_blog_posts'] . '</p>';
   	/*
   	//if the query did not run OK
   	//public message:

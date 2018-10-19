@@ -33,7 +33,7 @@ if (isset($_GET['pid']) && filter_var($_GET['pid'], FILTER_VALIDATE_INT, array('
 	$r = mysqli_query($dbc, $q);
 	if (mysqli_num_rows($r) !== 1) { // Problem!
     echo '<div class="inner-wrapper">';
-		echo '<div class="alert alert-danger">This page has been accessed in error.</div>';
+		echo '<div class="alert alert-danger">' . $lang['page_accessed_in_error'] . '</div>';
     echo '</div>';
 		include('./includes/php/footer.php');
 		exit();
@@ -48,7 +48,7 @@ if (isset($_GET['pid']) && filter_var($_GET['pid'], FILTER_VALIDATE_INT, array('
   echo "<div class=\"product\">
           <div class=\"product_title\">
             <h3>{$row['title']}</h3>
-            <h4>Volume: {$row['volume']} - Season: {$row['season']}</h4>
+            <h4>{$lang['volume']}: {$row['volume']} - {$lang['season']}: {$row['season']}</h4>
           </div>
           <div class=\"product_content\">
             {$row['content']}
@@ -60,7 +60,7 @@ if (isset($_GET['pid']) && filter_var($_GET['pid'], FILTER_VALIDATE_INT, array('
 } else { //invalid product id (pid)
 
   echo '<div class="inner-wrapper">';
-	echo '<div class="alert alert-danger">This page has been accessed in error.</div>';
+	echo '<div class="alert alert-danger">' . $lang['page_accessed_in_error'] . '</div>';
 
 } // End of primary validation IF.
 

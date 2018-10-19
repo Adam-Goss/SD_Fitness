@@ -36,7 +36,7 @@ if (isset($_GET['pid']) && filter_var($_GET['pid'], FILTER_VALIDATE_INT, array('
 	$r = mysqli_query($dbc, $q);
 	if (mysqli_num_rows($r) !== 1) { // Problem!
     echo '<div class="inner-wrapper">';
-		echo '<div class="alert alert-danger">This page has been accessed in error.</div>';
+		echo '<div class="alert alert-danger">' . $lang['page_accessed_in_error'] . '</div>';
     echo '</div>';
 		include('./includes/php/footer.php');
 		exit();
@@ -78,7 +78,7 @@ if (isset($_GET['pid']) && filter_var($_GET['pid'], FILTER_VALIDATE_INT, array('
             WHERE id = 27';
     	$r2 = mysqli_query($dbc, $q2);
     	if (mysqli_num_rows($r2) !== 1) { // Problem!
-    		echo '<div class="alert alert-danger">This page has been accessed in error.</div>';
+    		echo '<div class="alert alert-danger">' . $lang['page_accessed_in_error'] . '</div>';
         echo '</div>';
     		include('./includes/php/footer.php');
     		exit();
@@ -95,25 +95,25 @@ if (isset($_GET['pid']) && filter_var($_GET['pid'], FILTER_VALIDATE_INT, array('
                   </select>
                 </div>
                 <div class=\"form-group2\">
-                  <p>I agree to terms and conditions</p>
-                  <input type=\"radio\" name=\"t_and_c\" value=\"yes\" required> Yes
-                  <p><a href=\"website_terms_conditions.pdf\" target=\"_blank\">*View terms and conditions</a></p>
+                  <p>{$lang['agree_to_t_and_c']}</p>
+                  <input type=\"radio\" name=\"t_and_c\" value=\"yes\" required> {$lang['yes']}
+                  <p><a href=\"website_terms_conditions.pdf\" target=\"_blank\">*{$lang['view_t_and_c']}</a></p>
                 </div>
                 <div class=\"form-group3\">
                   <p>Include {$row2['title']}?</p>
-                  <input type=\"radio\" name=\"n\" value=\"yes\" checked> Yes (\${$row2['price']})
-                  <input type=\"radio\" name=\"n\" value=\"no\"> No
+                  <input type=\"radio\" name=\"n\" value=\"yes\" checked> {$lang['yes']} (\${$row2['price']})
+                  <input type=\"radio\" name=\"n\" value=\"no\"> {$lang['no']}
                   <div class=\"nutrition-program\">
                     <div class=\"pn-img\">
                       <img src=\"program_images/{$row2['img_file_name']}\">
                     </div>
                     <div class=\"pn-short-des\">
                       {$row2['short_description']}
-                      <p><a href=\"\">Find out more</a></p>
+                      <p><a href=\"\">{$lang['find_out_more']}</a></p>
                     </div>
                   </div>
                 </div>
-                <button type=\"submit\" class=\"\">Buy</button>
+                <button type=\"submit\" class=\"\">{$lang['buy']}</button>
               </fieldset>
               <input type=\"hidden\" name=\"submitted\" value=\"TRUE\">
             </form>";
@@ -128,15 +128,15 @@ if (isset($_GET['pid']) && filter_var($_GET['pid'], FILTER_VALIDATE_INT, array('
                       </select>
                     </div>
                     <div class=\"form-group2\">
-                      <p>I agree to terms and conditions</p>
+                      <p>{$lang['agree_to_t_and_c']}</p>
                       <input type=\"radio\" name=\"t_and_c\" value=\"yes\" required> Yes
-                      <p><a href=\"website_terms_conditions.pdf\" target=\"_blank\">*View terms and conditions</a></p>
+                      <p><a href=\"website_terms_conditions.pdf\" target=\"_blank\">*{$lang['view_t_and_c']}</a></p>
                     </div>
                     <div class=\"form-group3\">
-                      <p>You have previously brought the nurition option so check it out on your <a href=\"index.php?=view_p\">View Purchases Homepage</a></p>
+                      <p>{$lang['previously_purchased_nutrition_option']} <a href=\"index.php?=view_p\">{$lang['view_purchases_homepage']}</a></p>
                       <input type=\"hidden\" name=\"n\" value=\"no\">
                     </div>
-                    <button type=\"submit\" class=\"\">Buy</button>
+                    <button type=\"submit\" class=\"\">{$lang['buy']}</button>
                   </fieldset>
                   <input type=\"hidden\" name=\"submitted\" value=\"TRUE\">
                 </form>";
@@ -145,7 +145,7 @@ if (isset($_GET['pid']) && filter_var($_GET['pid'], FILTER_VALIDATE_INT, array('
       } else { //user not logged in#
 
     //say user must log in to buy product
-    echo '<p>You must <a href="index.php?p=login">login</a> or <a href="index.php?p=signup">sign up</a> to buy</p>';
+    echo '<p>' . $lang['login_signup_to_buy'] . '</p>';
 
   } //end of IF session set
 
@@ -156,7 +156,7 @@ if (isset($_GET['pid']) && filter_var($_GET['pid'], FILTER_VALIDATE_INT, array('
 } else { //invalid product id (pid)
 
   echo '<div class="inner-wrapper">';
-	echo '<div class="alert alert-danger">This page has been accessed in error.</div>';
+	echo '<div class="alert alert-danger">' . $lang['page_accessed_in_error'] . '</div>';
 
 } // End of primary validation IF.
 

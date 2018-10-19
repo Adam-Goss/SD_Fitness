@@ -29,8 +29,8 @@ setcookie (session_name('SD_Fitness_Sess'), '', time()-300); // Destroy the cook
 <!-- start of page specific content -->
 <div class="inner-wrapper">
 
-  <h2>Logged Out</h2>
-  <p>Thank you for visiting. You are now logged out. Please come back soon!</p>
+  <h2><?php echo $lang['logged_out']; ?></h2>
+  <p><?php echo $lang['thankyou_msg']; ?></p>
   <i class="far fa-hand-peace fa-4x"></i>
 
 

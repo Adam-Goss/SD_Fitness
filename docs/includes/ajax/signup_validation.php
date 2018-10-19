@@ -17,28 +17,28 @@ $reg_errors = array();
 if (preg_match('/^[A-Z \' .-]{2,45}$/i', $_GET['fn'])) {
    $fn = $_GET['fn'];
 } else {
-   $reg_errors['fn'] = 'Please enter your first name!';
+   $reg_errors['fn'] = $lang['enter_first_name'];
 }
 
 //validate the last name // DEBUG: ADD VALIDATION
 if (preg_match('/^[A-Z \' .-]{2,45}$/i', $_GET['ln'])) {
    $ln = $_GET['ln'];
 } else {
-   $reg_errors['ln'] = 'Please enter your last name!';
+   $reg_errors['ln'] = $lang['enter_last_name'];
 }
 
 //validate the username // DEBUG: ADD VALIDATION
 if (preg_match('/^[A-Z0-9]{2,45}$/i', $_GET['un'])) {
    $un = $_GET['un'];
 } else {
-   $reg_errors['un'] = 'Please enter your username!';
+   $reg_errors['un'] = $lang['enter_username'];
 }
 
 //validate the email address
 if (filter_var($_GET['e'], FILTER_VALIDATE_EMAIL)) {
    $e = escape_data($_GET['e'], $dbc);
 } else {
-   $reg_errors['e'] = 'Please enter a valid email address!';
+   $reg_errors['e'] = $lang['valid_email_address'];
 }
 
 //validate the password and confirm against confirmation password:
@@ -48,10 +48,10 @@ if (preg_match('/^[a-z]{2,}$/i', $_GET['p']) ) {
   if ($_GET['p'] === $_GET['cp']) {
 	   $p = $_GET['p'];
   } else {
-	   $reg_errors['cp'] = 'Your password did not match the confirmed password!';
+	   $reg_errors['cp'] = $lang['password_no_match'];
 	}
 } else {
-  $reg_errors['p'] = 'Please enter a valid password!';
+  $reg_errors['p'] = $lang['invalid_password'];
 }
 
 
@@ -109,20 +109,20 @@ if (empty($reg_errors)) { //OK to proceed
 
       } else { //query didn't run correctly
         trigger_error('You could not be registered due to a system error. We apologize for any inconvenience. We will correct the error ASAP.');
-        echo ('You could not be registered due to a system error. We apologize for any inconvenience. We will correct the error ASAP.');
+        echo $lang['system_error'];
       }  //end of if SELECT query == 1
 
     } else { //if the INSERT query did not run OK
         trigger_error('You could not be registered due to a system error. We apologize for any inconvenience. We will correct the error ASAP.');
-        echo ('You could not be registered due to a system error. We apologize for any inconvenience. We will correct the error ASAP.');
+        echo $lang['system_error'];
     }
 
   } else { //the email address or username is not avaliable
 
     if ($rows == 2) { //both are taken
 
-        $reg_errors['e'] = 'This email address has already been registered. If you have forgotten your password, use the link below to have your password sent to you.<br><a href="index.php?p=forgot_p">Forgot password?</a>';
-        $reg_errors['un'] = 'This username has already been registered. Please try another.';
+        $reg_errors['e'] = $lang['email_already_registered'];
+        $reg_errors['un'] = $lang['username_already_registered'];
 
     } else { //one or both may be taken
 
@@ -130,13 +130,13 @@ if (empty($reg_errors)) { //OK to proceed
       $row = mysqli_fetch_array($r, MYSQLI_NUM);
 
       if( ($row[0] === $e) && ($row[1] === $un) ) { // Both match.
-         $reg_errors['e_un'] = 'This email address and username has already been registered. If you have forgotten your password, use the link below to have your password sent to you.<br><a href="index.php?p=forgot_p">Forgot password?</a>';
+         $reg_errors['e_un'] = $lang['email_already_registered'];
 
     	} elseif ($row[0] === $e) { // Email match.
-         $reg_errors['e'] = 'This email address has already been registered. If you have forgotten your password, use the link below to have your password sent to you.<br><a href="index.php?p=forgot_p">Forgot password?</a>';
+         $reg_errors['e'] = $lang['email_already_registered'];
 
       } elseif ($row[1] === $un) { // Username match.
-         $reg_errors['un'] = 'This username has already been registered. Please try another.';
+         $reg_errors['un'] = $lang['username_already_registered'];
   		}
 
     }   //END OF $rows == 2 ELSE

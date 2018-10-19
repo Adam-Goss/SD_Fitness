@@ -17,14 +17,14 @@ $login_errors = array();
 if (filter_var($_GET['e'], FILTER_VALIDATE_EMAIL)) {
    $e = escape_data($_GET['e'], $dbc);
 } else {
-   $login_errors['e'] = 'Please enter a valid email address!';
+   $login_errors['e'] = $lang['valid_email_address'];
 }
 
 //validate the password:
 if (!empty($_GET['p'])) {
    $p = $_GET['p'];
 } else {
-   $login_errors['p'] = 'Please enter your password!';
+   $login_errors['p'] = $lang['enter_your_password'];
 }
 
 
@@ -57,12 +57,12 @@ if (empty($login_errors)) { //OK to proceed
 
 
       } else {  //right email address but invalid password
-        echo 'The email address and password do not match those on file, please try again...';
+        echo $lang['wrong_email_address_password'];
 
       }   //END OF validate password IF
 
   } else {  //no match was made (technically, only the email address failed)
-      echo 'The email address and password do not match those on file, please try again...';
+    echo $lang['wrong_email_address_password'];
 
   }
 

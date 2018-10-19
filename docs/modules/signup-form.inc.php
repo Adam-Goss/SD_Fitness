@@ -26,7 +26,7 @@ if (!defined('BASE_URL')) {
 <div class="inner-wrapper">
 
   <div id="form-container">
-    <h1 class="logo">Sign Up Form</h1>
+    <h1 class="logo"><?php echo $lang['signup_form_title']; ?></h1>
 
     <div id="form-box">
       <i id="prev-btn" class="fas fa-arrow-left"></i>
@@ -47,3 +47,14 @@ if (!defined('BASE_URL')) {
 
 </div> <!-- end of inner-wrapper -->
 <!-- end of page specific content -->
+<?php
+//setting language for login-form.js
+if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+  $form_language = 'en';
+} else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+  $form_language = 'fr';
+};
+echo '<script type="text/javascript">
+  var form_language ="' . $form_language . '";
+</script>';
+?>

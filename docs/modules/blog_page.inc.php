@@ -36,7 +36,7 @@ if (isset($_GET['id']) && filter_var($_GET['id'], FILTER_VALIDATE_INT, array('mi
 	if (mysqli_num_rows($r) !== 1) { // Problem!
 		$page_title = 'Error!';
     echo '<div class="inner-wrapper">';
-		echo '<div class="alert alert-danger">This page has been accessed in error.</div>';
+		echo '<div class="alert alert-danger">' . $lang['page_accessed_in_error'] . '</div>';
     echo '</div>';
 		include('./includes/php/footer.php');
 		exit();
@@ -72,7 +72,7 @@ if (isset($_GET['id']) && filter_var($_GET['id'], FILTER_VALIDATE_INT, array('mi
 	$r = mysqli_query($dbc, $q);
 	if (!$r) { // Problem!
 		$page_title = 'Error!';
-		echo '<div class="alert alert-danger">Unable to update blog views.</div>';
+		echo '<div class="alert alert-danger">' . $lang['no_update_blog_views'] . '</div>';
     echo '</div>';
 		include('./includes/php/footer.php');
 		exit();
@@ -102,11 +102,11 @@ if (isset($_GET['id']) && filter_var($_GET['id'], FILTER_VALIDATE_INT, array('mi
     $r = mysqli_query($dbc, $q);
     echo '<div class="favorite-box">';
     if (mysqli_num_rows($r) === 1) {
-      echo '<h3 id="favorite_h3"><i class="far fa-thumbs-up"></i><span>This is a favorite!</span>
+      echo '<h3 id="favorite_h3"><i class="far fa-thumbs-up"></i><span>' . $lang['a_favorite'] . '</span>
         <a id="remove_favorite_link" title="remove favorite" href="#"><i class="far fa-thumbs-down"></i></a>
         </h3>';
     } else {
-      echo '<h3 id="favorite_h3"><span>Make this a favorite!</span>
+      echo '<h3 id="favorite_h3"><span>' . $lang['make_favorite'] . '</span>
         <a id="add_favorite_link" title="favorite page" href="#"><i class="far fa-thumbs-up"></i></a>
         </h3>';
     }
@@ -130,7 +130,7 @@ if (isset($_GET['id']) && filter_var($_GET['id'], FILTER_VALIDATE_INT, array('mi
           mysqli_stmt_execute($stmt);
 
           if (mysqli_stmt_affected_rows($stmt) > 0) { //everything OK
-  				      echo '<div class="alert alert-success">Your rating has been saved.</div>';
+  				      echo '<div class="alert alert-success">' . $lang['rating_saved'] . '</div>';
   				}
   			}
   		}
@@ -151,7 +151,7 @@ if (isset($_GET['id']) && filter_var($_GET['id'], FILTER_VALIDATE_INT, array('mi
     echo '<div class="rating-box">';
   	echo '<form id="rating_form" action="' . htmlentities($_SERVER['PHP_SELF']) . '?p=blog_p&id=' . $blog_id . '&t=' . $title .'" method="post" accept-charset="utf-8">
   	<select name="rating" class="form-control">
-    <option>Select One</option>';
+    <option>' . $lang['select_one'] . '</option>';
   	//loop through possible ratings
   	for ($i=1; $i <= 5; $i++) {
   		echo "<option value=\"$i\" ";
@@ -167,20 +167,27 @@ if (isset($_GET['id']) && filter_var($_GET['id'], FILTER_VALIDATE_INT, array('mi
 
 	} else { // Not logged in.
 	   echo '<div class="alert">
-          <p>You are not currently logged in!</p>
-          <p>Please <a href="index.php?p=login">Login</a> or <a href="index.php?p=signup">Signup</a> to rate and favorite the page</p>
+          <p>' . $lang['not_logged_in'] . '</p>
+          <p>' . $lang['login_signup_to_rate_favorite'] . '</p>
           </div>';
+          exit();
 	}
 
 
 } else { // No valid ID.
   echo '<div class="inner-wrapper">';
-	echo '<div class="alert alert-danger">This page has been accessed in error.</div>';
+	echo '<div class="alert alert-danger">' . $lang['page_accessed_in_error'] . '</div>';
 } // End of primary IF.
 
 //close the inner wrapper (page content) and add-in JS script variables
-echo '</div><script type="text/javascript">
+if ($_SESSION['SD_Fitness_Sess']['lang'] == 'en') {
+  $form_language = 'en';
+} else if ($_SESSION['SD_Fitness_Sess']['lang'] == 'fr') {
+  $form_language = 'fr';
+};
+echo '<script type="text/javascript">
   var blog_id = ' . $blog_id . ';
   var user_id = ' . $user_id .';
+  var form_language = "' . $form_language . '";
   </script></div>';
 ?>

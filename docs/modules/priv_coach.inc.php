@@ -25,11 +25,11 @@ if (!defined('BASE_URL')) {
 <div class="inner-wrapper">
 
   <div class="pimg1-start">
-      <h2>Private Training Programs</h2>
+      <h2><?php echo $lang['private_training_programs']; ?></h2>
   </div>
 
   <section class="section section-opening">
-    <h3>Avaliable Programs</h3>
+    <h3><?php echo $lang['avaliable_programs']; ?></h3>
     <div class="programs-wrapper">
       <?php //output the training programs avaliable
       //connect to db
@@ -115,7 +115,7 @@ if (!defined('BASE_URL')) {
 
   <div class="pimg2">
     <div class="ptext">
-      <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+      <p><?php echo $lang['private_coaching_quote1']; ?></p>
     </div>
   </div>
 
@@ -125,25 +125,25 @@ if (!defined('BASE_URL')) {
       <video src="images/bg_vid1.mov" autoplay loop></video>
     </div>
     <div class="box-b">
-      <h3>Section Two</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius aliquam tenetur hic animi, asperiores tempora distinctio voluptates maiores, quis. Voluptatem laborum incidunt illum nihil tempora saepe aperiam a nostrum ad consectetur atque praesentium cumque rem ipsa, quisquam cupiditate quasi accusamus doloribus doloremque nesciunt ducimus eaque. Fugit obcaecati adipisci repudiandae ipsa blanditiis. Asperiores voluptas dignissimos quaerat voluptatum laboriosam delectus, animi quae corporis accusantium modi dicta, sed impedit. Laboriosam, sed eum minima repellat, tempore id neque, nisi consectetur eligendi at ipsa rem facilis, perferendis sequi.</p>
+      <h3><?php echo $lang['benefits_of_private_coaching']; ?></h3>
+      <p><?php echo $lang['benefits_of_private_coaching_info']; ?></p>
     </div>
   </section>
 
   <div class="pimg3">
     <div class="ptext">
-      <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+      <p><?php echo $lang['private_coaching_quote2']; ?></p>
     </div>
   </div>
 
   <section class="section">
-    <h3>Section Three</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius aliquam tenetur hic animi, asperiores tempora distinctio voluptates maiores, quis. Voluptatem laborum incidunt illum nihil tempora saepe aperiam a nostrum ad consectetur atque praesentium cumque rem ipsa, quisquam cupiditate quasi accusamus doloribus doloremque nesciunt ducimus eaque. Fugit obcaecati adipisci repudiandae ipsa blanditiis. Asperiores voluptas dignissimos quaerat voluptatum laboriosam delectus, animi quae corporis accusantium modi dicta, sed impedit. Laboriosam, sed eum minima repellat, tempore id neque, nisi consectetur eligendi at ipsa rem facilis, perferendis sequi.</p>
+    <h3><?php echo $lang['who_private_coaching_is_for']; ?></h3>
+    <p><?php echo $lang['who_private_coaching_is_for_info']; ?></p>
   </section>
 
 
   <div class="pimg1-end">
-    <h2>"Inspirational quote"</h2>
+    <h2><?php echo $lang['inspirational_quote4']; ?></h2>
   </div>
 
 

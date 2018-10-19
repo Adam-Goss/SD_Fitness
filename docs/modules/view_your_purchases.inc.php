@@ -35,7 +35,7 @@ if(isset($_SESSION['SD_Fitness_Sess']['username'])) {
 } ?>
 <!-- start of page specific content -->
 <div class="inner-wrapper">
-  <h2>Hi, <span class="username"><?php echo $username //print user's username ?></span></h2>
+  <h2><?php echo $lang['hi'] .', <span class="username">' . $username //print user's username ?></span></h2>
 
 <?php
 //check if the user has made any purchases (has any orders)
@@ -44,7 +44,7 @@ $r = @mysqli_query($dbc,$q);
 
 if(mysqli_num_rows($r) > 0) {
   //if the customer has made purchases
-  echo '<h3>Current Purchases</h3><div class="purchases_container">';
+  echo '<h3>' . $lang['current_purchases'] . '</h3><div class="purchases_container">';
 
   //join the transactions table to the products table to get product info
   $q = 'SELECT t.product_id, p.title, p.volume, p.season, p.short_description, p.img_file_name FROM transactions as t
@@ -58,9 +58,9 @@ if(mysqli_num_rows($r) > 0) {
             <div class=\"purchase-content-wrapper\" style=\"background-image:url('program_images/{$row['img_file_name']}')\">
               <div class=\"purchase-content\">
                 <h3>{$row['title']}<h3>
-                <h4>Edition: Volume - {$row['volume']}, Season - {$row['season']}</h4>
+                <h4>{$lang['edition']}: {$lang['volume']} - {$row['volume']}, {$lang['season']} - {$row['season']}</h4>
                 <p>{$row['short_description']}</p>
-                <a href=\"index.php?p=view_p_content&pid={$row['product_id']}\">View Content</a>
+                <a href=\"index.php?p=view_p_content&pid={$row['product_id']}\">{$lang['view_content']}</a>
               </div>
             </div>
           </div>";
@@ -76,7 +76,7 @@ if(mysqli_num_rows($r) > 0) {
 
 } else {
   //the customer has no purchases
-  echo '<h2>you currently have no purchases</h2>';
+  echo '<h2>' . $lang['no_purchases'] . '</h2>';
 }
 
 ?>

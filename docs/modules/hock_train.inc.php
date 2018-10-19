@@ -27,15 +27,15 @@ if (!defined('BASE_URL')) {
 
   <div class="season-wrapper">
     <div class="description-box">
-      <p>Want to get that extra edge on the ice? You may be doing some off-ice training with the team, but is it right for Your position? Click here and take charge of what YOU need to build on.</p>
+      <p><?php echo $lang['hockey_training_description']; ?></p>
     </div>
     <div class="inseason-box">
-      <h3>In-Season Training</h3>
-      <a href="index.php?p=hock_train_inseason" class="btn">Read More</a>
+      <h3><?php echo $lang['inseason_training']; ?></h3>
+      <a href="index.php?p=hock_train_inseason" class="btn"><?php echo $lang['read_more']; ?></a>
     </div>
     <div class="offseason-box">
-      <h3>Off-Season Training</h3>
-      <a href="index.php?p=hock_train_offseason" class="btn">Read More</a>
+      <h3><?php echo $lang['offseason_training']; ?></h3>
+      <a href="index.php?p=hock_train_offseason" class="btn"><?php echo $lang['read_more']; ?></a>
     </div>
   </div>
 

@@ -26,7 +26,7 @@ if (!defined('BASE_URL')) {
 
 
   <div class="showcase-img">
-    <h2>Male Training Programs</h2>
+    <h2><?php echo $lang['male_training_programs']; ?></h2>
   </div>
 
   <div class="programs-wrapper">
@@ -62,7 +62,7 @@ if (!defined('BASE_URL')) {
       mysqli_close($dbc);
 
     } else { //no records to return
-      echo '<p class="error">There are currently no male training programs.</p>';
+      echo '<p class="error">' . $lang['no_male_training_programs'] . '</p>';
     }
     ?>
 

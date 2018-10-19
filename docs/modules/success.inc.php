@@ -36,17 +36,16 @@ if (!empty($_GET['tid'] && !empty($_GET['product']))) {
 <div class="inner-wrapper">
 
   <div class="success-container">
-    <h2>Thank you for purchasing:
-      <?php echo "<br><span class=\"product-title\">$product</span>"; ?></h2>
+    <h2><?php echo $lang['thankyou_for_purchasing'] . "<br><span class=\"product-title\">$product</span>"; ?></h2>
     <?php
     if(isset($_GET['n']) && ($_GET['n'] == 'TRUE')) {
-      echo '<h3>(And the nutrition option!)</h3>';
+      echo '<h3>' . $lang['and_nutrition_option'] . '</h3>';
     }
     ?>
     <hr>
-    <p>Your transaction ID is <?php echo $tid; ?></p>
-    <p>Check your email for more information</p>
-    <p><a href="index.php?p=view_p">View Purchases</a></p>
+    <p><?php echo $lang['your_transaction_id'] .' '. $tid; ?></p>
+    <p><?php echo $lang['check_email_more_info']; ?></p>
+    <p><a href="index.php?p=view_p"><?php echo $lang['view_purchases']; ?></a></p>
   </div>
 
 

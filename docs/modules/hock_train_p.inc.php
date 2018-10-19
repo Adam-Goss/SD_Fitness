@@ -26,12 +26,12 @@ if(isset($_GET['s'])) {
   //set season variable
   if($_GET['s'] == 'in') {
 
-    $season = 'In-Season';
+    $season = $lang['inseason'];
     $sql_season = 1;
 
   } elseif ($_GET['s'] == 'off') {
 
-    $season = 'Off-Season';
+    $season = $lang['offseason'];
     $sql_season = 2;
 
   } else {
@@ -53,7 +53,7 @@ if(isset($_GET['s'])) {
 <div class="inner-wrapper">
 
   <div class="showcase-img">
-  <h2>Pro <?php echo $season; ?> Training Programs</h2>
+  <h2><?php echo $lang['pro'] .' '. $season .' '. $lang['training_programs']; ?></h2>
   </div>
 
   <div class="programs-wrapper">
@@ -91,7 +91,7 @@ if(isset($_GET['s'])) {
       mysqli_close($dbc);
 
     } else { //no records to return
-      echo '<p class="error">There are currently no male training programs.</p>';
+      echo '<p class="error">' . $lang['no_pro_programs'] . '</p>';
     }
     ?>
 
