@@ -157,11 +157,11 @@ $lang = array (
 
   /* --- checkout module --- */
   //buying errors
-  'select_valid_product' => 'Please select a valid product',
-  'accept_t_and_c' => 'Please read and accept terms and conditions to continue',
-  'valid_nutrition_option'=> 'Please select a valid nutrition option',
-  'logout_try_again' => 'logout</a> and try again',
-  'login_signup_to_buy' => '<p>You must <a href="index.php?p=login">login</a> or <a href="index.php?p=signup">sign up</a> to buy</p>',
+  'select_valid_product' => 'Please select a valid product.',
+  'accept_t_and_c' => 'Please read and accept terms and conditions to continue.',
+  'valid_nutrition_option'=> 'Please select a valid nutrition option.',
+  'logout_try_again' => 'logout</a> and try again.',
+  'login_signup_to_buy' => '<p>You must <a href="index.php?p=login">login</a> or <a href="index.php?p=signup">sign up</a> to buy.</p>',
   'try_again' => 'Please try again.',
 
   //general page
@@ -195,8 +195,8 @@ $lang = array (
 
 
   /* --- fail and success modules --- */
-  'purchased_not_processed' => 'Your purchased could not be processed at this time',
-  'fail_try_again' => 'Please Try Again',
+  'purchased_not_processed' => 'Your purchased could not be processed at this time.',
+  'fail_try_again' => 'Please try again.',
   'thankyou_for_purchasing' => 'Thank you for purchasing',
   'and_nutrition_option' => '(And the nutrition option!)',
   'your_transaction_id' => 'Your transaction ID is ',
@@ -306,9 +306,9 @@ $lang = array (
 
 
   /* --- signup validation --- */
-  'enter_first_name' => 'Please enter your first name!';
-  'enter_last_name' => 'Please enter your last name!';
-  'enter_username' => 'Please enter your username!';
+  'enter_first_name' => 'Please enter your first name!',
+  'enter_last_name' => 'Please enter your last name!',
+  'enter_username' => 'Please enter your username!',
   'system_error' => '<p>You could not be registered due to a system error. We apologize for any inconvenience. We will correct the error ASAP.</p>',
   'email_already_registered' => 'This email address has already been registered. If you have forgotten your password, use the link below to have your password sent to you.<br><a href="index.php?p=forgot_p">Forgot password?</a>',
   'username_already_registered' => 'This username has already been registered. Please try another.',

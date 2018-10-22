@@ -140,275 +140,271 @@ $lang = array (
 
   /* --- change_password module --- */
   //password errors
-  'enter_current_password' => 'Please enter your current password!',
-  'password_no_match' => 'Your password did not match the confirmed password!',
-  'invalid_password' => 'Please enter a valid password!',
-  'password_has_changed' => 'Your password has been changed...',
-  'password_not_changed' => 'Your password could not be changed due to a system error. We apologize for any inconvenience.</p><p>Please try again...',
-  'password_incorrect' => 'Your current password is incorrect!',
-  'try_again' => 'Please try again...',
+  'enter_current_password' => 'S\'il vous plaît entrer votre mot de passe actuel!',
+  'password_no_match' => 'Votre mot de passe ne correspond pas au mot de passe de confirmation!',
+  'invalid_password' => 'Entrer un mot de passe valide s\'il vous plait!',
+  'password_has_changed' => 'Votre mot de passe a été changé...',
+  'password_not_changed' => 'Votre mot de passe n\'a pas pu être modifié en raison d\'une erreur système. Nous nous excusons pour tout inconvénient.</p><p>Veuillez réessayer...',
+  'password_incorrect' => 'Votre mot de passe actuel est incorrect!',
+  'try_again' => 'Veuillez réessayer...',
 
   //general page
-  'change_your_password' => 'Change Your Password',
-  'use_form_to_change_password' => 'Use the form below to change your password.',
-  'current_password' => 'Current Password:',
-  'new_password' => 'New Password:',
-  'password_constraint' => '*Must be at least 6 characters long, with at least one lowercase letter, one uppercase letter, and one number.',
-  'confirm_new_password' => 'Confirm New Password:',
-  'change' => 'Change',
+  'change_your_password' => 'Changez votre mot de passe',
+  'use_form_to_change_password' => 'Utilisez le formulaire ci-dessous pour changer votre mot de passe.',
+  'current_password' => 'Mot de passe actuel:',
+  'new_password' => 'Nouveau mot de passe:',
+  'password_constraint' => '* Doit comporter au moins 6 caractères, dont au moins une lettre minuscule, une lettre majuscule et un chiffre.',
+  'confirm_new_password' => 'Confirmer le nouveau mot de passe:',
+  'change' => 'Changement',
 
   /*____________________________________________________________*/
 
 
   /* --- checkout module --- */
   //buying errors
-  'select_valid_product' => 'Please select a valid product',
-  'accept_t_and_c' => 'Please read and accept terms and conditions to continue',
-  'valid_nutrition_option'=> 'Please select a valid nutrition option',
-  'logout_try_again' => 'logout</a> and try again',
-  'login_signup_to_buy' => '<p>You must <a href="index.php?p=login">login</a> or <a href="index.php?p=signup">sign up</a> to buy</p>',
-  'try_again' => 'Please try again.',
+  'select_valid_product' => 'Veuillez sélectionner un produit valide.',
+  'accept_t_and_c' => 'Veuillez lire et accepter les termes et conditions pour continuer.',
+  'valid_nutrition_option'=> 'Veuillez sélectionner une option de nutrition valide.',
+  'logout_try_again' => 'Connectez - Out</a> et essayez à nouveau.',
+  'login_signup_to_buy' => '<p>Vous devez <a href="index.php?p=login">s\'identifier</a> ou <a href="index.php?p=signup">s\'inscrire</a> acheter.</p>',
+  'try_again' => 'Veuillez réessayer.',
 
   //general page
-  'program_title' => 'Program',
-  'gender_title' => 'Gender',
-  'age_group_title' => 'Age Group',
-  'nutrition_included_title' => 'Nutrition Included',
-  'price_title' => 'Price',
-  'enter_billing_info' => 'Please Enter Your Billing Information Below:',
-  'first_name' => 'First Name:',
-  'last_name' => 'Last Name:',
+  'program_title' => 'Programme',
+  'gender_title' => 'Le sexe',
+  'age_group_title' => 'Tranche d\'âge',
+  'nutrition_included_title' => 'Nutrition inclus',
+  'price_title' => 'Prix',
+  'enter_billing_info' => 'Veuillez saisir vos informations de facturation ci-dessous:',
+  'first_name' => 'Prénom:',
+  'last_name' => 'Nom de famille:',
   'email' => 'Email:',
-  'submit_payment' => 'Submit Payment',
-  'credit_card_will_be_charged' => 'By clicking this button, your order will be completed and your credit card will be charged.',
-  'purchase_paypal' => 'Purcahse with PayPal',
-  'edit_order' => 'Edit Order',
-  'questions_about_order' => 'Questions about your order?',
+  'submit_payment' => 'Soumettre le paiement',
+  'credit_card_will_be_charged' => 'En cliquant sur ce bouton, votre commande sera complétée et votre carte de crédit sera débitée.',
+  'purchase_paypal' => 'Achat avec PayPal',
+  'edit_order' => 'Modifier la commande',
+  'questions_about_order' => 'Des questions sur votre commande?',
   /*____________________________________________________________*/
 
 
   /* --- contact module --- */
   'company_contact_brief' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  'email_us' => 'Email Us',
-  'contact_name' => 'Name:',
-  'contact_company' => 'Company:',
+  'email_us' => 'Envoyez-nous un email',
+  'contact_name' => 'Prénom:',
+  'contact_company' => 'Entreprise:',
   'contact_email' => 'Email:',
-  'contact_phone_number' => 'Phone Number:',
+  'contact_phone_number' => 'Numéro de téléphone:',
   'contact_message' => 'Message:',
-  'submit' => 'Submit',
+  'submit' => 'Soumettre',
   /*____________________________________________________________*/
 
 
   /* --- fail and success modules --- */
-  'purchased_not_processed' => 'Your purchased could not be processed at this time',
-  'fail_try_again' => 'Please Try Again',
-  'thankyou_for_purchasing' => 'Thank you for purchasing',
-  'and_nutrition_option' => '(And the nutrition option!)',
-  'your_transaction_id' => 'Your transaction ID is ',
-  'check_email_more_info' => 'Check your email for more information',
-  'view_purchases' => 'View Purchases',
+  'purchased_not_processed' => 'Votre achat n\'a pas pu être traité pour le moment.',
+  'fail_try_again' => 'Veuillez réessayer.',
+  'thankyou_for_purchasing' => 'Merci d\'avoir effectué un achat',
+  'and_nutrition_option' => '(Et l\'option nutrition!)',
+  'your_transaction_id' => 'Votre identifiant de transaction est ',
+  'check_email_more_info' => 'Vérifiez votre email pour plus d\'informations',
+  'view_purchases' => 'Voir les achats',
   /*____________________________________________________________*/
 
 
   /* --- forgot password module --- */
   //password errors
-  'email_not_on_file' => 'The submitted email address does not match those on file!',
-  'invalid_email' => 'Please enter a valid email address!',
+  'email_not_on_file' => 'L\'adresse e-mail soumise ne correspond pas à celles du fichier!',
+  'invalid_email' => 'S\'il vous plaît, mettez une adresse email valide!',
   'password_not_reset' => '
-    Your password could not be changed due to a system error. We apologize for any inconvenience.</p><p>Please try again...
+    Votre mot de passe n\'a pas pu être modifié en raison d\'une erreur système. Nous nous excusons pour tout inconvénient.</p><p>Veuillez réessayer...
   ',
 
   //reset information
   'password_reset_email' => '
-    This email is in response to a forgotten password reset request at "SD Fitness". If you did make this request, click the following link to be able to access your account:
+    Cet e-mail est une réponse à une demande de réinitialisation de mot de passe oublié de "SD Fitness". Si vous avez fait cette demande, cliquez sur le lien suivant pour pouvoir accéder à votre compte:
   ',
-  'password_reset_email_p2' =>
-  ' For security purposes, you have 15 minutes to do this. If you do not click this link within 15 minutes, you\'ll need to request a reset again. If you have not forgotten your password you can safely ignore this message and you will still be able to login with your existing password.
+  'password_reset_email_p2' => '
+    Pour des raisons de sécurité, vous avez 15 minutes pour le faire. Si vous ne cliquez pas sur ce lien dans les 15 minutes, vous devrez demander à nouveau une réinitialisation. Si vous n\'avez pas oublié votre mot de passe, vous pouvez ignorer ce message en toute sécurité et vous pourrez toujours vous connecter avec votre mot de passe actuel.
   ',
   'reset_password_msg' => '
-    <h2 class="complete">Reset Your Password</h1><p>You will receive an access code via email. Click the link in that email to gain access to the site. Once you have done that, you may then change your password.</p>
+    <h2 class="complete">Réinitialisez votre mot de passe</h1><p>Vous recevrez un code d\'accès par email. Cliquez sur le lien dans cet email pour accéder au site. Une fois que vous avez fait cela, vous pouvez alors changer votre mot de passe.</p>
   ',
 
   //general page
-  'reset_password_title' => 'Enter your email address below to reset your password.',
+  'reset_password_title' => 'Entrez votre adresse email ci-dessous pour réinitialiser votre mot de passe.',
   'reset_password_brief' => '',
-  'reset' => 'Reset',
+  'reset' => 'Réinitialiser',
   /*____________________________________________________________*/
 
   /* --- hockey training, inseason, offseason modules --- */
   'hockey_training_description' => '
-    Want to get that extra edge on the ice? You may be doing some off-ice training with the team, but is it right for Your position? Click here and take charge of what YOU need to build on.
+    Vous voulez avoir un avantage supplémentaire sur la glace? Vous faites peut-être un entraînement hors glace avec l\'équipe, mais est-ce correct pour votre position? Cliquez ici et prenez en charge ce sur quoi VOUS avez besoin.
   ',
-  'inseason_training' => 'In-Season Training',
-  'offseason_training' => 'Off-Season Training',
-  'read_more' => 'Read More',
-  'youth' => 'Youth',
+  'inseason_training' => 'Entraînement en saison',
+  'offseason_training' => 'Entraînement hors saison',
+  'read_more' => 'Lire la suite',
+  'youth' => 'Jeunesse',
   'junior' => 'Junior',
   'pro' => 'Pro',
   'inseason_info' => '
-    <p>In-season training is quite crucial in today’s fast paced hockey world. You want to keep on track with consistently performing at your best, yet sometimes it may feel like you’re “overtired”, causing some lapses in focus and ultimately causing you to underperform. Or, maybe you want to continue to improve on the small things your position on the team demands of you.</p>
-    <p>I know I have. With countless years of doing in-season training, I’ve encountered these problems NUMEROUS times. This is where my In-season Elite Hockey Performance program kicks in;</p>
-    <p>I have taken everything I have learned from not just learning the sport and studying the sports performance world, but from playing the sport. In fact, I am STILL using this knowledge today to propel myself higher in pro hockey, and it has given me and my clients remarkable results.</p>
-    <p>Whether you are a forward, defensemen or goalie, I have the right program just for you. Unlike many hockey/sports training program nowadays, I SPECIALIZE my programs for your position, so that not only are you keeping up with your performances on a consistent basis, you are working SPECIFICALLY on your game.</p>
-    <p>The Program includes;</p>
+    <p>L’entraînement en saison est crucial dans le monde du hockey rapide. Vous voulez rester sur la bonne voie avec des performances constantes, mais vous pouvez parfois avoir l’impression que vous êtes "fatigué", ce qui entraîne certaines erreurs de mise au point et, au final, une sous-performance. Ou peut-être voulez-vous continuer à améliorer les petites choses que votre position au sein de l\'équipe exige de vous.</p>
+    <p>Je sais que j\'ai. Après de nombreuses années d’entraînement en saison, j’ai rencontré ces problèmes à de nombreuses reprises. C’est là que débute mon programme de performance de hockey élite en saison; </p>
+    <p>J\'ai utilisé tout ce que j\'ai appris non seulement en apprenant le sport et en étudiant le monde de la performance sportive, mais aussi en pratiquant ce sport. En fait, j\'utilise TOUJOURS ces connaissances aujourd\'hui pour me propulser plus haut dans le hockey professionnel, et cela a donné à moi et à mes clients des résultats remarquables. </p>
+    <p>Le programme comprend: </ p>
     <ul>
-      <li>Top programs that are backed by science and high level hockey experiences</li>
-      <li>Free Weight, Machine and Bodyweight exercises</li>
-      <li>Sports Specific Exercises</li>
-      <li>Proper Warm-up Protocols with mobility exercises</li>
-      <li>Cooldowns to ensure less soreness and more flexibility the next day</li>
-      <li>Your own personalized workout schedule calendar</li>
-      <li>How to progress properly to maximize benefits</li>
-      <li>Exclusive Core Exercise list</li>
-      <li>Expert Sports Nutrition package</li>
-      <li>1 RM Percentage charts to help prevent overtiredness and overtraining</li>
-      <li>Tapering methods to keep you fresh for every game, every practice</li>
-      <li>And much more!</li>
+      <li>Principaux programmes reposant sur des expériences scientifiques et sur le hockey de haut niveau</li>
+      <li>Exercices spécifiques au sport</li>
+      <li>Protocoles d’échauffement appropriés avec exercices de mobilité</li>
+      <li>Les temps de recharge garantissent moins de douleur et plus de souplesse le lendemain</li>
+      <li>Votre calendrier d\'agenda d\'entraînement personnalisé</li>
+      <li>Comment progresser correctement pour maximiser les avantages</li>
+      <li>Liste des exercices de base exclusifs</li>
+      <li>Package Expert Sports Nutrition</li>
+      <li>1 graphique RM Pourcentage permettant d\'éviter le surmenage et le surentraînement</li>
+      <li>Méthodes de tapering pour vous garder au frais pour chaque jeu, chaque pratique</li>
+      <li>Et bien plus encore!</li>
     </ul>
-    <p>As I specialize in elite high performance sports training, these programs come with three volumes at one price. We all know how long a hockey season can last, therefore I devised 2 training blocks that all have volume I to Volume III.</p>
-    <p>If you are interested in taking your hockey to the next level, select your age group <a href="options-wrapper">above</a>.</p>
-  ',
+    <p>Comme je suis spécialisé dans l’entraînement sportif de haut niveau, ces programmes sont proposés en trois volumes à un prix. Nous savons tous combien de temps une saison de hockey peut durer, et j’ai donc conçu deux blocs d’entraînement du volume I au volume III.</p>
+    <p>Si vous souhaitez améliorer votre niveau de hockey, sélectionnez votre groupe d’âge <a href="options-wrapper"> ci-dessus</a>.</p>',
   'offseason_info' => '
-    <p>Every summer, hockey players everywhere engage in off-ice hockey training to get themselves better for the next season. Some players are looking to perform better than their previous season, some are getting ready to jump to the next level, and others are simply putting in the work to move up on their current team.</p>
-    <p>One of the biggest challenges I faced when I grew up and trained hard for the next season, was that while I met many good trainers, A LOT of them were not making specialized training programs for me. While the training was still good (at a hefty price), much of the time I was in a group, which makes it harder to target the areas of my game that I want to improve on.</p>
-    <p>Now that I am my own trainer, I have the advantage to create a program meant explicitly for my position in hockey. And I want to give you the same tools and programs that I, along with many of my other hockey clients, am using today.</p>
-    <p>Whether you are a forward, defensemen or goalie, I have the right program just for you. Unlike many hockey/sports training program nowadays, I SPECIALIZE my programs for your position, so that not only are you keeping up with your performances on a consistent basis, you are working SPECIFICALLY on your game.</p>
-    <p>The Program includes;</p>
+    <p>Chaque été, les joueurs de hockey du monde entier s’entraînent hors de la glace pour s’améliorer pour la saison prochaine. Certains joueurs cherchent à obtenir de meilleures performances que leur saison précédente, certains se préparent à passer au niveau supérieur et d’autres se contentent de travailler pour faire progresser leur équipe actuelle.</p>
+    <p>L’un des plus grands défis que j’ai eu à relever lorsque j’ai grandi et que je me suis entraîné dur pour la saison suivante, c’est que même si j’ai rencontré de nombreux bons entraîneurs, BEAUCOUP d’entre eux ne me préparaient pas de programmes de formation spécialisés. Même si la formation était encore bonne (à un prix dérisoire), la plupart du temps, j\'étais dans un groupe, ce qui rend plus difficile de cibler les domaines de mon jeu que je souhaite améliorer.</p>
+    <p>Maintenant que je suis mon propre entraîneur, j’ai l’avantage de créer un programme destiné explicitement à ma position au hockey. Et je veux vous donner les mêmes outils et programmes que moi-même, ainsi que plusieurs de mes autres clients du hockey, j\'utilise aujourd\'hui.</p>
+    <p>Que vous soyez un attaquant, un défenseur ou un gardien, j\'ai le bon programme juste pour vous. À la différence de nombreux programmes d’entraînement sportif / hockey de nos jours, je spécialise mes programmes en fonction de votre position. Ainsi, non seulement vous suivez régulièrement vos performances, mais vous travaillez SPÉCIALEMENT à votre jeu.</p>
+    <p>Le programme comprend:</p>
     <ul>
-      <li>Sports Specific Exercises</li>
-      <li>Proper Warm-up Protocols with mobility exercises</li>
-      <li>Cooldowns to ensure less soreness and more flexibility the next day</li>
-      <li>Your own personalized workout schedule calendar</li>
-      <li>How to progress properly to maximize benefits</li>
-      <li>Exclusive Core Exercise list</li>
-      <li>Expert Sports Nutrition package</li>
-      <li>1 RM Percentage charts to help prevent overtiredness and overtraining</li>
-      <li>Tapering methods to keep you fresh for every game, every practice</li>
-      <li>And much more!</li>
+      <li>Exercices spécifiques au sport</li>
+      <li>Protocoles d’échauffement appropriés avec exercices de mobilité</li>
+      <li>Les temps de recharge garantissent moins de douleur et plus de souplesse le lendemain</li>
+      <li>Votre calendrier d\'agenda d\'entraînement personnalisé</li>
+      <li>Comment progresser correctement pour maximiser les avantages</li>
+      <li>Liste des exercices de base exclusifs</li>
+      <li>Package Expert Sports Nutrition</li>
+      <li>1 graphique RM Pourcentage permettant d\'éviter le surmenage et le surentraînement</li>
+      <li>Méthodes de tapering pour vous garder au frais pour chaque jeu, chaque pratique</li>
+      <li>Et bien plus encore!</li>
     </ul>
-    <p>As I specialize in elite high performance sports training, these programs come with three volumes at one price. We all know how long a hockey season can last, therefore I devised 2 training blocks that all have volume I to Volume III.</p>
-    <p>If you are interested in taking your hockey to the next level, select your age group <a href="options-wrapper">above</a></p>
+    <p>Comme je suis spécialisé dans l’entraînement sportif de haut niveau, ces programmes sont proposés en trois volumes à un prix. Nous savons tous combien de temps une saison de hockey peut durer, et j’ai donc conçu deux blocs d’entraînement du volume I au volume III.</p>
+    <p>Si vous souhaitez faire évoluer votre hockey, sélectionnez votre groupe d\'âge <a href="options-wrapper">ci-dessus</a></p>.
   ',
   /*____________________________________________________________*/
 
 
   /* --- hockey training junior, youth, pro modules --- */
-  'inseason' => 'In-Season',
-  'offseason' => 'Off-Season',
-  'training_programs' => 'Training Programs',
-  'no_junior_programs' => 'There are currently no junior training programs.',
-  'no_youth_programs' => 'There are currently no youth training programs.',
-  'no_pro_programs' => 'There are currently no pro training programs.',
+  'inseason' => 'En saison',
+  'offseason' => 'Hors saison',
+  'training_programs' => 'Des programmes de formation',
+  'no_junior_programs' => 'Il n\'y a actuellement aucun programme d\'entraînement junior.',
+  'no_youth_programs' => 'Il n\'y a actuellement aucun programme de formation pour les jeunes.',
+  'no_pro_programs' => 'Il n\'y a actuellement aucun programme de formation professionnelle.',
   /*____________________________________________________________*/
 
 
   /* --- login and sign_up forms and logout modules --- */
-  'login_form_title' => 'Login',
-  'signup_form_title' => 'Sign Up',
-  'logged_out' => 'Logged Out',
-  'thankyou_msg' => 'Thank you for visiting. You are now logged out. Please come back soon!',
+  'login_form_title' => 'S\'identifier',
+  'signup_form_title' => 'S\'inscrire',
+  'logged_out' => 'Déconnecté',
+  'thankyou_msg' => 'Merci pour votre visite. Vous êtes maintenant déconnecté. Je t\'en prie, reviens vite!',
   /*____________________________________________________________*/
 
 
   /* --- signup validation --- */
-  'enter_first_name' => 'Please enter your first name!';
-  'enter_last_name' => 'Please enter your last name!';
-  'enter_username' => 'Please enter your username!';
-  'system_error' => '<p>You could not be registered due to a system error. We apologize for any inconvenience. We will correct the error ASAP.</p>',
-  'email_already_registered' => 'This email address has already been registered. If you have forgotten your password, use the link below to have your password sent to you.<br><a href="index.php?p=forgot_p">Forgot password?</a>',
-  'username_already_registered' => 'This username has already been registered. Please try another.',
+  'enter_first_name' => 'Entrez votre prénom s\'il vous plait!',
+  'enter_last_name' => 'Veuillez entrer votre nom de famille!',
+  'enter_username' => 'S\'il vous plaît entrez votre nom d\'utilisateur!',
+  'system_error' => '<p>Vous n\'avez pas pu être enregistré à cause d\'une erreur système. Nous nous excusons pour tout inconvénient. Nous allons corriger l\'erreur dès que possible.</p>',
+  'email_already_registered' => 'Cette adresse email a déjà été enregistrée. Si vous avez oublié votre mot de passe, utilisez le lien ci-dessous pour que votre mot de passe vous soit envoyé.<br><a href="index.php?p=forgot_p">Mot de passe oublié?</a>',
+  'username_already_registered' => 'Ce nom d\'utilisateur a déjà été enregistré. S\'il vous plaît, essayez-en un autre.',
   /*____________________________________________________________*/
 
 
 
   /* --- terms and conditions module --- */
-  't_and_c_title' => 'Terms & Conditions',
-  'disclaimer_msg' => 'These products are not intended to diagnose, treat, cure or prevent any disease. Product results may vary from person to person.',
+  't_and_c_title' => 'Termes et conditions',
+  'disclaimer_msg' => 'Ces produits ne sont pas destinés à diagnostiquer, traiter, guérir ou prévenir les maladies. Les résultats du produit peuvent varier d\'une personne à l\'autre.',
   'returns_guarantees_FAQs_info' => '
-  <h3>Returns, Guarantees & FAQs</h3>
+      <h3>Retours, garanties et FAQ</h3>
         <ul>
-          <li><h4>Is There A Money Back Guarantee on SD Fitness Programs?</h4>
+          <li><h4>Existe-t-il une garantie de remboursement sur les programmes de remise en forme SD Fitness?</h4>
             <ul>
-              <li>SD Fitness offers a 14-day (2 weeks) refund policy from the date of purchase on digital AND on hard copies of programs.</li>
-              <li>In order to protect ourselves from abuse we reserve the right to refuse refunds to people that we deem to be \'serial refunders\'. Those include people that have received one or more refunds in the past. If you have received a refund in the past you are not eligible for refunds on future courses without express, written permission in advance from SD Fitness.</li>
+              <li>SD Fitness propose une politique de remboursement de 14 jours (2 semaines) à compter de la date d’achat sur support numérique ET sur les copies papier des programmes.</ li>
+              <li>Afin de nous protéger des abus, nous nous réservons le droit de refuser les remboursements aux personnes que nous considérons comme des "rembourseurs en série". Ceux qui incluent les personnes qui ont reçu un ou plusieurs remboursements dans le passé. Si vous avez déjà reçu un remboursement, vous n\'êtes pas éligible pour un remboursement sur les prochains cours sans l\'autorisation écrite expresse et préalable de SD Fitness.</li>
+            </ ul>
+          </ li>
+          <li><h4>Combien de temps faudra-t-il pour recevoir ma commande?</h4>
+            <ul>
+              <li>La plupart des commandes sont expédiées dans un délai de 1 jour ouvrable. Une fois expédié, USPS ou Fedex livrera généralement dans un délai de 3 à 5 jours ouvrables à toute adresse américaine ou canadienne.</li>
+              <li>Les commandes internationales via DHL Express arrivent généralement dans un délai de 3 à 5 jours ouvrables, selon le pays où elles sont expédiées. </ li>
             </ul>
           </li>
-          <li><h4>How Long Will It Take To Receive My Order?</h4>
+          <li><h4> Comment suivre ma commande?</h4>
             <ul>
-              <li>Most orders ship within 1 business day.  Once it has shipped, USPS or Fedex will generally deliver within 3 to 5 business days to any US or Canadian address.</li>
-              <li>International orders via DHL Express generally arrive in 3 to 5 business days depending on the country they are shipped to.</li>
+              <li>Lorsque votre commande sera expédiée, vous recevrez un courrier électronique avec le numéro de suivi. Vous pouvez suivre en temps réel à (insérez l\'URL Wesbite pour effectuer le suivi ici)</li>
             </ul>
           </li>
-          <li><h4>How Do I Track My Order?</h4>
+          <li><h4>Ma commande indique qu\'elle a été livrée mais que je n\'ai rien reçu </h4>
             <ul>
-              <li>When your order ships you will receive an email with the tracking number.  You can track in real time at (insert Wesbite URL for tracking here)</li>
+              <li>USPS ou Fedex marquent parfois quelque chose comme livré avant qu’il ne soit réellement déposé. Si tel est le cas, donnez-lui 2 jours ouvrables supplémentaires. Si vous ne l’avez pas reçu à ce moment-là, appelez-nous ou envoyez-nous un courrier électronique à (Insérer le lien e-mail de l\'assistance du site Web)</li>
             </ul>
           </li>
-          <li><h4>My Order Says It Was Delivered But I\'ve Not Received Anything</h4>
+          <li><h4>Pourquoi ne puis-je pas expédier dans mon pays?</h4>
             <ul>
-              <li>USPS or Fedex will sometimes mark something as delivered before it was actually dropped off.  If this is the case give it 2 more business days.  If you\'ve not received it by then please call us or email us at (Insert Website support email link)</li>
+              <li>Certains pays sont sous embargo ou soumis à des restrictions imposées par le gouvernement américain et canadien.</li>
             </ul>
           </li>
-          <li><h4>Why Can\'t You Ship To My Country?</h4>
+          <li><h4> Pourquoi les envois internationaux sont-ils si coûteux?</h4>
             <ul>
-              <li>Certain countries are embargoed or restricted by the US & Canadian Government.</li>
+              <li>Malheureusement, les envois internationaux peuvent coûter cher. Nous utilisons uniquement DHL Express pour assurer une livraison rapide avec un suivi de bout en bout et un minimum de tracas d\'importation.</li>
+              <li>En raison de nos volumes d’expédition, nous bénéficions d’une très grande remise que nous vous transmettons.</li>
             </ul>
           </li>
-          <li><h4>Why Is International Shipping So Expensive?</h4>
+          <li><h4>Dois-je payer des taxes ou des droits à l\'importation?</h4>
             <ul>
-              <li>Unfortunately, shipping internationally can be expensive. We only use DHL Express to ensure speedy delivery with end-to-end tracking and the fewest importing hassles possible.</li>
-              <li>Due to our shipping volumes we get a very large discount that we pass along to you.</li>
+              <li>Cela dépend. Certains pays sont plus complets en ce qui concerne la perception des droits. Soyez prêt car ils relèvent de votre responsabilité s\'ils sont perçus. </li>
             </ul>
           </li>
-          <li><h4>Will I Have To Pay Import Taxes or Duties?</h4>
+          <li><h4>Vos produits seront-ils dédouanés?</h4>
             <ul>
-              <li>It depends.  Some countries are more comprehensive when it comes to collecting duties. Please be prepared as these are your responsibility if they are levied.</li>
+              <li>N\'oubliez pas que vous importez ce que vous importez, assurez-vous donc de le vérifier à l\'avance.</li>
             </ul>
           </li>
-          <li><h4>Will Your Products Clear Customs?</h4>
+          <li><h4>J\'ai commandé un programme de remise en forme SD mais je ne l\'ai pas encore reçu</h4>
             <ul>
-              <li>Remember, you are responsible for what you import so please be sure to check it in advance.</li>
-            </ul>
-          </li>
-          <li><h4>I Ordered a SD Fitness Program But I\'ve Not Received It Yet</h4>
-            <ul>
-              <li>All SD Fitness programs are delivered digitally (unless hard copy was purchased) at( Insert Website link to products). Depending on how you purchased you might need to reset your password.</li>
-              <li>This is a complete list of the digital and hard copy list of SD Fitness products (Insert link of products here)</li>
-              <li>If you continue to have login issues please contact support (Support email).</li>
+              <li>Tous les programmes SD Fitness sont livrés sous forme numérique (sauf si une copie papier a été achetée) à (Insérer le lien du site Web vers les produits). Selon votre achat, vous devrez peut-être réinitialiser votre mot de passe.</li>
+              <li>Ceci est une liste complète de la liste des produits numériques et sur papier des produits SD Fitness (Insérer le lien des produits ici)</li>
+              <li>Si vous continuez à avoir des problèmes de connexion, contactez le support technique (courrier électronique du support technique).</li>
             </ul>
           </li>
         </ul>
   ',
-  'order_terms_title' => 'Order Terms',
+  'order_terms_title' => 'Conditions de commande',
   'order_terms_info' => '
-  <p>By placing your order you agree to, comply with, and accept the following conditions:</p>
-  <ul>
-    <li>You are 18 years or older, or have explicit permission to purchase if under the age of 18.</li>
-    <li>Our Money Back Guarantee as outlined here: (Insert Returns, refund policy FAQs page here)</li>
-    <li>Our International Shipping as outlined here: (Insert link to international tracking of product here)</li>
-  </ul>
-  <p>Please note: Order processing during and around Holiday times may be delayed due to volume</p>
-  ',
+    <p>En passant votre commande, vous acceptez, respectez et acceptez les conditions suivantes:</p>
+    <ul>
+      <li>Vous avez 18 ans ou plus, ou vous avez la permission explicite d\'acheter si vous avez moins de 18 ans.</li>
+      <li>Notre garantie de remboursement décrite ci-dessous: (Insérer ici les retours, page FAQ sur les règles de remboursement)</li>
+      <li>Nos envois internationaux tels que décrits ici: (Insérer un lien vers le suivi international du produit ici)</li>
+    </ul>
+    <p>Remarque: le traitement des commandes pendant et autour des vacances peut être retardé en raison du volume</p>',
   'full_terms_conditions_link' => '
-    <p>View Full <a href="website_terms_conditions.pdf" target="_blank">Website Terms & Conditions</a></p>
+    <p>Afficher l\'intégralité des <a href="website_terms_conditions.pdf" target="_blank">conditions d\'utilisation du site Web</a></p>
   ',
   /*____________________________________________________________*/
 
 
   /* --- private coaching page --- */
-  'private_training_programs' => 'Private Training Programs',
-  'avaliable_programs' => 'Avaliable Programs',
+  'private_training_programs' => 'Programmes de formation privés',
+  'avaliable_programs' => 'Programmes disponibles',
   'private_coaching_quote1' => '
     "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   ',
-  'benefits_of_private_coaching' => 'Benefits of Private Coaching Programs',
+  'benefits_of_private_coaching' => 'Avantages des programmes de coaching privé',
   'benefits_of_private_coaching_info' => '
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius aliquam tenetur hic animi, asperiores tempora distinctio voluptates maiores, quis. Voluptatem laborum incidunt illum nihil tempora saepe aperiam a nostrum ad consectetur atque praesentium cumque rem ipsa, quisquam cupiditate quasi accusamus doloribus doloremque nesciunt ducimus eaque. Fugit obcaecati adipisci repudiandae ipsa blanditiis. Asperiores voluptas dignissimos quaerat voluptatum laboriosam delectus, animi quae corporis accusantium modi dicta, sed impedit. Laboriosam, sed eum minima repellat, tempore id neque, nisi consectetur eligendi at ipsa rem facilis, perferendis sequi.
   ',
   'private_coaching_quote2' => '
     "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   ',
-  'who_private_coaching_is_for' => 'Who Private Coaching Programs Are For?',
+  'who_private_coaching_is_for' => 'Qui sont les programmes de coaching privé?',
   'who_private_coaching_is_for_info' => '
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius aliquam tenetur hic animi, asperiores tempora distinctio voluptates maiores, quis. Voluptatem laborum incidunt illum nihil tempora saepe aperiam a nostrum ad consectetur atque praesentium cumque rem ipsa, quisquam cupiditate quasi accusamus doloribus doloremque nesciunt ducimus eaque. Fugit obcaecati adipisci repudiandae ipsa blanditiis. Asperiores voluptas dignissimos quaerat voluptatum laboriosam delectus, animi quae corporis accusantium modi dicta, sed impedit. Laboriosam, sed eum minima repellat, tempore id neque, nisi consectetur eligendi at ipsa rem facilis, perferendis sequi.
   ',
@@ -416,43 +412,43 @@ $lang = array (
 
 
   /* --- programs, male programs, female programs modules --- */
-  'male' => 'Male',
-  'female' => 'Female',
-  'getfit_programs' => 'GetFit Programs',
+  'male' => 'Mâle',
+  'female' => 'Femelle',
+  'getfit_programs' => 'GetFit Programmes',
   'getfit_programs_info' => '
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   ',
-  'getshredded_programs' => 'GetShredded Programs',
+  'getshredded_programs' => 'GetShredded Programmes',
   'getshredded_programs_info' => '
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
   ',
-  'get_bfs_programs' => 'Get Bigger, Faster, & Stronger Programs',
+  'get_bfs_programs' => 'Obtenez des programmes plus gros, plus rapides et plus forts',
   'get_bfs_programs_info' => '
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
   ',
-  'male_training_programs' => 'Male Training Programs',
-  'no_male_training_programs' => 'There are currently no male training programs.',
-  'female_training_programs' => 'Female Training Programs',
-  'no_female_training_programs' => 'There are currently no female training programs.',
+  'male_training_programs' => 'Programmes de formation pour hommes',
+  'no_male_training_programs' => 'Il n\'y a actuellement aucun programme de formation pour hommes.',
+  'female_training_programs' => 'Programmes de formation pour femmes',
+  'no_female_training_programs' => 'Il n\'y a actuellement aucun programme de formation féminin.',
   /*____________________________________________________________*/
 
 
   /* --- view product, view your purchases , view purchase content modules --- */
-  'agree_to_t_and_c' => 'I agree to terms and conditions',
-  'yes' => 'Yes',
-  'no' => 'No',
-  'view_t_and_c' => 'View terms and conditions',
-  'find_out_more' => 'Find Out More',
-  'buy' => 'Buy',
-  'previously_purchased_nutrition_option' => 'You have previously brought the nurition option so check it out on your',
-  'view_purchases_homepage' => 'View Purchases Homepage',
-  'volume' => 'Volume',
-  'season' => 'Season',
-  'edition' => 'Edition',
-  'hi' => 'Hi',
-  'current_purchases' => 'Current Purchases',
-  'view_content' => 'View Content',
-  'no_purchases' => 'You currently have no purchases',
+  'agree_to_t_and_c' => 'J\'accepte les termes et conditions',
+  'yes' => 'Oui',
+  'no' => 'Non',
+  'view_t_and_c' => 'Voir les termes et conditions',
+  'find_out_more' => 'En savoir plus',
+  'buy' => 'Acheter',
+  'previously_purchased_nutrition_option' => 'Vous avez déjà apporté l\'option de nutrition, alors vérifiez-la sur votre',
+  'view_purchases_homepage' => 'Voir la page d\'accueil des achats',
+  'volume' => 'Le volume',
+  'season' => 'Saison',
+  'edition' => 'Édition',
+  'hi' => 'Salut',
+  'current_purchases' => 'Achats actuels',
+  'view_content' => 'Voir le contenu',
+  'no_purchases' => 'Vous n\'avez actuellement aucun achat'
   /*____________________________________________________________*/
 
 
